@@ -1,34 +1,1570 @@
 [
-    {
-		"name": "Watch a comfort movie",
-		"image": "assets/images/watch-a-comfort-movie.jpg",
-		"criteria": [
-			{
-				"in/out": {
-					"stay in": true,
-					"go out": false
-				}
-			},
-			{
-				"energy": {
-					"low": true,
-					"medium": false,
-					"high": false
-				}
-			},
-			{
-				"cost": {
-					"low": true,
-					"medium": false,
-					"high": false
-				}
-			},
-			{
-				"solo/social": {
-					"solo": true,
-					"social": true
-				}
-			}
-		]
-	}
+  {
+    "name": "Watch a comfort movie",
+    "image": "assets/images/watch-a-comfort-movie.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Order takeout and have a cozy night",
+    "image": "assets/images/order-takeout-and-have-a-cozy-night.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Listen to a podcast and unwind",
+    "image": "assets/images/listen-to-a-podcast-and-unwind.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Journal for 10 minutes",
+    "image": "assets/images/journal-for-10-minutes.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Read with tea",
+    "image": "assets/images/read-with-tea.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Self-care night",
+    "image": "assets/images/self-care-night.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Build a playlist",
+    "image": "assets/images/build-a-playlist.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bake cookies or dessert",
+    "image": "assets/images/bake-cookies-or-dessert.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Try a new recipe",
+    "image": "assets/images/try-a-new-recipe.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Start a puzzle",
+    "image": "assets/images/start-a-puzzle.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Paint or sketch",
+    "image": "assets/images/paint-or-sketch.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Start a scrapbook",
+    "image": "assets/images/start-a-scrapbook.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Make a vision board",
+    "image": "assets/images/make-a-vision-board.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Learn a dance online",
+    "image": "assets/images/learn-a-dance-online.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "At-home workout",
+    "image": "assets/images/at-home-workout.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Redecorate your room",
+    "image": "assets/images/redecorate-your-room.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Deep clean and reset",
+    "image": "assets/images/deep-clean-and-reset.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "DIY nails or craft night",
+    "image": "assets/images/diy-nails-or-craft-night.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mocktail night",
+    "image": "assets/images/mocktail-night.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Game night at home",
+    "image": "assets/images/game-night-at-home.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Movie night with friends",
+    "image": "assets/images/movie-night-with-friends.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Solo café date",
+    "image": "assets/images/solo-cafe-date.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "Visit a bookstore",
+    "image": "assets/images/visit-a-bookstore.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Go to a museum",
+    "image": "assets/images/go-to-a-museum.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sit in a park and people-watch",
+    "image": "assets/images/sit-in-a-park-and-people-watch.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Sunset walk",
+    "image": "assets/images/sunset-walk.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Long walk in a new neighborhood",
+    "image": "assets/images/long-walk-in-a-new-neighborhood.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Picnic",
+    "image": "assets/images/picnic.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Thrift shopping",
+    "image": "assets/images/thrift-shopping.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Farmers market",
+    "image": "assets/images/farmers-market.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Flea market",
+    "image": "assets/images/flea-market.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Take photos around the city",
+    "image": "assets/images/take-photos-around-the-city.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Try a new café",
+    "image": "assets/images/try-a-new-cafe.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Dessert run",
+    "image": "assets/images/dessert-run.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Try a new restaurant",
+    "image": "assets/images/try-a-new-restaurant.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Go to the movies",
+    "image": "assets/images/go-to-the-movies.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bowling",
+    "image": "assets/images/bowling.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Trivia night",
+    "image": "assets/images/trivia-night.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Go to an arcade",
+    "image": "assets/images/arcade.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Attend a comedy show",
+    "image": "assets/images/comedy-show.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Attend a concert",
+    "image": "assets/images/concert.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Go to a rooftop bar",
+    "image": "assets/images/rooftop-bar.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Attend a pop-up event",
+    "image": "assets/images/pop-up-event.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Attend a fitness class",
+    "image": "assets/images/fitness-class.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Roller skating or ice skating",
+    "image": "assets/images/roller-skating-or-ice-skating.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Hiking",
+    "image": "assets/images/hiking.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Botanical garden",
+    "image": "assets/images/botanical-garden.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Volunteer locally",
+    "image": "assets/images/volunteer-locally.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  },
+  {
+    "name": "Take a workshop or class",
+    "image": "assets/images/take-a-workshop-or-class.jpg",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      }
+    ]
+  }
 ]
