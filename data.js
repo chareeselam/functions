@@ -1,0 +1,29 @@
+let data = [
+	{
+		name: 'Watch a comfort movie',
+		image: 'assets/images/watch-a-comfort-movie.jpg',
+		criteria:[
+			'in/out': {
+				'stay in': true,
+				'go out': false
+			},
+
+			'energy': {
+				'low': true,
+				'medium': false,
+				'high': false
+			},
+
+			'cost': {
+				'low': true,
+				'medium': false,
+				'high': false
+			},
+
+			'solo/social': {
+				'solo': true,
+				'social': true
+			}
+		]
+	}
+]
