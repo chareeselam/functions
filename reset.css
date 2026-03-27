@@ -17,7 +17,7 @@ html {
 }
 
 /* Reapply the pointer cursor for anchor tags. */
-a, button, summary { cursor: revert }
+a, button { cursor: revert }
 
 /* Remove list styles (bullets/numbers). */
 ol, ul, menu, summary { list-style: none }
@@ -38,7 +38,9 @@ input, textarea { -webkit-user-select: auto }
 textarea { white-space: revert }
 
 /* Minimum style to allow to style meter element. */
-meter { appearance: revert }
+meter {
+	appearance: revert;
+}
 
 /* Default text opacity of input placeholder. */
 ::placeholder { color: unset }
@@ -48,6 +50,15 @@ meter { appearance: revert }
 
 /* Fix the feature of 'hidden' attribute. */
 :where([hidden]) { display: none }
+
+/* Revert for bug in Chromium browsers. */
+:where([contenteditable]:not([contenteditable='false'])) {
+	-webkit-line-break: after-white-space;
+	overflow-wrap: break-word;
+	-moz-user-modify: read-write;
+	-webkit-user-modify: read-write;
+	-webkit-user-select: auto;
+}
 
 /* Restore draggable feature. */
 :where([draggable='true']) { -webkit-user-drag: element }

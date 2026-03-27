@@ -3,3 +3,19 @@
 	--black: #171717;
 }
 
+body {
+	--spacing: 2em;
+
+	display: grid;
+	gap: var(--spacing);
+	margin: initial;
+	padding: var(--spacing);
+}
+
+form {
+	background-color: whitesmoke;
+	border-radius: calc(var(--spacing) / 2);
+	display: grid;
+	gap: var(--spacing);
+	padding: var(--spacing);
+}
