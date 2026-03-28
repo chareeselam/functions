@@ -14,9 +14,9 @@
 			<form id="nightcap-form" action="/my-handling-form-page" method="post">
 			<!-- Added action and method attributes to the form.
 			https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
-				
+			<button>Back</button>
+			
 			<fieldset class="step">
-					<button>Back</button>
 					<legend>Do you want to stay in or go out?</legend>
 					<!-- And how different the `radio` type is! -->
 					<input id="stay-in" name="stay-or-go" type="radio" value="stay-in">
@@ -26,14 +26,12 @@
 				</fieldset>
 
 				<section class="step">
-					<button>Back</button>
 					<label for="energy">What is your energy level?</label>
 					<input type="range" id="energy" name="energy" min="0" max="5" value="5">
 				</section>
 
 
 				<fieldset class="step">
-					<button>Back</button>
 					<legend>How do you want to spend your time?</legend>
 					<!-- And how different the `radio` type is! -->
 					<input id="solo" name="solo-or-social" type="radio" value="solo">
@@ -43,7 +41,6 @@
 				</fieldset>
 
 				<section class="step">
-					<button>Back</button>
 					<label for="type-of-activity">And a dropdown <code>&lt;select&gt;</code>:</label>
 					<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
 					<select id="type-of-activity" name="type-of-activity">
@@ -71,7 +68,7 @@
 					<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
 					<!-- <button type="reset">Reset</button> -->
 					<!-- `button` without a type will submit their parent `form`. -->
-					<!-- <button>Submit</button> -->
+					<button>Submit</button>
 					<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
 				<!-- </section> -->
 			</form>
@@ -82,6 +79,6 @@
 
 		<!-- <script defer src="data.json"></script> -->
 		<script defer src="form-state.js"></script>
-		<script defer src="script.js"></script>
+		<!-- <script defer src="script.js"></script> -->
 	</body>
 </html>
