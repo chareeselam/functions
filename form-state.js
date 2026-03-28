@@ -32,6 +32,13 @@ nextBtn.addEventListener('click', () => {
 	showStep(currentStep)
 })
 
+document.querySelector('#nightcap-form').addEventListener('reset', () => {
+	currentStep = 0
+	steps.forEach(step => step.classList.remove('answered'))
+	document.querySelector('#result').innerHTML = ''
+	showStep(0)
+})
+
 // // Target your form.
 // let formElement = document.querySelector('#nightcap-form')
 
