@@ -3,35 +3,49 @@ const nextBtn = document.querySelector('#next')
 const submitBtn = document.querySelector('#submit')
 let currentStep = 0
 let data = []
- 
+
+// load data and show question one
 fetch('data.json')
 	.then(response => response.json())
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Parsing_JSON
+    // Parse from raw data to JS array
 	.then(json => {
 		data = json
 		showStep(0)
 	})
- 
-function showStep(index) {
-	steps.forEach((step, i) => {
-		step.classList.toggle('active', i === index)
-	})
 
-    const isLast = index === steps.length - 1
-	nextBtn.hidden = isLast
-	submitBtn.hidden = !isLast
+// radio next button
+function isAnswered(stepEl) {
+	const radios = stepEl.querySelectorAll('input[type="radio"]')
+	for (let radio of radios) {
+		if (radio.checked) return true
+	}
+	return radios.length === 0
 }
 
+// next/submit buttons
+function showStep(index) {
+    steps.forEach((step, i) => {
+        step.classList.toggle('active', i === index)
+
+    })
+    
+    const isLast = index === steps.length - 1
+        nextBtn.hidden = isLast
+        submitBtn.hidden = !isLast
+
+        nextBtn.classList.toggle('disabled', !isAnswered(steps[index]))
+        submitBtn.classList.toggle('disabled', !isAnswered(steps[index]))
+}
+
+// next question
 nextBtn.addEventListener('click', () => {
-	const currentStepEl = steps[currentStep]
-	const radios = [...currentStepEl.querySelectorAll('input[type="radio"]')]
- 
-	if (radios.length > 0 && !radios.some(r => r.checked)) return
- 
-	currentStepEl.classList.add('answered')
+	steps[currentStep].classList.add('answered')
 	currentStep++
 	showStep(currentStep)
 })
 
+// reset button
 document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	currentStep = 0
 	steps.forEach(step => step.classList.remove('answered'))
