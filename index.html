@@ -6,66 +6,64 @@
 		<link href="reset.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
 
-	</head>	
+	</head>
 	<body>
 		<main>
 			<h1>Functions</h1>
 			<p>Lorem Ipsum</p>
-			<form id="nightcap-form">
-			<!-- Semantic groupings within `form`: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset -->
-			<fieldset>
-				<legend>Do you want to stay in or go out?</legend>
-				<!-- And how different the `radio` type is! -->
-				<input checked id="stay-in" name="stay-in" type="radio" value="first">
-				<label for="stay-in">Stay in</label>
-				<input id="go-out" name="go-out" type="radio" value="second">
-				<label for="go-out">Go out</label>
-			</fieldset>
-			
-			<section>
-				<!-- `range` sliders are always fun. -->
-				<label for="energy-level">What is your energy level?</label>
-				<input type="range" id="energy-level" name="energy-level" min="0" max="5" value="5">
-			</section>
+			<form id="nightcap-form" action="/my-handling-form-page" method="post">
+			<!-- Added action and method attributes to the form.
+			https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
+				
+			<fieldset class="step">
+					<legend>Do you want to stay in or go out?</legend>
+					<!-- And how different the `radio` type is! -->
+					<input id="stay-in" name="stay-or-go" type="radio" value="stay-in">
+					<label for="stay-in">Stay in</label>
+					<input id="go-out" name="stay-or-go" type="radio" value="go-out">
+					<label for="go-out">Go out</label>
+				</fieldset>
+
+				<section class="step">
+					<label for="energy-level">What is your energy level?</label>
+					<input type="range" id="energy-level" name="energy-level" min="0" max="5" value="5">
+				</section>
 
 
-			<fieldset>
-				<legend>How do you want to spend your time?</legend>
-				<!-- And how different the `radio` type is! -->
-				<input checked id="solo" name="solo" type="radio" value="first">
-				<label for="solo">Solo</label>
-				<input id="social" name="social" type="radio" value="second">
-				<label for="social">Social</label>
-			</fieldset>
+				<fieldset class="step">
+					<legend>How do you want to spend your time?</legend>
+					<!-- And how different the `radio` type is! -->
+					<input id="solo" name="solo-or-social" type="radio" value="solo">
+					<label for="solo">Solo</label>
+					<input id="social" name="solo-or-social" type="radio" value="social">
+					<label for="social">Social</label>
+				</fieldset>
 
-			<section>
-				<label for="some-option">And a dropdown <code>&lt;select&gt;</code>:</label>
-				<!-- Classic “dropdown”: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
-				<select id="some-option" name="some-option">
-						<option>Cozy</option>
-						<option>Create</option>
-						<option>Move</option>
-						<option>Explore</option>
-						<option>Eat & Drink</option>
-						<option>Social</option>
-						<!-- <optgroup label="Grouped">
-							<option>You can organize</option>
-							<option>Options in groups</option>
-						</optgroup> -->
-				</select>
-			</section>
-			
-			<section>
-				<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
-				<!-- <button type="reset">Reset</button> -->
-				<!-- `button` without a type will submit their parent `form`. -->
-				<button>Submit</button>
-				<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
-			</section>
-		</form>
+				<section class="step">
+					<label for="some-option">And a dropdown <code>&lt;select&gt;</code>:</label>
+					<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
+					<select id="some-option" name="some-option">
+							<option>Cozy</option>
+							<option>Create</option>
+							<option>Move</option>
+							<option>Explore</option>
+							<option>Eat & Drink</option>
+							<option>Social</option>
+					</select>
+				</section>
+
+				<section class="step">
+					<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
+					<!-- <button type="reset">Reset</button> -->
+					<!-- `button` without a type will submit their parent `form`. -->
+					<button>Submit</button>
+					<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
+				</section>
+			</form>
 		</main>
-			
+
 		<script defer src="data.json"></script>
+		<script defer src="form-state.js"></script>
 		<script defer src="script.js"></script>
 	</body>
 </html>

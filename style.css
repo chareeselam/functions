@@ -12,6 +12,14 @@ body {
 	padding: var(--spacing);
 }
 
+.step {
+	display: none;
+}
+
+.step.active {
+	display: block;
+}
+
 form {
 	background-color: whitesmoke;
 	border-radius: calc(var(--spacing) / 2);
