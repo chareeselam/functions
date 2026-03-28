@@ -16,6 +16,7 @@
 			https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
 				
 			<fieldset class="step">
+					<button>Back</button>
 					<legend>Do you want to stay in or go out?</legend>
 					<!-- And how different the `radio` type is! -->
 					<input id="stay-in" name="stay-or-go" type="radio" value="stay-in">
@@ -25,12 +26,14 @@
 				</fieldset>
 
 				<section class="step">
-					<label for="energy-level">What is your energy level?</label>
-					<input type="range" id="energy-level" name="energy-level" min="0" max="5" value="5">
+					<button>Back</button>
+					<label for="energy">What is your energy level?</label>
+					<input type="range" id="energy" name="energy" min="0" max="5" value="5">
 				</section>
 
 
 				<fieldset class="step">
+					<button>Back</button>
 					<legend>How do you want to spend your time?</legend>
 					<!-- And how different the `radio` type is! -->
 					<input id="solo" name="solo-or-social" type="radio" value="solo">
@@ -40,9 +43,10 @@
 				</fieldset>
 
 				<section class="step">
-					<label for="some-option">And a dropdown <code>&lt;select&gt;</code>:</label>
+					<button>Back</button>
+					<label for="type-of-activity">And a dropdown <code>&lt;select&gt;</code>:</label>
 					<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
-					<select id="some-option" name="some-option">
+					<select id="type-of-activity" name="type-of-activity">
 							<option>Cozy</option>
 							<option>Create</option>
 							<option>Move</option>
@@ -50,19 +54,33 @@
 							<option>Eat & Drink</option>
 							<option>Social</option>
 					</select>
+					<button>Submit</button>
 				</section>
 
-				<section class="step">
+				<fieldset class="step">
+					<legend>What's your budget?</legend>
+					<input id="cost-low" name="cost" type="radio" value="low">
+					<label for="cost-low">Low</label>
+					<input id="cost-medium" name="cost" type="radio" value="medium">
+					<label for="cost-medium">Medium</label>
+					<input id="cost-high" name="cost" type="radio" value="high">
+					<label for="cost-high">High</label>
+				</fieldset>
+
+				<!-- <section class="step"> -->
 					<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
 					<!-- <button type="reset">Reset</button> -->
 					<!-- `button` without a type will submit their parent `form`. -->
-					<button>Submit</button>
+					<!-- <button>Submit</button> -->
 					<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
-				</section>
+				<!-- </section> -->
 			</form>
+
+			<div id="result"></div>
+
 		</main>
 
-		<script defer src="data.json"></script>
+		<!-- <script defer src="data.json"></script> -->
 		<script defer src="form-state.js"></script>
 		<script defer src="script.js"></script>
 	</body>
