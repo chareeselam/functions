@@ -14,7 +14,7 @@
 			<form id="nightcap-form" action="/my-handling-form-page" method="post">
 			<!-- Added action and method attributes to the form.
 			https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
-			<button>Back</button>
+			<button type="reset">Start again</button>
 			
 			<fieldset class="step">
 					<legend>Do you want to stay in or go out?</legend>
@@ -27,7 +27,7 @@
 
 				<section class="step">
 					<label for="energy">What is your energy level?</label>
-					<input type="range" id="energy" name="energy" min="0" max="5" value="5">
+					<input type="range" id="energy" name="energy" min="0" max="5" value="0">
 				</section>
 
 
@@ -41,7 +41,7 @@
 				</fieldset>
 
 				<section class="step">
-					<label for="type-of-activity">And a dropdown <code>&lt;select&gt;</code>:</label>
+					<label for="type-of-activity">What type of activity are you interested in?</label>
 					<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
 					<select id="type-of-activity" name="type-of-activity">
 							<option>Cozy</option>
@@ -51,7 +51,6 @@
 							<option>Eat & Drink</option>
 							<option>Social</option>
 					</select>
-					<button>Submit</button>
 				</section>
 
 				<fieldset class="step">
@@ -68,7 +67,8 @@
 					<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
 					<!-- <button type="reset">Reset</button> -->
 					<!-- `button` without a type will submit their parent `form`. -->
-					<button>Submit</button>
+					<button id="next" type="button">Next</button>
+					<button id="submit" type="submit">Submit</button>
 					<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
 				<!-- </section> -->
 			</form>

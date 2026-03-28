@@ -1,4 +1,6 @@
 const steps = document.querySelectorAll('.step')
+const nextBtn = document.querySelector('#next')
+const submitBtn = document.querySelector('#submit')
 let currentStep = 0
 let data = []
  
@@ -13,7 +15,22 @@ function showStep(index) {
 	steps.forEach((step, i) => {
 		step.classList.toggle('active', i === index)
 	})
+
+    const isLast = index === steps.length - 1
+	nextBtn.hidden = isLast
+	submitBtn.hidden = !isLast
 }
+
+nextBtn.addEventListener('click', () => {
+	const currentStepEl = steps[currentStep]
+	const radios = [...currentStepEl.querySelectorAll('input[type="radio"]')]
+ 
+	if (radios.length > 0 && !radios.some(r => r.checked)) return
+ 
+	currentStepEl.classList.add('answered')
+	currentStep++
+	showStep(currentStep)
+})
 
 // // Target your form.
 // let formElement = document.querySelector('#nightcap-form')
