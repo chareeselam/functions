@@ -63,6 +63,12 @@ submitBtn.addEventListener('click', (event) => {
     const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')?.value
     const cost = document.querySelector('[name="cost"]:checked')?.value
     const activityType = document.querySelector('#activity-dropdown').value
+
+    // map energy level 1-5
+    let energyLevel
+    if (energyValue <= 2) energyLevel = 'low'
+    else if (energyValue <= 3) energyLevel = 'medium'
+    else energyLevel = 'high'
 })
 
 // // Target your form.
