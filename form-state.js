@@ -17,6 +17,8 @@ fetch('data.json')
 function isAnswered(step) {
     const radio = step.querySelector('input[type="radio"]')
     if (radio) return !!step.querySelector('input[type="radio"]:checked')
+    const dropdown = step.querySelector('select')
+    if (dropdown) return dropdown.value !== ''
     return true
 }
 
@@ -35,8 +37,14 @@ function showStep(index) {
         submitBtn.classList.toggle('disabled', !isAnswered(steps[index]))
 }
 
+// update next/submit button state when user makes a selection
+document.querySelector('#nightcap-form').addEventListener('change', () => {
+    showStep(currentStep)
+})
+
 // next question
 nextBtn.addEventListener('click', () => {
+	if (!isAnswered(steps[currentStep])) return
 	steps[currentStep].classList.add('answered')
 	currentStep++
 	showStep(currentStep)
@@ -81,6 +89,18 @@ submitBtn.addEventListener('click', (event) => {
         return inOutMatch && energyMatch && costMatch && soloSocialMatch && activityMatch
         // https://www.reddit.com/r/worldjerking/comments/16xaa78/can_someone_explain_and/
     })
+
+    const resultDiv = document.querySelector('#result')
+        if (results.length === 0) {
+            resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
+        } else {
+            resultDiv.innerHTML = results.map(item => 
+                `
+                    <img src="${item.image}" alt="${item.name}">
+                    <p>${item.name}</p>
+                `
+                ).join('')
+        }
 })
 
 // // Target your form.
