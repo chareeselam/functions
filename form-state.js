@@ -4,26 +4,17 @@ const submitBtn = document.querySelector('#submit')
 let currentStep = 0
 let data = []
 
-// load data and show question one
+// load data then show question one
 fetch('data.json')
 	.then(response => response.json())
-    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Parsing_JSON
-    // Parse from raw data to JS array
+    // https://developer.mozilla.org/en-US/docs/Web/API/Response/json
 	.then(json => {
 		data = json
 		showStep(0)
 	})
 
-// radio next button
-function isAnswered(stepEl) {
-	const radios = stepEl.querySelectorAll('input[type="radio"]')
-	for (let radio of radios) {
-		if (radio.checked) return true
-	}
-	return radios.length === 0
-}
 
-// next/submit buttons
+// show/hide/disabled next/submit buttons
 function showStep(index) {
     steps.forEach((step, i) => {
         step.classList.toggle('active', i === index)
