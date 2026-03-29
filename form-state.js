@@ -69,6 +69,18 @@ submitBtn.addEventListener('click', (event) => {
     if (energyValue <= 2) energyLevel = 'low'
     else if (energyValue <= 3) energyLevel = 'medium'
     else energyLevel = 'high'
+
+    const results = data.filter(item => {
+        const criteria = item.criteria
+        const inOutMatch = criteria.find(c => c['in/out'])?.['in/out']?.[stayOrGo]
+        const energyMatch = criteria.find(c => c['energy'])?.['energy']?.[energyLevel]
+        const costMatch = criteria.find(c => c['cost'])?.['cost']?.[cost]
+        const soloSocialMatch = criteria.find(c => c['solo/social'])?.['solo/social']?.[soloOrSocial]
+        const activityMatch = criteria.find(c => c['type of activity'])?.['type of activity']?.includes(activityType)
+
+        return inOutMatch && energyMatch && costMatch && soloSocialMatch && activityMatch
+        // https://www.reddit.com/r/worldjerking/comments/16xaa78/can_someone_explain_and/
+    })
 })
 
 // // Target your form.
