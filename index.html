@@ -9,74 +9,84 @@
 	</head>
 	<body>
 		<main>
-			<h1>Functions</h1>
-			<p>Lorem Ipsum</p>
-			<form id="nightcap-form" action="/my-handling-form-page" method="post">
-			<!-- Added action and method attributes to the form.
-			https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
-			<button type="reset">Start again</button>
-			
-			<fieldset class="step">
-					<legend>Do you want to stay in or go out?</legend>
-					<!-- And how different the `radio` type is! -->
-					<input id="stay-in" name="stay-or-go" type="radio" value="stay in">
-					<label for="stay-in">Stay in</label>
-					<input id="go-out" name="stay-or-go" type="radio" value="go out">
-					<label for="go-out">Go out</label>
-				</fieldset>
+			<section id="intro">
+				<h1>Nightcap</h1>
+				<p>Nightcap is a concept for a digital tool that helps you answer the nightly question: "What should I do tonight?" before you end up three hours deep into your phone wondering where the evening went.</p>
+				<p>Tell it how you're feeling, how much energy you've got, what your budget looks like, and whether pants are still an option, and it gives you something worth doing. Going out? It finds events and activities that match your vibe. Staying in? It helps you make the most of what you've already got at home. No guilt, no overthinking, just a better evening.</p>
+			</section>
 
-				<section class="step">
-					<label for="energy">What is your energy level?</label>
-					<input type="range" id="energy" name="energy" min="1" max="5" value="1">
-				</section>
+			<section>
+				<form id="nightcap-form" action="/my-handling-form-page" method="post">
+					<!-- Added action and method attributes to the form.
+					https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
+					<button type="reset">Start again</button>
+				
+					<fieldset class="step">
+						<legend>Do you want to stay in or go out?</legend>
+						<!-- And how different the `radio` type is! -->
+						<input id="stay-in" name="stay-or-go" type="radio" value="stay in">
+						<label for="stay-in">Stay in</label>
+						<input id="go-out" name="stay-or-go" type="radio" value="go out">
+						<label for="go-out">Go out</label>
+					</fieldset>
+
+					<section class="step">
+						<label for="energy">What is your energy level?</label>
+						<input type="range" id="energy" name="energy" min="1" max="5" value="1">
+					</section>
 
 
-				<fieldset class="step">
-					<legend>How do you want to spend your time?</legend>
-					<!-- And how different the `radio` type is! -->
-					<input id="solo" name="solo-or-social" type="radio" value="solo">
-					<label for="solo">Solo</label>
-					<input id="social" name="solo-or-social" type="radio" value="social">
-					<label for="social">Social</label>
-				</fieldset>
+					<fieldset class="step">
+						<legend>How do you want to spend your time?</legend>
+						<!-- And how different the `radio` type is! -->
+						<input id="solo" name="solo-or-social" type="radio" value="solo">
+						<label for="solo">Solo</label>
+						<input id="social" name="solo-or-social" type="radio" value="social">
+						<label for="social">Social</label>
+					</fieldset>
 
-				<section class="step">
-					<label for="activity-dropdown">What type of activity are you interested in?</label>
-					<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
-					<select id="activity-dropdown" name="activity-dropdown">
-							<option value="" disabled selected>Choose an option</option>	
-							<option>Cozy</option>
-							<option>Creative</option>
-							<option>Active</option>
-							<option>Explore</option>
-							<option>Eat & drink</option>
-							<option>Social</option>
-					</select>
-				</section>
+					<section class="step">
+						<label for="activity-dropdown">What type of activity are you interested in?</label>
+						<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
+						<select id="activity-dropdown" name="activity-dropdown">
+								<option value="" disabled selected>Choose an option</option>	
+								<option>Cozy</option>
+								<option>Creative</option>
+								<option>Active</option>
+								<option>Explore</option>
+								<option>Eat & drink</option>
+								<option>Social</option>
+						</select>
+					</section>
 
-				<fieldset class="step">
-					<legend>What's your budget?</legend>
-					<input id="cost-low" name="cost" type="radio" value="low">
-					<label for="cost-low">Low</label>
-					<input id="cost-medium" name="cost" type="radio" value="medium">
-					<label for="cost-medium">Medium</label>
-					<input id="cost-high" name="cost" type="radio" value="high">
-					<label for="cost-high">High</label>
-				</fieldset>
+					<fieldset class="step">
+						<legend>What's your budget?</legend>
+						<input id="cost-low" name="cost" type="radio" value="low">
+						<label for="cost-low">Low</label>
+						<input id="cost-medium" name="cost" type="radio" value="medium">
+						<label for="cost-medium">Medium</label>
+						<input id="cost-high" name="cost" type="radio" value="high">
+						<label for="cost-high">High</label>
+					</fieldset>
 
-				<!-- <section class="step"> -->
-					<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
-					<!-- <button type="reset">Reset</button> -->
-					<!-- `button` without a type will submit their parent `form`. -->
-					<button id="next" type="button">Next</button>
-					<button id="submit" type="submit">Submit</button>
-					<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
-				<!-- </section> -->
-			</form>
+					<!-- <section class="step"> -->
+						<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
+						<!-- <button type="reset">Reset</button> -->
+						<!-- `button` without a type will submit their parent `form`. -->
+						<button id="next" type="button">Next</button>
+						<button id="submit" type="submit">Submit</button>
+						<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
+					<!-- </section> -->
+				</form>
+			</section>
 
 			<div id="result"></div>
 
 		</main>
+		<footer>
+			<p>Designed by Chareese Lam</p>
+			<p>Typography & Interaction II</p>
+		</footer>
 
 		<!-- <script defer src="data.json"></script> -->
 		<script defer src="form-state.js"></script>
