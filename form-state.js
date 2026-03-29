@@ -13,6 +13,12 @@ fetch('data.json')
 		showStep(0)
 	})
 
+// next button only if users input is valid
+function isAnswered(step) {
+    const radio = step.querySelector('input[type="radio"]')
+    if (radio) return !!step.querySelector('input[type="radio"]:checked')
+    return true
+}
 
 // show/hide/disabled next/submit buttons
 function showStep(index) {
@@ -42,6 +48,21 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	steps.forEach(step => step.classList.remove('answered'))
 	document.querySelector('#result').innerHTML = ''
 	showStep(0)
+})
+
+// submit button
+// document.querySelector('#nightcap-form').addEventListener('submit', (event) => {
+
+
+// filter data and show result
+submitBtn.addEventListener('click', (event) => {
+    event.preventDefault()
+
+    const stayOrGo = document.querySelector('[name="stay-or-go"]:checked')?.value
+    const energyValue = parseInt(document.querySelector('#energy').value)
+    const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')?.value
+    const cost = document.querySelector('[name="cost"]:checked')?.value
+    const activityType = document.querySelector('#activity-dropdown').value
 })
 
 // // Target your form.

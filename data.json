@@ -30,7 +30,7 @@
         }
       },
       {
-        "type of activity": ["cozy", "social"]
+        "type of activity": ["Cozy", "Social"]
       }
     ]
   },
@@ -65,7 +65,7 @@
         }
       },
       {
-        "type of activity": ["cozy", "eat & drink"]
+        "type of activity": ["Cozy", "Eat & drink"]
       }
     ]
   },
@@ -100,7 +100,7 @@
         }
       },
       {
-        "type of activity": ["cozy"]
+        "type of activity": ["Cozy"]
       }
     ]
   },
@@ -135,7 +135,7 @@
         }
       },
       {
-        "type of activity": ["cozy", "creative"]
+        "type of activity": ["Cozy", "Creative"]
       }
     ]
   },
@@ -170,7 +170,7 @@
         }
       },
       {
-        "type of activity": ["cozy"]
+        "type of activity": ["Cozy"]
       }
     ]
   },
@@ -205,7 +205,7 @@
         }
       },
       {
-        "type of activity": ["cozy"]
+        "type of activity": ["Cozy"]
       }
     ]
   },
@@ -240,7 +240,7 @@
         }
       },
       {
-        "type of activity": ["creative", "cozy"]
+        "type of activity": ["Creative", "Cozy"]
       }
     ]
   },
@@ -275,7 +275,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "creative"]
+        "type of activity": ["Eat & drink", "Creative"]
       }
     ]
   },
@@ -310,7 +310,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "creative"]
+        "type of activity": ["Eat & drink", "Creative"]
       }
     ]
   },
@@ -345,7 +345,7 @@
         }
       },
       {
-        "type of activity": ["cozy", "social"]
+        "type of activity": ["Cozy", "Social"]
       }
     ]
   },
@@ -380,7 +380,7 @@
         }
       },
       {
-        "type of activity": ["creative"]
+        "type of activity": ["Creative"]
       }
     ]
   },
@@ -415,7 +415,7 @@
         }
       },
       {
-        "type of activity": ["creative"]
+        "type of activity": ["Creative"]
       }
     ]
   },
@@ -450,7 +450,7 @@
         }
       },
       {
-        "type of activity": ["creative", "social"]
+        "type of activity": ["Creative", "Social"]
       }
     ]
   },
@@ -485,7 +485,7 @@
         }
       },
       {
-        "type of activity": ["active", "creative"]
+        "type of activity": ["Active", "Creative"]
       }
     ]
   },
@@ -520,7 +520,7 @@
         }
       },
       {
-        "type of activity": ["active"]
+        "type of activity": ["Active"]
       }
     ]
   },
@@ -555,7 +555,7 @@
         }
       },
       {
-        "type of activity": ["creative", "active"]
+        "type of activity": ["Creative", "Active"]
       }
     ]
   },
@@ -590,7 +590,7 @@
         }
       },
       {
-        "type of activity": ["active"]
+        "type of activity": ["Active"]
       }
     ]
   },
@@ -625,7 +625,7 @@
         }
       },
       {
-        "type of activity": ["creative", "social"]
+        "type of activity": ["Creative", "Social"]
       }
     ]
   },
@@ -660,7 +660,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "social"]
+        "type of activity": ["Eat & drink", "Social"]
       }
     ]
   },
@@ -695,7 +695,7 @@
         }
       },
       {
-        "type of activity": ["social"]
+        "type of activity": ["Social"]
       }
     ]
   },
@@ -730,7 +730,7 @@
         }
       },
       {
-        "type of activity": ["cozy", "social"]
+        "type of activity": ["Cozy", "Social"]
       }
     ]
   },
@@ -765,7 +765,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "cozy"]
+        "type of activity": ["Eat & drink", "Cozy"]
       }
     ]
   },
@@ -800,7 +800,7 @@
         }
       },
       {
-        "type of activity": ["explore", "cozy"]
+        "type of activity": ["Explore", "Cozy"]
       }
     ]
   },
@@ -835,7 +835,7 @@
         }
       },
       {
-        "type of activity": ["explore"]
+        "type of activity": ["Explore"]
       }
     ]
   },
@@ -870,7 +870,7 @@
         }
       },
       {
-        "type of activity": ["explore", "cozy"]
+        "type of activity": ["Explore", "Cozy"]
       }
     ]
   },
@@ -905,7 +905,7 @@
         }
       },
       {
-        "type of activity": ["explore", "active"]
+        "type of activity": ["Explore", "Active"]
       }
     ]
   },
@@ -940,7 +940,7 @@
         }
       },
       {
-        "type of activity": ["explore", "active"]
+        "type of activity": ["Explore", "Active"]
       }
     ]
   },
@@ -975,7 +975,7 @@
         }
       },
       {
-        "type of activity": ["social", "eat & drink"]
+        "type of activity": ["Social", "Eat & drink"]
       }
     ]
   },
@@ -1010,7 +1010,7 @@
         }
       },
       {
-        "type of activity": ["explore"]
+        "type of activity": ["Explore"]
       }
     ]
   },
@@ -1045,7 +1045,7 @@
         }
       },
       {
-        "type of activity": ["explore", "eat & drink"]
+        "type of activity": ["Explore", "Eat & drink"]
       }
     ]
   },
@@ -1080,7 +1080,7 @@
         }
       },
       {
-        "type of activity": ["explore"]
+        "type of activity": ["Explore"]
       }
     ]
   },
@@ -1115,7 +1115,7 @@
         }
       },
       {
-        "type of activity": ["creative", "explore"]
+        "type of activity": ["Creative", "Explore"]
       }
     ]
   },
@@ -1150,7 +1150,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "explore"]
+        "type of activity": ["Eat & drink", "Explore"]
       }
     ]
   },
@@ -1185,7 +1185,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "social"]
+        "type of activity": ["Eat & drink", "Social"]
       }
     ]
   },
@@ -1220,7 +1220,7 @@
         }
       },
       {
-        "type of activity": ["eat & drink", "social"]
+        "type of activity": ["Eat & drink", "Social"]
       }
     ]
   },
@@ -1255,7 +1255,7 @@
         }
       },
       {
-        "type of activity": ["social", "cozy"]
+        "type of activity": ["Social", "Cozy"]
       }
     ]
   },
@@ -1290,7 +1290,7 @@
         }
       },
       {
-        "type of activity": ["social", "active"]
+        "type of activity": ["Social", "Active"]
       }
     ]
   },
@@ -1325,7 +1325,7 @@
         }
       },
       {
-        "type of activity": ["social"]
+        "type of activity": ["Social"]
       }
     ]
   },
@@ -1360,7 +1360,7 @@
         }
       },
       {
-        "type of activity": ["social", "active"]
+        "type of activity": ["Social", "Active"]
       }
     ]
   },
@@ -1395,7 +1395,7 @@
         }
       },
       {
-        "type of activity": ["social"]
+        "type of activity": ["Social"]
       }
     ]
   },
@@ -1430,7 +1430,7 @@
         }
       },
       {
-        "type of activity": ["social", "active"]
+        "type of activity": ["Social", "Active"]
       }
     ]
   },
@@ -1465,7 +1465,7 @@
         }
       },
       {
-        "type of activity": ["social", "eat & drink"]
+        "type of activity": ["Social", "Eat & drink"]
       }
     ]
   },
@@ -1500,7 +1500,7 @@
         }
       },
       {
-        "type of activity": ["explore", "social"]
+        "type of activity": ["Explore", "Social"]
       }
     ]
   },
@@ -1535,7 +1535,7 @@
         }
       },
       {
-        "type of activity": ["active", "social"]
+        "type of activity": ["Active", "Social"]
       }
     ]
   },
@@ -1570,7 +1570,7 @@
         }
       },
       {
-        "type of activity": ["active", "social"]
+        "type of activity": ["Active", "Social"]
       }
     ]
   },
@@ -1605,7 +1605,7 @@
         }
       },
       {
-        "type of activity": ["active", "explore"]
+        "type of activity": ["Active", "Explore"]
       }
     ]
   },
@@ -1640,7 +1640,7 @@
         }
       },
       {
-        "type of activity": ["explore", "cozy"]
+        "type of activity": ["Explore", "Cozy"]
       }
     ]
   },
@@ -1675,7 +1675,7 @@
         }
       },
       {
-        "type of activity": ["social", "active"]
+        "type of activity": ["Social", "Active"]
       }
     ]
   },
@@ -1710,7 +1710,7 @@
         }
       },
       {
-        "type of activity": ["creative", "explore"]
+        "type of activity": ["Creative", "Explore"]
       }
     ]
   }

@@ -19,9 +19,9 @@
 			<fieldset class="step">
 					<legend>Do you want to stay in or go out?</legend>
 					<!-- And how different the `radio` type is! -->
-					<input id="stay-in" name="stay-or-go" type="radio" value="stay-in">
+					<input id="stay-in" name="stay-or-go" type="radio" value="stay in">
 					<label for="stay-in">Stay in</label>
-					<input id="go-out" name="stay-or-go" type="radio" value="go-out">
+					<input id="go-out" name="stay-or-go" type="radio" value="go out">
 					<label for="go-out">Go out</label>
 				</fieldset>
 
@@ -44,11 +44,12 @@
 					<label for="activity-dropdown">What type of activity are you interested in?</label>
 					<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
 					<select id="activity-dropdown" name="activity-dropdown">
+							<option value="" disabled selected>Choose an option</option>	
 							<option>Cozy</option>
 							<option>Creative</option>
 							<option>Active</option>
 							<option>Explore</option>
-							<option>Eat & Drink</option>
+							<option>Eat & drink</option>
 							<option>Social</option>
 					</select>
 				</section>
