@@ -3,6 +3,7 @@
 :root {
 	--white: #ffffff;
 	--black: #171717;
+	--bg-color: #F8C2C2;
 
 	/* spacing */
 	--space-sm: 0.5rem;
@@ -16,7 +17,7 @@
 	/* font sizes */
 	--text-sm:   0.875rem;
 	--text-base: 1rem;
-	--text-lg:   1.5rem;
+	--text-lg:   5rem;
 }
 
 p {
@@ -29,16 +30,18 @@ p {
 h1 {
 	font-family: var(--heading-font);
 	font-size: var(--text-lg);
+	text-transform: uppercase;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	padding: var(--space-md);
+	background-color: var(--bg-color);
 }
 
 main {
-	background-color: var(--white);
+	background-color: var(--bg-color);
 	display: grid;
 	gap: var(--space-md);
 
@@ -56,7 +59,7 @@ main {
 }
 
 form {
-	background-color: #f2f2f2;
+	background-color: #ffedb7;
 	border-radius: var(--space-sm);
 	display: grid;
 	gap: var(--space-md);

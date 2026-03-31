@@ -1,7 +1,7 @@
 [
   {
     "name": "Watch a comfort movie",
-    "image": "assets/images/watch-a-comfort-movie.jpg",
+    "image": "assets/images/watch-a-comfort-movie.png",
     "criteria": [
       {
         "in/out": {
@@ -36,7 +36,7 @@
   },
   {
     "name": "Order takeout and have a cozy night",
-    "image": "assets/images/order-takeout-and-have-a-cozy-night.jpg",
+    "image": "assets/images/order-takeout-and-have-a-cozy-night.png",
     "criteria": [
       {
         "in/out": {
@@ -71,7 +71,7 @@
   },
   {
     "name": "Listen to a podcast and unwind",
-    "image": "assets/images/listen-to-a-podcast-and-unwind.jpg",
+    "image": "assets/images/listen-to-a-podcast.png",
     "criteria": [
       {
         "in/out": {
@@ -106,7 +106,7 @@
   },
   {
     "name": "Journal for 10 minutes",
-    "image": "assets/images/journal-for-10-minutes.jpg",
+    "image": "assets/images/journal-for-10-minutes.png",
     "criteria": [
       {
         "in/out": {
@@ -141,7 +141,7 @@
   },
   {
     "name": "Read with tea",
-    "image": "assets/images/read-with-tea.jpg",
+    "image": "assets/images/read-with-tea.png",
     "criteria": [
       {
         "in/out": {
@@ -176,7 +176,7 @@
   },
   {
     "name": "Self-care night",
-    "image": "assets/images/self-care-night.jpg",
+    "image": "assets/images/self-care-night.png",
     "criteria": [
       {
         "in/out": {
@@ -211,7 +211,7 @@
   },
   {
     "name": "Build a playlist",
-    "image": "assets/images/build-a-playlist.jpg",
+    "image": "assets/images/build-a-playlist.png",
     "criteria": [
       {
         "in/out": {
@@ -246,7 +246,7 @@
   },
   {
     "name": "Bake cookies or dessert",
-    "image": "assets/images/bake-cookies-or-dessert.jpg",
+    "image": "assets/images/bake-cookies-or-dessert.png",
     "criteria": [
       {
         "in/out": {
@@ -281,7 +281,7 @@
   },
   {
     "name": "Try a new recipe",
-    "image": "assets/images/try-a-new-recipe.jpg",
+    "image": "assets/images/try-a-new-recipe.png",
     "criteria": [
       {
         "in/out": {
@@ -316,7 +316,7 @@
   },
   {
     "name": "Start a puzzle",
-    "image": "assets/images/start-a-puzzle.jpg",
+    "image": "assets/images/start-a-puzzle.png",
     "criteria": [
       {
         "in/out": {
@@ -351,7 +351,7 @@
   },
   {
     "name": "Paint or sketch",
-    "image": "assets/images/paint-or-sketch.jpg",
+    "image": "assets/images/paint-or-sketch.png",
     "criteria": [
       {
         "in/out": {
@@ -386,7 +386,7 @@
   },
   {
     "name": "Start a scrapbook",
-    "image": "assets/images/start-a-scrapbook.jpg",
+    "image": "assets/images/start-a-scrapbook.png",
     "criteria": [
       {
         "in/out": {
@@ -421,7 +421,7 @@
   },
   {
     "name": "Make a vision board",
-    "image": "assets/images/make-a-vision-board.jpg",
+    "image": "assets/images/make-a-vision-board.png",
     "criteria": [
       {
         "in/out": {
@@ -456,7 +456,7 @@
   },
   {
     "name": "Learn a dance online",
-    "image": "assets/images/learn-a-dance-online.jpg",
+    "image": "assets/images/learn-a-dance-online.png",
     "criteria": [
       {
         "in/out": {
@@ -491,7 +491,7 @@
   },
   {
     "name": "At-home workout",
-    "image": "assets/images/at-home-workout.jpg",
+    "image": "assets/images/at-home-workout.png",
     "criteria": [
       {
         "in/out": {
@@ -526,7 +526,7 @@
   },
   {
     "name": "Redecorate your room",
-    "image": "assets/images/redecorate-your-room.jpg",
+    "image": "assets/images/redecorate-your-room.png",
     "criteria": [
       {
         "in/out": {
@@ -561,7 +561,7 @@
   },
   {
     "name": "Deep clean and reset",
-    "image": "assets/images/deep-clean-and-reset.jpg",
+    "image": "assets/images/deep-clean-and-reset.png",
     "criteria": [
       {
         "in/out": {
@@ -595,8 +595,8 @@
     ]
   },
   {
-    "name": "DIY nails or craft night",
-    "image": "assets/images/diy-nails-or-craft-night.jpg",
+    "name": "Do your nails",
+    "image": "assets/images/diy-nails.png",
     "criteria": [
       {
         "in/out": {
@@ -631,7 +631,7 @@
   },
   {
     "name": "Mocktail night",
-    "image": "assets/images/mocktail-night.jpg",
+    "image": "assets/images/mocktail-night.png",
     "criteria": [
       {
         "in/out": {
@@ -666,7 +666,7 @@
   },
   {
     "name": "Game night at home",
-    "image": "assets/images/game-night-at-home.jpg",
+    "image": "assets/images/game-night-at-home.png",
     "criteria": [
       {
         "in/out": {
@@ -701,7 +701,7 @@
   },
   {
     "name": "Movie night with friends",
-    "image": "assets/images/movie-night-with-friends.jpg",
+    "image": "assets/images/movie-night-with-friends.png",
     "criteria": [
       {
         "in/out": {
@@ -736,7 +736,7 @@
   },
   {
     "name": "Solo café date",
-    "image": "assets/images/solo-cafe-date.jpg",
+    "image": "assets/images/solo-cafe-date.png",
     "criteria": [
       {
         "in/out": {
@@ -771,7 +771,7 @@
   },
   {
     "name": "Visit a bookstore",
-    "image": "assets/images/visit-a-bookstore.jpg",
+    "image": "assets/images/visit-a-bookstore.png",
     "criteria": [
       {
         "in/out": {
@@ -806,7 +806,7 @@
   },
   {
     "name": "Go to a museum",
-    "image": "assets/images/go-to-a-museum.jpg",
+    "image": "assets/images/go-to-a-museum.png",
     "criteria": [
       {
         "in/out": {
@@ -841,7 +841,7 @@
   },
   {
     "name": "Sit in a park and people-watch",
-    "image": "assets/images/sit-in-a-park-and-people-watch.jpg",
+    "image": "assets/images/sit-in-a-park-and-people-watch.png",
     "criteria": [
       {
         "in/out": {
@@ -876,7 +876,7 @@
   },
   {
     "name": "Sunset walk",
-    "image": "assets/images/sunset-walk.jpg",
+    "image": "assets/images/sunset-walk.png",
     "criteria": [
       {
         "in/out": {
@@ -911,7 +911,7 @@
   },
   {
     "name": "Long walk in a new neighborhood",
-    "image": "assets/images/long-walk-in-a-new-neighborhood.jpg",
+    "image": "assets/images/long-walk-in-a-new-neighborhood.png",
     "criteria": [
       {
         "in/out": {
@@ -946,7 +946,7 @@
   },
   {
     "name": "Picnic",
-    "image": "assets/images/picnic.jpg",
+    "image": "assets/images/picnic.png",
     "criteria": [
       {
         "in/out": {
@@ -981,7 +981,7 @@
   },
   {
     "name": "Thrift shopping",
-    "image": "assets/images/thrift-shopping.jpg",
+    "image": "assets/images/thrift-shopping.png",
     "criteria": [
       {
         "in/out": {
@@ -1016,7 +1016,7 @@
   },
   {
     "name": "Farmers market",
-    "image": "assets/images/farmers-market.jpg",
+    "image": "assets/images/farmers-market.png",
     "criteria": [
       {
         "in/out": {
@@ -1051,7 +1051,7 @@
   },
   {
     "name": "Flea market",
-    "image": "assets/images/flea-market.jpg",
+    "image": "assets/images/flea-market.png",
     "criteria": [
       {
         "in/out": {
@@ -1086,7 +1086,7 @@
   },
   {
     "name": "Take photos around the city",
-    "image": "assets/images/take-photos-around-the-city.jpg",
+    "image": "assets/images/take-photos-around-the-city.png",
     "criteria": [
       {
         "in/out": {
@@ -1121,7 +1121,7 @@
   },
   {
     "name": "Try a new café",
-    "image": "assets/images/try-a-new-cafe.jpg",
+    "image": "assets/images/try-a-new-cafe.png",
     "criteria": [
       {
         "in/out": {
@@ -1156,7 +1156,7 @@
   },
   {
     "name": "Dessert run",
-    "image": "assets/images/dessert-run.jpg",
+    "image": "assets/images/dessert-run.png",
     "criteria": [
       {
         "in/out": {
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "Try a new restaurant",
-    "image": "assets/images/try-a-new-restaurant.jpg",
+    "image": "assets/images/try-a-new-restaurant.png",
     "criteria": [
       {
         "in/out": {
@@ -1226,7 +1226,7 @@
   },
   {
     "name": "Go to the movies",
-    "image": "assets/images/go-to-the-movies.jpg",
+    "image": "assets/images/go-to-the-movies.png",
     "criteria": [
       {
         "in/out": {
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "Go bowling",
-    "image": "assets/images/bowling.jpg",
+    "image": "assets/images/bowling.png",
     "criteria": [
       {
         "in/out": {
@@ -1296,7 +1296,7 @@
   },
   {
     "name": "Trivia night",
-    "image": "assets/images/trivia-night.jpg",
+    "image": "assets/images/trivia-night.png",
     "criteria": [
       {
         "in/out": {
@@ -1331,7 +1331,7 @@
   },
   {
     "name": "Go to an arcade",
-    "image": "assets/images/arcade.jpg",
+    "image": "assets/images/arcade.png",
     "criteria": [
       {
         "in/out": {
@@ -1366,7 +1366,7 @@
   },
   {
     "name": "Attend a comedy show",
-    "image": "assets/images/comedy-show.jpg",
+    "image": "assets/images/comedy-show.png",
     "criteria": [
       {
         "in/out": {
@@ -1401,7 +1401,7 @@
   },
   {
     "name": "Attend a concert",
-    "image": "assets/images/concert.jpg",
+    "image": "assets/images/concert.png",
     "criteria": [
       {
         "in/out": {
@@ -1436,7 +1436,7 @@
   },
   {
     "name": "Go to a rooftop bar",
-    "image": "assets/images/rooftop-bar.jpg",
+    "image": "assets/images/rooftop-bar.png",
     "criteria": [
       {
         "in/out": {
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "Attend a pop-up event",
-    "image": "assets/images/pop-up-event.jpg",
+    "image": "assets/images/pop-up-event.png",
     "criteria": [
       {
         "in/out": {
@@ -1506,7 +1506,7 @@
   },
   {
     "name": "Attend a fitness class",
-    "image": "assets/images/fitness-class.jpg",
+    "image": "assets/images/fitness-class.png",
     "criteria": [
       {
         "in/out": {
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "Roller skating or ice skating",
-    "image": "assets/images/roller-skating-or-ice-skating.jpg",
+    "image": "assets/images/roller-skating-or-ice-skating.png",
     "criteria": [
       {
         "in/out": {
@@ -1576,7 +1576,7 @@
   },
   {
     "name": "Hiking",
-    "image": "assets/images/hiking.jpg",
+    "image": "assets/images/hiking.png",
     "criteria": [
       {
         "in/out": {
@@ -1611,7 +1611,7 @@
   },
   {
     "name": "Botanical garden",
-    "image": "assets/images/botanical-garden.jpg",
+    "image": "assets/images/botanical-garden.png",
     "criteria": [
       {
         "in/out": {
@@ -1646,7 +1646,7 @@
   },
   {
     "name": "Volunteer locally",
-    "image": "assets/images/volunteer-locally.jpg",
+    "image": "assets/images/volunteer-locally.png",
     "criteria": [
       {
         "in/out": {
@@ -1681,7 +1681,7 @@
   },
   {
     "name": "Take a workshop or class",
-    "image": "assets/images/take-a-workshop-or-class.jpg",
+    "image": "assets/images/take-a-workshop-or-class.png",
     "criteria": [
       {
         "in/out": {
