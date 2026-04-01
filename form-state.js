@@ -33,8 +33,8 @@ function showStep(index) {
         nextBtn.hidden = isLast
         submitBtn.hidden = !isLast
 
-        nextBtn.classList.toggle('disabled', !isAnswered(steps[index]))
-        submitBtn.classList.toggle('disabled', !isAnswered(steps[index]))
+        nextBtn.disabled = !isAnswered(steps[index])
+        submitBtn.disabled = !isAnswered(steps[index])
 }
 
 // update next/submit button state when user makes a selection
