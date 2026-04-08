@@ -1,3 +1,8 @@
+document.querySelector('#get-started').addEventListener('click', () => {
+	document.querySelector('#intro').style.display = 'none'
+	document.querySelector('#form-section').classList.add('active')
+})
+
 const steps = document.querySelectorAll('.step')
 const nextBtn = document.querySelector('.next')
 const submitBtn = document.querySelector('#submit')

@@ -50,12 +50,20 @@ main {
 	}
 }
 
-.step {
+#form-section {
 	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
-.step.active {
-	display: block;
+.step {
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 form {
