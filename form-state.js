@@ -116,15 +116,17 @@ submitBtn.addEventListener('click', (event) => {
         return true;
     });
 
+    document.querySelector('#form-section').classList.remove('active')
+
     const resultDiv = document.querySelector('#result')
         if (results.length === 0) {
             resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
         } else {
-            resultDiv.innerHTML = results.map(item => 
-                `
+            resultDiv.innerHTML = results.map(item =>
+                `<div class="result-card">
                     <img src="${item.image}" alt="${item.name}">
                     <p>${item.name}</p>
-                `
+                </div>`
                 ).join('')
         }
 })
