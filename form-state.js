@@ -21,6 +21,38 @@ fetch('data.json')
 		showStep(0)
 	})
 
+// form progress bar
+// https://dev.to/jolamemushaj/how-to-create-a-steps-progress-bar-4m2b
+// i want to make a progress bar that fills in as users go through the form. i found this link and created a segmented progress bar. the list item is filled in when the user clicks "next" and moves on to the next question. i also added a class of "answered" to the step so that if users go back to previous questions, they can see which ones they've already answered.
+function updateProgressBar() {
+    const progressBarItems = document.querySelectorAll('#results-progress-bar li')
+
+    const first = document.querySelector(".first");
+    const second = document.querySelector(".second");
+    const third = document.querySelector(".third");
+    const fourth = document.querySelector(".fourth");
+    const fifth = document.querySelector(".fifth");
+    const steps = [first, second, third, fourth, fifth];
+
+    function nextStep(currentStep) {
+        steps.forEach(step => step.classList.remove("active"));
+
+        steps.forEach((step, index) => {
+            if (index <= currentStep) {
+                step.classList.add("active");
+            } else {
+                step.classList.remove("active");
+            }
+        });
+    };
+}
+
+steps.forEach((step, index) => {
+    step.addEventListener("click", () => {
+        nextStep(index);
+    });
+});
+
 // next button only if users input is valid
 function isAnswered(step) {
     const radio = step.querySelector('input[type="radio"]')
@@ -99,19 +131,24 @@ submitBtn.addEventListener('click', (event) => {
         // i am mapping through each item in the data and checking if it matches the user's selections. if any of the criteria don't match, i return false and that item is filtered out. If all criteria match, I return true and that item is included in the results.
 
         const inOut = criteria[0]["in/out"];
-        if (inOrOut && !inOut[inOrOut.value]) return false;
+        if (inOrOut && !inOut[inOrOut.value]) 
+            return false;
 
         const energy = criteria[1]["energy"];
-        if (energyLevel && !energy[energyLevel]) return false;
+        if (energyLevel && !energy[energyLevel]) 
+            return false;
 
         const cost = criteria[2]["cost"];
-        if (costSelection && !cost[costSelection.value]) return false;
+        if (costSelection && !cost[costSelection.value]) 
+            return false;
 
         const soloSocial = criteria[3]["solo/social"];
-        if (soloOrSocial && !soloSocial[soloOrSocial.value]) return false;
+        if (soloOrSocial && !soloSocial[soloOrSocial.value]) 
+            return false;
 
         const activityOptions = criteria[4]["type of activity"];
-        if (activityType && !activityOptions.includes(activityType)) return false;
+        if (activityType && !activityOptions.includes(activityType)) 
+            return false;
 
         return true;
     });
