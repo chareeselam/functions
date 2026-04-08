@@ -196,7 +196,13 @@ footer {
 					width: 80%;
 					height: 80%;
 					object-fit: contain;
+					filter: brightness(0) invert(1);
+					display: none;
 				}
+			}
+
+			&.active .check-mark img {
+				display: block;
 			}
 		}
 
@@ -263,6 +269,11 @@ footer {
 		background-color: var(--black);
 		color: var(--white);
 	}
+}
+
+#results-controls {
+	display: flex;
+	justify-content: space-between;
 }
 
 #result-recs {

@@ -91,11 +91,20 @@ nextBtn.addEventListener('click', () => {
 	updateProgressBar(currentStep) 
 })
 
+// restart button on results page — triggers the form's reset event
+document.querySelector('#results-restart').addEventListener('click', () => {
+	document.querySelector('#nightcap-form').reset()
+})
+
 // reset button
 document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	currentStep = 0
 	steps.forEach(step => step.classList.remove('answered'))
-	document.querySelector('#result').innerHTML = ''
+	document.querySelector('#result-recs').innerHTML = ''
+	document.querySelector('#shuffle').hidden = true
+	document.querySelector('#results-restart').hidden = true
+	document.querySelector('#form-section').classList.add('active')
+	document.querySelector('#results-progress-bar').classList.add('active')
 	showStep(0)
 	updateProgressBar(0)
 })
@@ -158,6 +167,7 @@ submitBtn.addEventListener('click', (event) => {
 
 	const resultDiv = document.querySelector('#result-recs')
 	const shuffleBtn = document.querySelector('#shuffle')
+	const restartBtn = document.querySelector('#results-restart')
 
 	// save all results so the shuffle button can access them
 	let allResults = results
@@ -169,8 +179,10 @@ submitBtn.addEventListener('click', (event) => {
 	if (results.length === 0) {
 		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
 		shuffleBtn.hidden = true
+		restartBtn.hidden = false
 	} else {
 		showThree()
+		restartBtn.hidden = false
 
 		// only show the shuffle button if there are more than 3 results
 		if (allResults.length > 3) {
