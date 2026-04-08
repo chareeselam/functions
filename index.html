@@ -25,7 +25,7 @@
 						<div class="progress-bar first">
 							<p>1</p>
 							<i class="check-mark">
-								<img src="assets/icons/Check.png" alt="check mark">
+								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
 						<p class="label">Stay in/Go out</p>
@@ -35,7 +35,7 @@
 						<div class="progress-bar second">
 							<p>2</p>
 							<i class="check-mark">
-								<img src="assets/icons/Check.png" alt="check mark">
+								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
 						<p class="label">Energy Level</p>
@@ -45,7 +45,7 @@
 						<div class="progress-bar third">
 							<p>3</p>
 							<i class="check-mark">
-								<img src="assets/icons/Check.png" alt="check mark">
+								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
 						<p class="label">Solo/Social</p>
@@ -55,7 +55,7 @@
 						<div class="progress-bar fourth">
 							<p>4</p>
 							<i class="check-mark">
-								<img src="assets/icons/Check.png" alt="check mark">
+								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
 						<p class="label">Activity Type</p>
@@ -65,13 +65,16 @@
 						<div class="progress-bar fifth">
 							<p>5</p>
 							<i class="check-mark">
-								<img src="assets/icons/Check.png" alt="check mark">
+								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
 						<p class="label">Budget</p>
 					</li>
 				</ul>
 
+				<button id="shuffle" hidden>
+					<img src="assets/icons/Shuffle.svg" alt="Shuffle">
+				</button>
 				<div id="result-recs"></div>
 			</div>
 
@@ -79,7 +82,9 @@
 				<form id="nightcap-form" action="/my-handling-form-page" method="post">
 					<!-- Added action and method attributes to the form.
 					https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
-					<button type="reset">Start again</button>
+					<button type="reset">
+						<img src="assets/icons/Restart.svg" alt="Restart">
+					</button>
 
 					<fieldset class="step">
 						<legend>Do you want to stay in or go out?</legend>
@@ -139,7 +144,7 @@
 				</form>
 			</section>
 
-			<div>
+			<!-- <div>
 				<div id="result-recap">
 					<h2>Your Selections</h2>
 					<ul id="recap-answers">
@@ -151,7 +156,7 @@
 					</ul>
 					<button id="edit-recap">Edit</button>
 				</div>
-			</div>
+			</div> -->
 					
 		</main>
 		<footer>

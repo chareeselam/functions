@@ -157,16 +157,52 @@ submitBtn.addEventListener('click', (event) => {
 	document.querySelector('#results-progress-bar').classList.remove('active')
 
 	const resultDiv = document.querySelector('#result-recs')
-		if (results.length === 0) {
-			resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
-		} else {
-			resultDiv.innerHTML = results.map(item =>
-				`<div class="results-card">
-					<img src="${item.image}" alt="${item.name}">
-					<p>${item.name}</p>
-				</div>`
-				).join('')
+	const shuffleBtn = document.querySelector('#shuffle')
+
+	// save all results so the shuffle button can access them
+	let allResults = results
+
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+	// i also used spread for my links project to generate the randomized grid so i brought it back in. i'm defining all results, and remaining results because i only want to show 3 results a time and have users click the shuffle button to view more if the top 3 suggestions aren't good enough. the spread here is to make a dupe of allResults so that when i splice the remaining array to show 3 results, it doesn't modify allResults and i can always go back to the full list of results when i need to refill the remaining pool.
+	let remaining = [...allResults]
+
+	if (results.length === 0) {
+		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
+		shuffleBtn.hidden = true
+	} else {
+		showThree()
+
+		// only show the shuffle button if there are more than 3 results
+		if (allResults.length > 3) {
+			shuffleBtn.hidden = false
 		}
+	}
+
+	function showThree() {
+		// if there are fewer than 3 left in the pool, refill it
+		if (remaining.length < 3) {
+			remaining = [...allResults]
+		}
+
+		// shuffle the remaining pool into a random order
+		remaining.sort(() => Math.random() - 0.5)
+
+		// take the first 3 and remove them from the pool so they won't repeat
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+		let threeResults = remaining.splice(0, 3)
+
+		// display them
+		resultDiv.innerHTML = threeResults.map(item =>
+			`<div class="results-card">
+				<img src="${item.image}" alt="${item.name}">
+				<p>${item.name}</p>
+			</div>`
+		).join('')
+	}
+
+	shuffleBtn.addEventListener('click', () => {
+		showThree()
+	})
 })
 
 // // Target your form.

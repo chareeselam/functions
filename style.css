@@ -266,15 +266,17 @@ footer {
 }
 
 #result-recs {
-	display: flex;
-	overflow-x: scroll;
-	scroll-snap-type: x mandatory;
+	display: grid;
+	/* grid-template-columns: repeat(2, 1fr); */
+	grid-template-columns: repeat(3, 1fr);
 	gap: var(--space-md);
+
+	/* @media (min-width: 750px) {
+		grid-template-columns: repeat(3, 1fr);
+	} */
 }
 
 .results-card {
-	flex: 0 0 calc((100% - 2 * var(--space-md)) / 3);
-	scroll-snap-align: start;
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-sm);
