@@ -130,14 +130,14 @@ footer {
 	}
 }
 
-#result {
+#result-recs {
 	display: flex;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	gap: var(--space-md);
 }
 
-.result-card {
+.results-card {
 	flex: 0 0 calc((100% - 2 * var(--space-md)) / 3);
 	scroll-snap-align: start;
 	display: flex;
