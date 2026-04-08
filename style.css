@@ -146,7 +146,11 @@ footer {
 }
 
 #results-progress-bar {
-    display: flex;
+    display: none;
+
+	&.active {
+		display: flex;
+	}
 
 	li {
 		list-style: none;

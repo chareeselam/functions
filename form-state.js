@@ -1,6 +1,7 @@
 document.querySelector('#get-started').addEventListener('click', () => {
 	document.querySelector('#intro').style.display = 'none'
 	document.querySelector('#form-section').classList.add('active')
+	document.querySelector('#results-progress-bar').classList.add('active')
 })
 
 const steps = document.querySelectorAll('.step')
@@ -153,6 +154,7 @@ submitBtn.addEventListener('click', (event) => {
 	});
 
 	document.querySelector('#form-section').classList.remove('active')
+	document.querySelector('#results-progress-bar').classList.remove('active')
 
 	const resultDiv = document.querySelector('#result-recs')
 		if (results.length === 0) {
