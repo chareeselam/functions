@@ -23,10 +23,9 @@
 				
 					<fieldset class="step">
 						<legend>Do you want to stay in or go out?</legend>
-						<!-- And how different the `radio` type is! -->
-						<input id="stay-in" name="stay-or-go" type="radio" value="stay in">
+						<input id="stay-in" name="in-or-out" type="radio" value="stay in">
 						<label for="stay-in">Stay in</label>
-						<input id="go-out" name="stay-or-go" type="radio" value="go out">
+						<input id="go-out" name="in-or-out" type="radio" value="go out">
 						<label for="go-out">Go out</label>
 					</fieldset>
 
@@ -73,7 +72,7 @@
 						<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
 						<!-- <button type="reset">Reset</button> -->
 						<!-- `button` without a type will submit their parent `form`. -->
-						<button id="next" type="button" disabled>Next</button>
+						<button class="next" type="button" disabled>Next</button>
 						<button id="submit" type="submit" disabled>Submit</button>
 						<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
 					<!-- </section> -->

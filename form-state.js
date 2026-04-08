@@ -1,10 +1,13 @@
 const steps = document.querySelectorAll('.step')
-const nextBtn = document.querySelector('#next')
+const nextBtn = document.querySelector('.next')
 const submitBtn = document.querySelector('#submit')
 let currentStep = 0
 let data = []
 
 // load data then show question one
+// this is a fetch request to get the data from the .json file
+// i learned that fetch returns a promise and that we can chain .then() to handle the response
+// the first .then() converts the response to JSON, and the second .then() assigns the JSON data to our variable and shows the first step of the form
 fetch('data.json')
 	.then(response => response.json())
     // https://developer.mozilla.org/en-US/docs/Web/API/Response/json
@@ -19,6 +22,8 @@ function isAnswered(step) {
     if (radio) return !!step.querySelector('input[type="radio"]:checked')
     const dropdown = step.querySelector('select')
     if (dropdown) return dropdown.value !== ''
+    // this means that if there are radios or dropdowns in the step, we check if they have a value before allowing users to click "next". If there aren't any radios or dropdowns, we just return true and allow users to click "next" without having to answer any questions (like for the energy level slider).
+    // i only need it for radios and dropdowns because for other questions like my energyLevel slider, it starts at "1" but if users are already feeling "1", they don't have to move it and just click "next"
     return true
 }
 
@@ -61,34 +66,50 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 // submit button
 // document.querySelector('#nightcap-form').addEventListener('submit', (event) => {
 
-
 // filter data and show result
+
+// after speaking to my professor Michael about and Eric, i rewrote the logic of how the form filters through data. Explained my logic below.
+// main issue after: The "submit" button wasn't working after i rewrote it and i spoke with Claude to understand why and the mistakes i made were: forgetting to define criteria [x], starting an array at 1 instead of 0, mismatch naming between form and data, and not including the "type of activity" criteria in the filtering logic.
+// https://claude.ai/share/fb79f9e3-bb71-4878-b95a-296a0b03281c
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault()
 
-    const stayOrGo = document.querySelector('[name="stay-or-go"]:checked')?.value
-    const energyValue = parseInt(document.querySelector('#energy').value)
-    const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')?.value
-    const cost = document.querySelector('[name="cost"]:checked')?.value
-    const activityType = document.querySelector('#activity-dropdown').value
+    const inOrOut = document.querySelector('[name="in-or-out"]:checked')
+    let energyLevel = parseInt(document.querySelector('#energy').value)
+    // i wanted users to fill out the form and give them more flexibility when answering the energy level question so i decided to represent it of 1-5 so they can pick in-between values. i had to parse it as an integer because the value from the dropdown is a string and i needed to compare it to numbers.
+    // i also learned to change const to let for energyLevel because i needed to reassign the value after mapping it to low/medium/high.
+    const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')
+    const costSelection = document.querySelector('[name="cost"]:checked')
+    const activityType = document.querySelector('#activity-dropdown').value;
 
     // map energy level 1-5
-    let energyLevel
-    if (energyValue <= 2) energyLevel = 'low'
-    else if (energyValue <= 3) energyLevel = 'medium'
-    else energyLevel = 'high'
+    // the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data. 
+    let energyValue = energyLevel
+        if (energyLevel <= 2) energyLevel = 'low'
+        else if (energyLevel <= 3) energyLevel = 'medium'
+        else energyLevel = 'high'
 
     const results = data.filter(item => {
-        const criteria = item.criteria
-        const inOutMatch = criteria.find(c => c['in/out'])?.['in/out']?.[stayOrGo]
-        const energyMatch = criteria.find(c => c['energy'])?.['energy']?.[energyLevel]
-        const costMatch = criteria.find(c => c['cost'])?.['cost']?.[cost]
-        const soloSocialMatch = criteria.find(c => c['solo/social'])?.['solo/social']?.[soloOrSocial]
-        const activityMatch = criteria.find(c => c['type of activity'])?.['type of activity']?.includes(activityType)
+        const criteria = item.criteria;
+        // i am mapping through each item in the data and checking if it matches the user's selections. if any of the criteria don't match, i return false and that item is filtered out. If all criteria match, I return true and that item is included in the results.
 
-        return inOutMatch && energyMatch && costMatch && soloSocialMatch && activityMatch
-        // https://www.reddit.com/r/worldjerking/comments/16xaa78/can_someone_explain_and/
-    })
+        const inOut = criteria[0]["in/out"];
+        if (inOrOut && !inOut[inOrOut.value]) return false;
+
+        const energy = criteria[1]["energy"];
+        if (energyLevel && !energy[energyLevel]) return false;
+
+        const cost = criteria[2]["cost"];
+        if (costSelection && !cost[costSelection.value]) return false;
+
+        const soloSocial = criteria[3]["solo/social"];
+        if (soloOrSocial && !soloSocial[soloOrSocial.value]) return false;
+
+        const activityOptions = criteria[4]["type of activity"];
+        if (activityType && !activityOptions.includes(activityType)) return false;
+
+        return true;
+    });
 
     const resultDiv = document.querySelector('#result')
         if (results.length === 0) {
