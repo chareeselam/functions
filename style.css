@@ -93,11 +93,13 @@ fieldset {
 		margin-bottom: var(--space-sm);
 	}
 
-	input[type="radio"] {
+	input[type="radio"],
+	input[type="checkbox"] {
 		display: none;
 	}
 
-	input[type="radio"]:checked + label {
+	input[type="radio"]:checked + label,
+	input[type="checkbox"]:checked + label {
 		background-color: var(--black);
 		border-color: var(--black);
 		color: var(--white);

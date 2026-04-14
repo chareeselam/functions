@@ -57,17 +57,17 @@
 								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
-						<p class="label">Activity Type</p>
+						<p class="label">Budget</p>
 					</li>
 					<li>
-						<i class="icons-budget"></i>
+						<i class="icons-activity"></i>
 						<div class="progress-bar fifth">
 							<p>5</p>
 							<i class="check-mark">
 								<img src="assets/icons/Check.svg" alt="check mark">
 							</i>
 						</div>
-						<p class="label">Budget</p>
+						<p class="label">Activity Type</p>
 					</li>
 				</ul>
 
@@ -114,22 +114,6 @@
 					</fieldset>
 
 					<fieldset class="step">
-						<legend>What type of activity are you interested in?</legend>
-						<input id="activity-cozy" name="activity-dropdown" type="radio" value="Cozy">
-						<label for="activity-cozy">Cozy</label>
-						<input id="activity-creative" name="activity-dropdown" type="radio" value="Creative">
-						<label for="activity-creative">Creative</label>
-						<input id="activity-active" name="activity-dropdown" type="radio" value="Active">
-						<label for="activity-active">Active</label>
-						<input id="activity-explore" name="activity-dropdown" type="radio" value="Explore">
-						<label for="activity-explore">Explore</label>
-						<input id="activity-eat-drink" name="activity-dropdown" type="radio" value="Eat & drink">
-						<label for="activity-eat-drink">Eat & drink</label>
-						<input id="activity-social" name="activity-dropdown" type="radio" value="Social">
-						<label for="activity-social">Social</label>
-					</fieldset>
-
-					<fieldset class="step">
 						<legend>What's your budget?</legend>
 						<input id="cost-low" name="cost" type="radio" value="low">
 						<label for="cost-low">Low</label>
@@ -139,11 +123,23 @@
 						<label for="cost-high">High</label>
 					</fieldset>
 
-					<!-- <section class="step"> -->
-						<!-- `button` for in-page actions: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button -->
-						<!-- <button type="reset">Reset</button> -->
-						<!-- `button` without a type will submit their parent `form`. -->
-						<button id="submit" type="submit" disabled>Submit</button>
+					<fieldset class="step">
+						<legend>What type of activity are you interested in?</legend>
+						<input id="activity-cozy" name="activity-dropdown" type="checkbox" value="Cozy">
+						<label for="activity-cozy">Cozy</label>
+						<input id="activity-creative" name="activity-dropdown" type="checkbox" value="Creative">
+						<label for="activity-creative">Creative</label>
+						<input id="activity-active" name="activity-dropdown" type="checkbox" value="Active">
+						<label for="activity-active">Active</label>
+						<input id="activity-explore" name="activity-dropdown" type="checkbox" value="Explore">
+						<label for="activity-explore">Explore</label>
+						<input id="activity-eat-drink" name="activity-dropdown" type="checkbox" value="Eat & drink">
+						<label for="activity-eat-drink">Eat & drink</label>
+						<input id="activity-social" name="activity-dropdown" type="checkbox" value="Social">
+						<label for="activity-social">Social</label>
+					</fieldset>
+
+					<button id="submit" type="submit" disabled>Submit</button>
 						<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
 					<!-- </section> -->
 				</form>
