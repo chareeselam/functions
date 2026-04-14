@@ -5,7 +5,6 @@ document.querySelector('#get-started').addEventListener('click', () => {
 })
 
 const steps = document.querySelectorAll('.step')
-const nextBtn = document.querySelector('.next')
 const submitBtn = document.querySelector('#submit')
 let currentStep = 0
 let data = []
@@ -62,33 +61,45 @@ function isAnswered(step) {
 	return true
 }
 
-// show/hide/disabled next/submit buttons
+// show/hide/disable submit button
 function showStep(index) {
 	steps.forEach((step, i) => {
 		step.classList.toggle('active', i === index)
-
 	})
-	
-	const isLast = index === steps.length - 1
-		nextBtn.hidden = isLast
-		submitBtn.hidden = !isLast
 
-		nextBtn.disabled = !isAnswered(steps[index])
-		submitBtn.disabled = !isAnswered(steps[index])
+	const isLast = index === steps.length - 1
+	submitBtn.hidden = !isLast
+	submitBtn.disabled = !isAnswered(steps[index])
 }
 
-// update next/submit button state when user makes a selection
-document.querySelector('#nightcap-form').addEventListener('change', () => {
-	showStep(currentStep)
-})
-
-// next question
-nextBtn.addEventListener('click', () => {
+function advanceStep() {
 	if (!isAnswered(steps[currentStep])) return
 	steps[currentStep].classList.add('answered')
 	currentStep++
 	showStep(currentStep)
-	updateProgressBar(currentStep) 
+	updateProgressBar(currentStep)
+}
+
+// auto-advance on radio change, or update submit state on last step
+document.querySelector('#nightcap-form').addEventListener('change', (e) => {
+	if (e.target.type === 'radio') {
+		if (currentStep === steps.length - 1) {
+			showStep(currentStep)
+		} else {
+			advanceStep()
+		}
+	} else {
+		showStep(currentStep)
+	}
+})
+
+// https://claude.ai/share/bfde2840-9524-4f30-9b73-bca713c43a6a
+// i wanted to make the energy level question a range slider and have it auto-advance when users select their energy level. this function listens for input changes on the slider and then advances the step after a short delay (so it doesn't immediately jump to the next question while users are still adjusting the slider)
+// auto-advance range slider after user releases
+let sliderTimer = null
+document.querySelector('#energy').addEventListener('input', () => {
+	clearTimeout(sliderTimer)
+	sliderTimer = setTimeout(advanceStep, 800)
 })
 
 // restart button on results page — triggers the form's reset event
@@ -126,7 +137,8 @@ submitBtn.addEventListener('click', (event) => {
 	// i also learned to change const to let for energyLevel because i needed to reassign the value after mapping it to low/medium/high.
 	const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')
 	const costSelection = document.querySelector('[name="cost"]:checked')
-	const activityType = document.querySelector('#activity-dropdown').value;
+	const activityTypeInput = document.querySelector('[name="activity-dropdown"]:checked')
+	const activityType = activityTypeInput ? activityTypeInput.value : ''
 
 	// map energy level 1-5
 	// the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data. 
