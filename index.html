@@ -13,9 +13,8 @@
 				<h1>Nightcap</h1>
 			</header>
 			<section id="intro">
-				<p>Nightcap is a concept for a digital tool that helps you answer the nightly question: "What should I do tonight?" before you end up three hours deep into your phone wondering where the evening went.</p>
-				<p>Tell it how you're feeling, how much energy you've got, what your budget looks like, and whether pants are still an option, and it gives you something worth doing. Going out? It finds events and activities that match your vibe. Staying in? It helps you make the most of what you've already got at home. No guilt, no overthinking, just a better evening.</p>
-				<button id="get-started">Get Started</button>
+				<p>Nightcap helps you decide what to do tonight based on your mood, energy, budget, and whether going out is even on the table.</p>
+				<button id="get-started">Get started</button>
 			</section>
 
 			<div id="results">
@@ -114,19 +113,21 @@
 						<label for="social">Social</label>
 					</fieldset>
 
-					<section class="step">
-						<label for="activity-dropdown">What type of activity are you interested in?</label>
-						<!-- Classic "dropdown": https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select -->
-						<select id="activity-dropdown" name="activity-dropdown">
-								<option value="" disabled selected>Choose an option</option>	
-								<option>Cozy</option>
-								<option>Creative</option>
-								<option>Active</option>
-								<option>Explore</option>
-								<option>Eat & drink</option>
-								<option>Social</option>
-						</select>
-					</section>
+					<fieldset class="step">
+						<legend>What type of activity are you interested in?</legend>
+						<input id="activity-cozy" name="activity-dropdown" type="radio" value="Cozy">
+						<label for="activity-cozy">Cozy</label>
+						<input id="activity-creative" name="activity-dropdown" type="radio" value="Creative">
+						<label for="activity-creative">Creative</label>
+						<input id="activity-active" name="activity-dropdown" type="radio" value="Active">
+						<label for="activity-active">Active</label>
+						<input id="activity-explore" name="activity-dropdown" type="radio" value="Explore">
+						<label for="activity-explore">Explore</label>
+						<input id="activity-eat-drink" name="activity-dropdown" type="radio" value="Eat & drink">
+						<label for="activity-eat-drink">Eat & drink</label>
+						<input id="activity-social" name="activity-dropdown" type="radio" value="Social">
+						<label for="activity-social">Social</label>
+					</fieldset>
 
 					<fieldset class="step">
 						<legend>What's your budget?</legend>
@@ -164,10 +165,10 @@
 			</div> -->
 					
 		</main>
-		<footer>
+		<!-- <footer>
 			<p>Designed by Chareese Lam</p>
 			<p>Typography & Interaction II</p>
-		</footer>
+		</footer> -->
 
 		<!-- <script defer src="data.json"></script> -->
 		<script defer src="form-state.js"></script>
