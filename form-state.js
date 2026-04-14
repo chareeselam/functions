@@ -137,7 +137,7 @@ submitBtn.addEventListener('click', (event) => {
 	// i also learned to change const to let for energyLevel because i needed to reassign the value after mapping it to low/medium/high.
 	const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')
 	const costSelection = document.querySelector('[name="cost"]:checked')
-	const activityTypes = Array.from(document.querySelectorAll('[name="activity-dropdown"]:checked')).map(i => i.value)
+	const activityTypes = Array.from(document.querySelectorAll('[name="activity-type"]:checked')).map(i => i.value)
 
 	// map energy level 1-5
 	// the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data. 
