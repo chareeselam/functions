@@ -67,6 +67,11 @@ main {
 	}
 }
 
+fieldset.step.active {
+	display: flex;
+}
+
+
 form {
 	background-color: var(--white);
 	border-radius: var(--space-sm);
@@ -74,6 +79,48 @@ form {
 	gap: var(--space-md);
 	padding: var(--space-md);
 	font-family: var(--body-font);
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: var(--space-sm);
+
+	legend {
+		width: 100%;
+		margin-bottom: var(--space-sm);
+	}
+
+	input[type="radio"] {
+		display: none;
+	}
+
+	input[type="radio"]:checked + label {
+		background-color: var(--black);
+		border-color: var(--black);
+		color: var(--white);
+	}
+
+	label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		padding: var(--space-md);
+		border: 2px solid var(--grey);
+		border-radius: var(--space-sm);
+		cursor: pointer;
+		font-family: var(--body-font);
+		font-size: var(--text-base);
+		text-align: center;
+		transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+
+		&:hover {
+			border-color: var(--black);
+		}
+	}
 }
 
 footer {
