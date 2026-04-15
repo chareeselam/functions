@@ -1,7 +1,5 @@
 document.querySelector('#start').addEventListener('click', () => {
-	document.querySelector('main').classList.remove('home')
-	document.querySelector('#intro-img').style.display = 'none'
-	document.querySelector('#intro').style.display = 'none'
+	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.add('active')
 	document.querySelector('#progress-bar').classList.add('active')
 })
@@ -33,11 +31,9 @@ document.querySelector('#back').addEventListener('click', () => {
 		updateProgressBar(currentStep)
 	} else {
 		// return to landing and going back to default
-		document.querySelector('main').classList.add('home')
-		document.querySelector('#intro-img').style.display = ''
-		document.querySelector('#intro').style.display = ''
 		document.querySelector('#form-section').classList.remove('active')
 		document.querySelector('#progress-bar').classList.remove('active')
+		document.querySelector('#home').classList.add('active')
 	}
 })
 
@@ -141,6 +137,7 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	document.querySelector('#result-recs').innerHTML = ''
 	document.querySelector('#shuffle').hidden = true
 	document.querySelector('#results-restart').hidden = true
+	document.querySelector('#results').classList.remove('active')
 	document.querySelector('#form-section').classList.add('active')
 	document.querySelector('#progress-bar').classList.add('active')
 	showStep(0)
@@ -150,11 +147,10 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 // i changed the logic of the submit and randomize button from previous commits. now, the function showResults takes in a list of the results and handles all the display logic for both flows. 
 // the submit button filters the data based on user input and then calls showResults with the filtered results. the randomize button just calls showResults with the full dataset to show random picks.
 function showResults(results) {
-	document.querySelector('main').classList.remove('home')
-	document.querySelector('#intro-img').style.display = 'none'
-	document.querySelector('#intro').style.display = 'none'
+	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.remove('active')
 	document.querySelector('#progress-bar').classList.remove('active')
+	document.querySelector('#results').classList.add('active')
 
 	const resultDiv = document.querySelector('#result-recs')
 	const shuffleBtn = document.querySelector('#shuffle')

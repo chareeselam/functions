@@ -81,7 +81,9 @@ h4 {
 
 #submit,
 #start,
-#random {
+#random,
+#results-restart,
+#shuffle {
 	display: inline-block;
 	inline-size: fit-content;
 	font-family: var(--body-font);
@@ -127,15 +129,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: var(--space-md);
-	background-color: var(--cream);
-	max-inline-size: 800px;
-	block-size: 100vh;
-	margin-inline: auto;
-	transition: background-color 0.3s ease;
+	background-color: var(--blue);
 
-	&:has(main.home) {
-		background-color: var(--blue);
+	&:has(#form-section.active) {
+		background-color: var(--cream);
 	}
+	max-inline-size: 800px;
+	block-size: 100svh;
+	max-block-size: 100svh;
+	margin-inline: auto;
 
 	@media (width>800px) {
 		padding: var(--space-ex-lg);
@@ -143,24 +145,34 @@ body {
 }
 
 main {
-	background-color: var(--cream);
 	display: grid;
 	gap: var(--space-md);
 	flex: 1;
 
 	@media (width <800px) {
 		gap: var(--space-lg);
-		padding-block: var(--space-lg);
+	}
+		/* padding-block: var(--space-lg);
 	}
 
 	@media (width > 1200px) {
 		padding-block: var(--space-ex-lg);
-	}
+	} */
 }
 
 /* landing state — blue background */
-main.home {
-	background-color: var(--blue);
+#home {
+	display: none;
+
+	&.active {
+		background-color: var(--blue);
+		max-block-size: 100svh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-md);
+	}
 
 	h1, h2, p, #start, #random {
 		color: var(--cream);
@@ -175,54 +187,41 @@ main.home {
 		}
 	}
 
-	header {
-		block-size: 100%;
+	#intro {
 		display: flex;
 		flex-direction: column;
+		gap: var(--space-lg);
 		align-items: center;
-		justify-content: center;
-		gap: var(--space-md);
+		text-align: center;
 
-		#intro {
+		#intro-text {
 			display: flex;
 			flex-direction: column;
-			gap: var(--space-lg);
-			align-items: center;
-			text-align: center;
+			gap: var(--space-sm);
 
-			#intro-text {
+			hgroup {
 				display: flex;
 				flex-direction: column;
-				gap: var(--space-sm);
-
-				hgroup {
-					display: flex;
-					flex-direction: column;
-					gap: 0;
-				}
+				gap: 0;
 			}
+		}
 
-			#intro-buttons {
-				display: flex;
-				gap: var(--space-md);
-			}
+		#intro-buttons {
+			display: flex;
+			gap: var(--space-md);
 		}
 	}
 }
 
 /* form layout */
-main:not(.home) {
-	grid-template-rows: auto auto 1fr;
+main:has(#form-section.active),
+main:has(#results.active) {
+	grid-template-rows: 1fr;
 	gap: var(--space-md);
 	padding: 0;
 
-	#landing {
-		text-align: center;
-	}
-
 	@media (width>800px) {
 		gap: var(--space-lg);
-		/* padding-block: var(--space-ex-lg); */
 	}
 }
 
@@ -233,6 +232,17 @@ main:not(.home) {
 		display: flex;
 		flex-direction: column;
 		flex: 1;
+		gap: var(--space-lg);
+		background-color: var(--cream);
+
+		h1 {
+			font-size: var(--text-h2);
+			text-align: center
+		}
+
+		@media (width > 800px) {
+			gap: var(--space-ex-lg);
+		}
 	}
 
 	form {
@@ -278,7 +288,7 @@ main:not(.home) {
 	align-items: flex-end;
 	justify-content: space-between;
 	margin-top: auto;
-	padding-block: var(--space-md);
+	/* padding-block: var(--space-md); */
 }
 
 /* thinking dog */
@@ -339,6 +349,8 @@ fieldset {
 		.input-layout {
 			flex-direction: row;
 			flex-wrap: wrap;
+			gap: var(--space-sm);
+			/* justify-content: center; */
 		}
 
 		label {
@@ -567,9 +579,38 @@ input[type="range"]#energy {
 
 /* results */
 #results {
-	display: flex;
-	flex-direction: column;
-	flex: 1;
+	display: none;
+
+	&.active {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		background-color: var(--blue);
+
+		h1 {
+			font-size: var(--text-h2);
+			text-align: center;
+		}
+	}
+
+	h1, h2, h3, p {
+		color: var(--cream);
+	}
+
+	h4 {
+		color: var(--blue)
+	}
+
+	#results-restart,
+	#shuffle {
+		color: var(--cream);
+		border-color: var(--cream);
+
+		&:hover {
+			background-color: var(--cream);
+			color: var(--blue);
+		}
+	}
 }
 
 #results-controls {
@@ -640,6 +681,11 @@ input[type="range"]#energy {
 	padding: var(--space-sm);
 	overflow: hidden;
 	color: var(--blue);
+
+	h1, h2, h3, h4, p {
+		color: var(--blue);
+	}
+
 	flex-shrink: 0;
 	min-inline-size: 40%;
 	max-inline-size: 80%;

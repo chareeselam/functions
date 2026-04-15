@@ -8,8 +8,8 @@
 
 	</head>
 	<body>
-		<main class="home">
-			<header id="landing">
+		<main>
+			<header id="home" class="active">
 				<h1>Nightcap</h1>
 				<img id="intro-img" src="assets/images/landing-cream.png" alt="Dog putting phone away">
 				<!-- <video id="intro-img" src="assets/images/animated-dog.mp4" autoplay loop muted playsinline></video> -->
@@ -28,7 +28,9 @@
 				</section>
 			</header>
 
-			<div id="results">
+			<section id="form-section">
+				<h1>Nightcap</h1>
+
 				<ul id="progress-bar">
 					<li>
 						<div class="segment first"></div>
@@ -52,18 +54,6 @@
 					</li>
 				</ul>
 
-				<div id="results-controls">
-					<button id="results-restart" hidden>
-						<p>Restart</p>
-					</button>
-					<button id="shuffle" hidden>
-						<p>Shuffle</p>
-					</button>
-				</div>
-				<div id="result-recs"></div>
-			</div>
-
-			<section id="form-section">
 				<form id="nightcap-form" action="/my-handling-form-page" method="post">
 					<!-- Added action and method attributes to the form.
 					https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
@@ -137,6 +127,7 @@
 					<fieldset class="step">
 						<legend>
 							<h3>What types of activities are you interested in?</h3>
+							<p>Pick up to 3 types of activities.</p>
 						</legend>
 						<div class="input-layout">
 							<input id="activity-cozy" name="activity-type" type="checkbox" value="Cozy">
@@ -169,6 +160,19 @@
 				</form>
 			</section>
 
+			<section id="results">
+				<h1>Nightcap</h1>
+				<div id="results-controls">
+					<button id="results-restart" hidden>
+						<p>Restart</p>
+					</button>
+					<button id="shuffle" hidden>
+						<p>Shuffle</p>
+					</button>
+				</div>
+				<div id="result-recs"></div>
+			</section>
+
 			<!-- <div>
 				<div id="result-recap">
 					<h2>Your Selections</h2>
@@ -189,8 +193,6 @@
 			<p>Typography & Interaction II</p>
 		</footer> -->
 
-		<!-- <script defer src="data.json"></script> -->
 		<script defer src="form-state.js"></script>
-		<!-- <script defer src="script.js"></script> -->
 	</body>
 </html>
