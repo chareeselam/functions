@@ -242,13 +242,14 @@ submitBtn.addEventListener('click', (event) => {
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 		let threeResults = remaining.splice(0, 3)
 
-		// display them
-		resultDiv.innerHTML = threeResults.map(item =>
+		const cardsHTML = threeResults.map(item =>
 			`<div class="results-card">
 				<img src="${item.image}" alt="${item.name}">
-				<p>${item.name}</p>
+				<h4>${item.name}</h4>
 			</div>`
 		).join('')
+
+		resultDiv.innerHTML = `<div class="carousel-track">${cardsHTML}</div>`
 	}
 
 	shuffleBtn.addEventListener('click', () => {

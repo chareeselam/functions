@@ -1,45 +1,44 @@
 [
   {
-    "name": "Do a slow stretch session solo",
-    "image": "assets/images/do-a-slow-stretch-session-solo.png",
+    "name": "Attend trivia night",
+    "image": "assets/images/results/attend-trivia-night.png",
     "criteria": [
       {
         "in/out": {
-          "stay in": true,
-          "go out": false
+          "stay in": false,
+          "go out": true
         }
       },
       {
         "energy": {
-          "low": true,
-          "medium": false,
+          "low": false,
+          "medium": true,
           "high": false
         }
       },
       {
         "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
+          "low": false,
+          "medium": true,
+          "high": true
         }
       },
       {
         "solo/social": {
           "solo": true,
-          "social": false
+          "social": true
         }
       },
       {
         "type of activity": [
-          "Active",
-          "Cozy"
+          "Social"
         ]
       }
     ]
   },
   {
-    "name": "Make instant ramen and unwind for one",
-    "image": "assets/images/make-instant-ramen-and-unwind-for-one.png",
+    "name": "Bake brownies",
+    "image": "assets/images/results/bake-brownies.png",
     "criteria": [
       {
         "in/out": {
@@ -49,3034 +48,36 @@
       },
       {
         "energy": {
-          "low": true,
-          "medium": false,
+          "low": false,
+          "medium": true,
           "high": false
         }
       },
       {
         "cost": {
           "low": true,
-          "medium": false,
+          "medium": true,
           "high": false
         }
       },
       {
         "solo/social": {
           "solo": true,
-          "social": false
+          "social": true
         }
       },
       {
         "type of activity": [
+          "Creative",
           "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Journal by candlelight by yourself",
-    "image": "assets/images/journal-by-candlelight-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make instant ramen and unwind with friends",
-    "image": "assets/images/make-instant-ramen-and-unwind-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy",
           "Social"
         ]
       }
     ]
   },
   {
-    "name": "Journal by candlelight with your group",
-    "image": "assets/images/journal-by-candlelight-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Watch a nostalgic movie with someone",
-    "image": "assets/images/watch-a-nostalgic-movie-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a slow stretch session solo or with friends",
-    "image": "assets/images/do-a-slow-stretch-session-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make instant ramen and unwind for yourself or with someone",
-    "image": "assets/images/make-instant-ramen-and-unwind-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Journal by candlelight alone or with company",
-    "image": "assets/images/journal-by-candlelight-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Listen to a calming album solo",
-    "image": "assets/images/listen-to-a-calming-album-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Read poetry with tea for one",
-    "image": "assets/images/read-poetry-with-tea-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a slow stretch session for a fun night by yourself",
-    "image": "assets/images/do-a-slow-stretch-session-for-a-fun-night-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Listen to a calming album with friends",
-    "image": "assets/images/listen-to-a-calming-album-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Read poetry with tea with your group",
-    "image": "assets/images/read-poetry-with-tea-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a slow stretch session for a fun night with someone",
-    "image": "assets/images/do-a-slow-stretch-session-for-a-fun-night-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make instant ramen and unwind solo or with friends",
-    "image": "assets/images/make-instant-ramen-and-unwind-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Journal by candlelight for yourself or with someone",
-    "image": "assets/images/journal-by-candlelight-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Watch a nostalgic movie for a fun night alone or with company",
-    "image": "assets/images/watch-a-nostalgic-movie-for-a-fun-night-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make instant ramen and unwind for a special night out solo",
-    "image": "assets/images/make-instant-ramen-and-unwind-for-a-special-night-out-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Journal by candlelight for one",
-    "image": "assets/images/journal-by-candlelight-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Watch a nostalgic movie by yourself",
-    "image": "assets/images/watch-a-nostalgic-movie-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Listen to a calming album for a special night out with friends",
-    "image": "assets/images/listen-to-a-calming-album-for-a-special-night-out-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Read poetry with tea with your group 2",
-    "image": "assets/images/read-poetry-with-tea-with-your-group-2.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a slow stretch session with someone",
-    "image": "assets/images/do-a-slow-stretch-session-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make instant ramen and unwind for a special night out solo or with friends",
-    "image": "assets/images/make-instant-ramen-and-unwind-for-a-special-night-out-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Journal by candlelight for yourself or with someone 2",
-    "image": "assets/images/journal-by-candlelight-for-yourself-or-with-someone-2.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Watch a nostalgic movie alone or with company",
-    "image": "assets/images/watch-a-nostalgic-movie-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a home reset solo",
-    "image": "assets/images/do-a-home-reset-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a playlist for the week for one",
-    "image": "assets/images/make-a-playlist-for-the-week-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe by yourself",
-    "image": "assets/images/try-a-new-pasta-recipe-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a home reset with friends",
-    "image": "assets/images/do-a-home-reset-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a playlist for the week with your group",
-    "image": "assets/images/make-a-playlist-for-the-week-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe with someone",
-    "image": "assets/images/try-a-new-pasta-recipe-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Start a collage project solo or with friends",
-    "image": "assets/images/start-a-collage-project-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Rearrange your room for yourself or with someone",
-    "image": "assets/images/rearrange-your-room-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Bake brownies alone or with company",
-    "image": "assets/images/bake-brownies-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Bake brownies solo",
-    "image": "assets/images/bake-brownies-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a home reset for one",
-    "image": "assets/images/do-a-home-reset-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a playlist for the week for a fun night by yourself",
-    "image": "assets/images/make-a-playlist-for-the-week-for-a-fun-night-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Bake brownies with friends",
-    "image": "assets/images/bake-brownies-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a home reset with your group",
-    "image": "assets/images/do-a-home-reset-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a playlist for the week for a fun night with someone",
-    "image": "assets/images/make-a-playlist-for-the-week-for-a-fun-night-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe solo or with friends",
-    "image": "assets/images/try-a-new-pasta-recipe-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Start a collage project for yourself or with someone",
-    "image": "assets/images/start-a-collage-project-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Rearrange your room for a fun night alone or with company",
-    "image": "assets/images/rearrange-your-room-for-a-fun-night-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe for a special night out solo",
-    "image": "assets/images/try-a-new-pasta-recipe-for-a-special-night-out-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Start a collage project for one",
-    "image": "assets/images/start-a-collage-project-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Rearrange your room by yourself",
-    "image": "assets/images/rearrange-your-room-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a playlist for the week for a special night out with friends",
-    "image": "assets/images/make-a-playlist-for-the-week-for-a-special-night-out-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe with your group",
-    "image": "assets/images/try-a-new-pasta-recipe-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Start a collage project with someone",
-    "image": "assets/images/start-a-collage-project-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe for a special night out solo or with friends",
-    "image": "assets/images/try-a-new-pasta-recipe-for-a-special-night-out-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Start a collage project for yourself or with someone 2",
-    "image": "assets/images/start-a-collage-project-for-yourself-or-with-someone-2.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Rearrange your room alone or with company",
-    "image": "assets/images/rearrange-your-room-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow solo",
-    "image": "assets/images/try-an-intense-yoga-flow-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play a fast-paced party game for one",
-    "image": "assets/images/play-a-fast-paced-party-game-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a cardio workout by yourself",
-    "image": "assets/images/do-a-cardio-workout-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a karaoke session with friends",
-    "image": "assets/images/host-a-karaoke-session-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a living room circuit workout with your group",
-    "image": "assets/images/do-a-living-room-circuit-workout-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow with someone",
-    "image": "assets/images/try-an-intense-yoga-flow-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a living room circuit workout solo or with friends",
-    "image": "assets/images/do-a-living-room-circuit-workout-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow for yourself or with someone",
-    "image": "assets/images/try-an-intense-yoga-flow-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play a fast-paced party game alone or with company",
-    "image": "assets/images/play-a-fast-paced-party-game-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Learn a dance routine solo",
-    "image": "assets/images/learn-a-dance-routine-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a karaoke session for one",
-    "image": "assets/images/host-a-karaoke-session-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a living room circuit workout for a fun night by yourself",
-    "image": "assets/images/do-a-living-room-circuit-workout-for-a-fun-night-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Learn a dance routine with friends",
-    "image": "assets/images/learn-a-dance-routine-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a karaoke session with your group",
-    "image": "assets/images/host-a-karaoke-session-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a living room circuit workout for a fun night with someone",
-    "image": "assets/images/do-a-living-room-circuit-workout-for-a-fun-night-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a karaoke session solo or with friends",
-    "image": "assets/images/host-a-karaoke-session-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a living room circuit workout for yourself or with someone",
-    "image": "assets/images/do-a-living-room-circuit-workout-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow for a fun night alone or with company",
-    "image": "assets/images/try-an-intense-yoga-flow-for-a-fun-night-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow for a special night out solo",
-    "image": "assets/images/try-an-intense-yoga-flow-for-a-special-night-out-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play a fast-paced party game for one 2",
-    "image": "assets/images/play-a-fast-paced-party-game-for-one-2.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a cardio workout by yourself 3",
-    "image": "assets/images/do-a-cardio-workout-by-yourself-3.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Learn a dance routine for a special night out with friends",
-    "image": "assets/images/learn-a-dance-routine-for-a-special-night-out-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a karaoke session with your group 2",
-    "image": "assets/images/host-a-karaoke-session-with-your-group-2.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a living room circuit workout with someone",
-    "image": "assets/images/do-a-living-room-circuit-workout-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow for a special night out solo or with friends",
-    "image": "assets/images/try-an-intense-yoga-flow-for-a-special-night-out-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play a fast-paced party game for yourself or with someone",
-    "image": "assets/images/play-a-fast-paced-party-game-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a cardio workout alone or with company",
-    "image": "assets/images/do-a-cardio-workout-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sit in the park and people-watch solo",
-    "image": "assets/images/sit-in-the-park-and-people-watch-solo.png",
+    "name": "Browse a bookstore",
+    "image": "assets/images/results/browse-a-bookstore.png",
     "criteria": [
       {
         "in/out": {
@@ -3088,6 +89,45 @@
         "energy": {
           "low": true,
           "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Cozy",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Check out a pop-up event",
+    "image": "assets/images/results/pop-up-event.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
           "high": false
         }
       },
@@ -3107,720 +147,32 @@
       {
         "type of activity": [
           "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy caf\u00e9 on a budget for one",
-    "image": "assets/images/visit-a-cozy-caf-on-a-budget-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Browse a bookstore by yourself",
-    "image": "assets/images/browse-a-bookstore-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Browse a bookstore with friends",
-    "image": "assets/images/browse-a-bookstore-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
           "Social"
         ]
       }
     ]
   },
   {
-    "name": "Take a sunset walk on a budget with your group",
-    "image": "assets/images/take-a-sunset-walk-on-a-budget-with-your-group.png",
+    "name": "Cook a comfort dinner",
+    "image": "assets/images/comfort-dinner.png",
     "criteria": [
       {
         "in/out": {
-          "stay in": false,
-          "go out": true
+          "stay in": true,
+          "go out": false
         }
       },
       {
         "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to an art gallery with someone",
-    "image": "assets/images/go-to-an-art-gallery-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Get dessert solo or with friends",
-    "image": "assets/images/get-dessert-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sit in the park and people-watch on a budget for yourself or with someone",
-    "image": "assets/images/sit-in-the-park-and-people-watch-on-a-budget-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy caf\u00e9 alone or with company",
-    "image": "assets/images/visit-a-cozy-caf-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Get dessert solo",
-    "image": "assets/images/get-dessert-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
           "low": false,
           "medium": true,
           "high": false
         }
       },
       {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sit in the park and people-watch for one",
-    "image": "assets/images/sit-in-the-park-and-people-watch-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
         "cost": {
-          "low": false,
+          "low": true,
           "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy caf\u00e9 by yourself",
-    "image": "assets/images/visit-a-cozy-caf-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy caf\u00e9 with friends",
-    "image": "assets/images/visit-a-cozy-caf-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Browse a bookstore with your group",
-    "image": "assets/images/browse-a-bookstore-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take a sunset walk with someone",
-    "image": "assets/images/take-a-sunset-walk-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sit in the park and people-watch solo or with friends",
-    "image": "assets/images/sit-in-the-park-and-people-watch-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy caf\u00e9 for yourself or with someone",
-    "image": "assets/images/visit-a-cozy-caf-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Browse a bookstore alone or with company",
-    "image": "assets/images/browse-a-bookstore-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to an art gallery for a special night out solo",
-    "image": "assets/images/go-to-an-art-gallery-for-a-special-night-out-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Get dessert for one",
-    "image": "assets/images/get-dessert-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
           "high": true
         }
       },
@@ -3838,1307 +190,52 @@
     ]
   },
   {
-    "name": "Sit in the park and people-watch by yourself",
-    "image": "assets/images/sit-in-the-park-and-people-watch-by-yourself.png",
+    "name": "Dance through a workout playlist",
+    "image": "assets/images/results/dance-workout-playlist.png",
     "criteria": [
       {
         "in/out": {
-          "stay in": false,
-          "go out": true
+          "stay in": true,
+          "go out": false
         }
       },
       {
         "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
           "low": false,
           "medium": false,
           "high": true
         }
       },
       {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Get dessert for a special night out with friends",
-    "image": "assets/images/get-dessert-for-a-special-night-out-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
         "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sit in the park and people-watch with your group",
-    "image": "assets/images/sit-in-the-park-and-people-watch-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
           "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy caf\u00e9 with someone",
-    "image": "assets/images/visit-a-cozy-caf-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to an art gallery for a special night out solo or with friends",
-    "image": "assets/images/go-to-an-art-gallery-for-a-special-night-out-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Get dessert for yourself or with someone",
-    "image": "assets/images/get-dessert-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sit in the park and people-watch alone or with company",
-    "image": "assets/images/sit-in-the-park-and-people-watch-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take photos around the city solo",
-    "image": "assets/images/take-photos-around-the-city-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
           "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
+          "high": true
         }
       },
       {
         "solo/social": {
-          "solo": true,
-          "social": false
+          "solo": false,
+          "social": true
         }
       },
       {
         "type of activity": [
+          "Active",
           "Creative",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go bowling on a budget for one",
-    "image": "assets/images/go-bowling-on-a-budget-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a night market by yourself",
-    "image": "assets/images/visit-a-night-market-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go bowling with friends",
-    "image": "assets/images/go-bowling-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a night market on a budget with your group",
-    "image": "assets/images/visit-a-night-market-on-a-budget-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Eat & drink",
           "Social"
         ]
       }
     ]
   },
   {
-    "name": "Try a new restaurant with someone",
-    "image": "assets/images/try-a-new-restaurant-with-someone.png",
+    "name": "Do a cardio workout",
+    "image": "assets/images/results/cardio-workout.png",
     "criteria": [
       {
         "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Social",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a night market solo or with friends",
-    "image": "assets/images/visit-a-night-market-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new restaurant on a budget for yourself or with someone",
-    "image": "assets/images/try-a-new-restaurant-on-a-budget-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Social",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go thrifting alone or with company",
-    "image": "assets/images/go-thrifting-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Attend trivia night solo",
-    "image": "assets/images/attend-trivia-night-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take photos around the city for one",
-    "image": "assets/images/take-photos-around-the-city-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go bowling by yourself",
-    "image": "assets/images/go-bowling-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take photos around the city with friends",
-    "image": "assets/images/take-photos-around-the-city-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go bowling with your group",
-    "image": "assets/images/go-bowling-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a night market with someone",
-    "image": "assets/images/visit-a-night-market-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Eat & drink",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Attend trivia night solo or with friends",
-    "image": "assets/images/attend-trivia-night-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take photos around the city for yourself or with someone",
-    "image": "assets/images/take-photos-around-the-city-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go bowling alone or with company",
-    "image": "assets/images/go-bowling-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new restaurant for a special night out solo",
-    "image": "assets/images/try-a-new-restaurant-for-a-special-night-out-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Social",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go thrifting for one",
-    "image": "assets/images/go-thrifting-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Attend trivia night by yourself",
-    "image": "assets/images/attend-trivia-night-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Attend trivia night for a special night out with friends",
-    "image": "assets/images/attend-trivia-night-for-a-special-night-out-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take photos around the city with your group",
-    "image": "assets/images/take-photos-around-the-city-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go bowling with someone",
-    "image": "assets/images/go-bowling-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go thrifting for a special night out solo or with friends",
-    "image": "assets/images/go-thrifting-for-a-special-night-out-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Attend trivia night for yourself or with someone",
-    "image": "assets/images/attend-trivia-night-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take photos around the city alone or with company",
-    "image": "assets/images/take-photos-around-the-city-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go roller skating solo",
-    "image": "assets/images/go-roller-skating-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
+          "stay in": true,
+          "go out": false
         }
       },
       {
@@ -5151,921 +248,6 @@
       {
         "cost": {
           "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Hike a nearby trail on a budget for one",
-    "image": "assets/images/hike-a-nearby-trail-on-a-budget-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing by yourself",
-    "image": "assets/images/go-rock-climbing-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go roller skating with friends",
-    "image": "assets/images/go-roller-skating-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Hike a nearby trail on a budget with your group",
-    "image": "assets/images/hike-a-nearby-trail-on-a-budget-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing with someone",
-    "image": "assets/images/go-rock-climbing-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play pickleball solo or with friends",
-    "image": "assets/images/play-pickleball-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to a concert on a budget for yourself or with someone",
-    "image": "assets/images/go-to-a-concert-on-a-budget-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take a fitness class alone or with company",
-    "image": "assets/images/take-a-fitness-class-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Hike a nearby trail solo",
-    "image": "assets/images/hike-a-nearby-trail-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing for one",
-    "image": "assets/images/go-rock-climbing-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play pickleball by yourself",
-    "image": "assets/images/play-pickleball-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go roller skating with friends 1",
-    "image": "assets/images/go-roller-skating-with-friends-1.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Hike a nearby trail with your group",
-    "image": "assets/images/hike-a-nearby-trail-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing with someone 3",
-    "image": "assets/images/go-rock-climbing-with-someone-3.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play pickleball solo or with friends 1",
-    "image": "assets/images/play-pickleball-solo-or-with-friends-1.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to a concert for yourself or with someone",
-    "image": "assets/images/go-to-a-concert-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take a fitness class alone or with company 3",
-    "image": "assets/images/take-a-fitness-class-alone-or-with-company-3.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing for a special night out solo",
-    "image": "assets/images/go-rock-climbing-for-a-special-night-out-solo.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play pickleball for one",
-    "image": "assets/images/play-pickleball-for-one.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to a concert by yourself",
-    "image": "assets/images/go-to-a-concert-by-yourself.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Hike a nearby trail for a special night out with friends",
-    "image": "assets/images/hike-a-nearby-trail-for-a-special-night-out-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing with your group",
-    "image": "assets/images/go-rock-climbing-with-your-group.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Play pickleball with someone",
-    "image": "assets/images/play-pickleball-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go rock climbing for a special night out solo or with friends",
-    "image": "assets/images/go-rock-climbing-for-a-special-night-out-solo-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
           "medium": false,
           "high": true
         }
@@ -6084,84 +266,8 @@
     ]
   },
   {
-    "name": "Play pickleball for yourself or with someone",
-    "image": "assets/images/play-pickleball-for-yourself-or-with-someone.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Go to a concert alone or with company",
-    "image": "assets/images/go-to-a-concert-alone-or-with-company.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make herbal tea and read on a budget on your own",
-    "image": "assets/images/make-herbal-tea-and-read-on-a-budget-on-your-own.png",
+    "name": "Do a cozy crossword",
+    "image": "assets/images/results/cozy-crossword.png",
     "criteria": [
       {
         "in/out": {
@@ -6179,46 +285,8 @@
       {
         "cost": {
           "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a cozy crossword on a budget with your crew",
-    "image": "assets/images/do-a-cozy-crossword-on-a-budget-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
+          "medium": true,
+          "high": true
         }
       },
       {
@@ -6236,8 +304,46 @@
     ]
   },
   {
-    "name": "Write a reflective note on a budget on your own or with friends",
-    "image": "assets/images/write-a-reflective-note-on-a-budget-on-your-own-or-with-friends.png",
+    "name": "Do a home reset",
+    "image": "assets/images/results/home-reset.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Do a slow stretch session",
+    "image": "assets/images/results/stretch-session.png",
     "criteria": [
       {
         "in/out": {
@@ -6255,7 +361,199 @@
       {
         "cost": {
           "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Cozy",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Do an online bootcamp",
+    "image": "assets/images/results/online-bootcamp.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
           "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      },
+      {
+        "type of activity": [
+          "Active"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Get dessert",
+    "image": "assets/images/get-dessert.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Go bowling",
+    "image": "assets/images/go-bowling.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Go rock climbing",
+    "image": "assets/images/go-rock-climbing.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Go roller skating",
+    "image": "assets/images/go-roller-skating.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
           "high": false
         }
       },
@@ -6267,15 +565,322 @@
       },
       {
         "type of activity": [
-          "Creative",
-          "Cozy"
+          "Active",
+          "Social"
         ]
       }
     ]
   },
   {
-    "name": "Make herbal tea and read on your own",
-    "image": "assets/images/make-herbal-tea-and-read-on-your-own.png",
+    "name": "Go thrifting",
+    "image": "assets/images/go-thrifting.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Explore"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Go to a concert",
+    "image": "assets/images/go-to-a-concert.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Go to an art gallery",
+    "image": "assets/images/go-to-an-art-gallery.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hike a nearby trail",
+    "image": "assets/images/hike-a-nearby-trail.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Host a fast game challenge",
+    "image": "assets/images/host-a-fast-game-challenge.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Host a karaoke session",
+    "image": "assets/images/host-a-karaoke-session.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Creative",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Journal by candlelight",
+    "image": "assets/images/results/journal-by-candlelight.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Creative",
+          "Cozy",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Learn a dance routine",
+    "image": "assets/images/learn-a-dance-routine.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": false,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Creative",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Listen to a calming album",
+    "image": "assets/images/listen-to-a-calming-album.png",
     "criteria": [
       {
         "in/out": {
@@ -6294,50 +899,12 @@
         "cost": {
           "low": false,
           "medium": true,
-          "high": false
+          "high": true
         }
       },
       {
         "solo/social": {
           "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do a cozy crossword with your crew",
-    "image": "assets/images/do-a-cozy-crossword-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
           "social": true
         }
       },
@@ -6350,8 +917,8 @@
     ]
   },
   {
-    "name": "Write a reflective note on your own or with friends",
-    "image": "assets/images/write-a-reflective-note-on-your-own-or-with-friends.png",
+    "name": "Make a playlist for the week",
+    "image": "assets/images/make-a-playlist-for-the-week.png",
     "criteria": [
       {
         "in/out": {
@@ -6361,16 +928,16 @@
       },
       {
         "energy": {
-          "low": true,
-          "medium": false,
+          "low": false,
+          "medium": true,
           "high": false
         }
       },
       {
         "cost": {
-          "low": false,
+          "low": true,
           "medium": true,
-          "high": false
+          "high": true
         }
       },
       {
@@ -6382,14 +949,53 @@
       {
         "type of activity": [
           "Creative",
-          "Cozy"
+          "Cozy",
+          "Social"
         ]
       }
     ]
   },
   {
-    "name": "Make herbal tea and read for a special night on your own",
-    "image": "assets/images/make-herbal-tea-and-read-for-a-special-night-on-your-own.png",
+    "name": "Make a scrapbook page",
+    "image": "assets/images/make-a-scrapbook-page.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Creative",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Make herbal tea and read",
+    "image": "assets/images/make-herbal-tea-and-read.png",
     "criteria": [
       {
         "in/out": {
@@ -6406,8 +1012,8 @@
       },
       {
         "cost": {
-          "low": false,
-          "medium": false,
+          "low": true,
+          "medium": true,
           "high": true
         }
       },
@@ -6426,8 +1032,162 @@
     ]
   },
   {
-    "name": "Do a cozy crossword for a special night with your crew",
-    "image": "assets/images/do-a-cozy-crossword-for-a-special-night-with-your-crew.png",
+    "name": "Make instant ramen and unwind",
+    "image": "assets/images/results/instant-ramen-and-unwind.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Cozy",
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Meet up for casual dinner",
+    "image": "assets/images/meet-up-for-casual-dinner.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Play a fast-paced party game",
+    "image": "assets/images/play-a-fast-paced-party-game.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Play pickleball",
+    "image": "assets/images/play-pickleball.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Read poetry with tea",
+    "image": "assets/images/read-poetry-with-tea.png",
     "criteria": [
       {
         "in/out": {
@@ -6445,13 +1205,13 @@
       {
         "cost": {
           "low": false,
-          "medium": false,
+          "medium": true,
           "high": true
         }
       },
       {
         "solo/social": {
-          "solo": false,
+          "solo": true,
           "social": true
         }
       },
@@ -6464,8 +1224,587 @@
     ]
   },
   {
-    "name": "Write a reflective note for a special night on your own or with friends",
-    "image": "assets/images/write-a-reflective-note-for-a-special-night-on-your-own-or-with-friends.png",
+    "name": "Rearrange your room",
+    "image": "assets/images/rearrange-your-room.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Creative"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sit in the park and people-watch",
+    "image": "assets/images/sit-in-the-park-and-people-watch.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Cozy",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Start a collage project",
+    "image": "assets/images/start-a-collage-project.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Creative",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Take a fitness class",
+    "image": "assets/images/take-a-fitness-class.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Take a scenic neighborhood walk",
+    "image": "assets/images/take-a-scenic-neighborhood-walk.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Take a sunset walk",
+    "image": "assets/images/take-a-sunset-walk.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Take photos around the city",
+    "image": "assets/images/take-photos-around-the-city.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Creative",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tidy and decorate your space",
+    "image": "assets/images/tidy-and-decorate-your-space.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Creative"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Try a new pasta recipe",
+    "image": "assets/images/try-a-new-pasta-recipe.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Creative",
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Try a new restaurant",
+    "image": "assets/images/try-a-new-restaurant.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Explore",
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Try an intense yoga flow",
+    "image": "assets/images/try-an-intense-yoga-flow.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": false,
+          "high": true
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Active",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Visit a cozy café",
+    "image": "assets/images/visit-a-cozy-cafe.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Cozy",
+          "Explore",
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Visit a night market",
+    "image": "assets/images/visit-a-night-market.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": false,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": false
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Explore",
+          "Eat & drink",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Visit a quiet library",
+    "image": "assets/images/visit-a-quiet-library.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": false,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Cozy",
+          "Explore",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Walk to a nearby café",
+    "image": "assets/images/walk-to-a-nearby-cafe.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": false,
+          "go out": true
+        }
+      },
+      {
+        "energy": {
+          "low": true,
+          "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": false
+        }
+      },
+      {
+        "type of activity": [
+          "Explore",
+          "Eat & drink"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Watch a nostalgic movie",
+    "image": "assets/images/watch-a-nostalgic-movie.png",
     "criteria": [
       {
         "in/out": {
@@ -6482,8 +1821,46 @@
       },
       {
         "cost": {
-          "low": false,
+          "low": true,
+          "medium": true,
+          "high": true
+        }
+      },
+      {
+        "solo/social": {
+          "solo": true,
+          "social": true
+        }
+      },
+      {
+        "type of activity": [
+          "Cozy",
+          "Social"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Write a reflective note",
+    "image": "assets/images/write-a-reflective-note.png",
+    "criteria": [
+      {
+        "in/out": {
+          "stay in": true,
+          "go out": false
+        }
+      },
+      {
+        "energy": {
+          "low": true,
           "medium": false,
+          "high": false
+        }
+      },
+      {
+        "cost": {
+          "low": true,
+          "medium": true,
           "high": true
         }
       },
@@ -6497,1108 +1874,6 @@
         "type of activity": [
           "Creative",
           "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Cook a comfort dinner on a budget on your own",
-    "image": "assets/images/cook-a-comfort-dinner-on-a-budget-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a scrapbook page on a budget with your crew",
-    "image": "assets/images/make-a-scrapbook-page-on-a-budget-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Tidy and decorate your space on a budget on your own or with friends",
-    "image": "assets/images/tidy-and-decorate-your-space-on-a-budget-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Cook a comfort dinner on your own",
-    "image": "assets/images/cook-a-comfort-dinner-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a scrapbook page with your crew",
-    "image": "assets/images/make-a-scrapbook-page-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Tidy and decorate your space on your own or with friends",
-    "image": "assets/images/tidy-and-decorate-your-space-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Cook a comfort dinner for a special night on your own",
-    "image": "assets/images/cook-a-comfort-dinner-for-a-special-night-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a scrapbook page for a special night with your crew",
-    "image": "assets/images/make-a-scrapbook-page-for-a-special-night-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Tidy and decorate your space for a special night on your own or with friends",
-    "image": "assets/images/tidy-and-decorate-your-space-for-a-special-night-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do an online bootcamp on a budget on your own",
-    "image": "assets/images/do-an-online-bootcamp-on-a-budget-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Dance through a workout playlist on a budget with your crew",
-    "image": "assets/images/dance-through-a-workout-playlist-on-a-budget-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a fast game challenge on a budget on your own or with friends",
-    "image": "assets/images/host-a-fast-game-challenge-on-a-budget-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do an online bootcamp on your own",
-    "image": "assets/images/do-an-online-bootcamp-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Dance through a workout playlist with your crew",
-    "image": "assets/images/dance-through-a-workout-playlist-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a fast game challenge on your own or with friends",
-    "image": "assets/images/host-a-fast-game-challenge-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Do an online bootcamp for a special night on your own",
-    "image": "assets/images/do-an-online-bootcamp-for-a-special-night-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Dance through a workout playlist for a special night with your crew",
-    "image": "assets/images/dance-through-a-workout-playlist-for-a-special-night-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Host a fast game challenge for a special night on your own or with friends",
-    "image": "assets/images/host-a-fast-game-challenge-for-a-special-night-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Social",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Walk to a nearby caf\u00e9 on your own",
-    "image": "assets/images/walk-to-a-nearby-caf-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a quiet library with your crew",
-    "image": "assets/images/visit-a-quiet-library-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take a scenic neighborhood walk on your own or with friends",
-    "image": "assets/images/take-a-scenic-neighborhood-walk-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Walk to a nearby caf\u00e9 for a weeknight plan on your own",
-    "image": "assets/images/walk-to-a-nearby-caf-for-a-weeknight-plan-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a quiet library for a weeknight plan with your crew",
-    "image": "assets/images/visit-a-quiet-library-for-a-weeknight-plan-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take a scenic neighborhood walk for a weeknight plan on your own or with friends",
-    "image": "assets/images/take-a-scenic-neighborhood-walk-for-a-weeknight-plan-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Walk to a nearby caf\u00e9 for a special night on your own",
-    "image": "assets/images/walk-to-a-nearby-caf-for-a-special-night-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a quiet library for a special night with your crew",
-    "image": "assets/images/visit-a-quiet-library-for-a-special-night-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Cozy",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Take a scenic neighborhood walk for a special night on your own or with friends",
-    "image": "assets/images/take-a-scenic-neighborhood-walk-for-a-special-night-on-your-own-or-with-friends.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Check out a pop-up event on your own",
-    "image": "assets/images/check-out-a-pop-up-event-on-your-own.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": false
-        }
-      },
-      {
-        "type of activity": [
-          "Explore",
-          "Social"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Meet up for casual dinner with your crew",
-    "image": "assets/images/meet-up-for-casual-dinner-with-your-crew.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "solo/social": {
-          "solo": false,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Eat & drink",
-          "Social"
         ]
       }
     ]
