@@ -19,7 +19,7 @@
 							<h2>Less scrolling.</h2>
 							<h2>More doing.</h2>
 						</hgroup>
-						<p>A better answer to “What should I do tonight?”</p>
+						<p>A better answer to "What should I do tonight?"</p>
 					</div>
 					<div id="intro-buttons">
 						<button id="random">Randomise</button>
@@ -67,9 +67,6 @@
 				<form id="nightcap-form" action="/my-handling-form-page" method="post">
 					<!-- Added action and method attributes to the form.
 					https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form -->
-					<button type="reset">
-						<img src="assets/icons/Restart.svg" alt="Restart">
-					</button>
 
 					<fieldset class="step">
 						<legend>
@@ -159,7 +156,13 @@
 
 					<button id="submit" type="submit" disabled>Submit</button>
 						<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
-					<!-- </section> -->
+
+					<img src="assets/images/thinking-dog.png" alt="Thinking dog" class="thinking-dog">
+
+					<nav class="form-nav">
+						<button type="button" id="back">Back</button>
+						<button type="reset" id="restart">Restart</button>
+					</nav>
 				</form>
 			</section>
 
@@ -176,7 +179,7 @@
 					<button id="edit-recap">Edit</button>
 				</div>
 			</div> -->
-					
+
 		</main>
 		<!-- <footer>
 			<p>Designed by Chareese Lam</p>

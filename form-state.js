@@ -24,6 +24,23 @@ fetch('data.json')
 		updateProgressBar(0)
 	})
 
+// back button
+// the back button just moves back a step and updates the progress bar. if users are on the first step and click back, it takes them to the landing page and resets the form state
+document.querySelector('#back').addEventListener('click', () => {
+	if (currentStep > 0) {
+		currentStep--
+		showStep(currentStep)
+		updateProgressBar(currentStep)
+	} else {
+		// return to landing and going back to default
+		document.querySelector('main').classList.add('home')
+		document.querySelector('#intro-img').style.display = ''
+		document.querySelector('#intro').style.display = ''
+		document.querySelector('#form-section').classList.remove('active')
+		document.querySelector('#progress-bar').classList.remove('active')
+	}
+})
+
 // next button
 steps.forEach((step, index) => {
 	step.addEventListener("click", () => {
@@ -78,7 +95,7 @@ function showStep(index) {
 	submitBtn.hidden = !isLast
 	submitBtn.disabled = !isAnswered(steps[index])
 }
-
+// when user advances, the current step is marked as "answered" so that if they go back, they can see which questions they've already answered. then it shows the next step and updates the progress bar
 function advanceStep() {
 	if (!isAnswered(steps[currentStep])) return
 	steps[currentStep].classList.add('answered')
@@ -88,13 +105,16 @@ function advanceStep() {
 }
 
 // auto-advance on radio change, or update submit state on last step
+// i added an event listener to the form that listens for any changes. if the change is on a radio button, i want it to auto-advance to the next question (unless it's the last question, then i just want to update the submit button state). if the change is on any other input type, we just want to update the submit button state in case users go back and change their answers. my logic:
 document.querySelector('#nightcap-form').addEventListener('change', (e) => {
+	// this targets radio buttons and checks if the change event is coming from a radio input. 
 	if (e.target.type === 'radio') {
 		if (currentStep === steps.length - 1) {
 			showStep(currentStep)
 		} else {
 			advanceStep()
 		}
+		// if the current step is the last one, i'm updating to change to a submit button, otherwise, it'll advance to the next question
 	} else {
 		showStep(currentStep)
 	}
