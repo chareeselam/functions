@@ -147,6 +147,77 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	updateProgressBar(0)
 })
 
+// i changed the logic of the submit and randomize button from previous commits. now, the function showResults takes in a list of the results and handles all the display logic for both flows. 
+// the submit button filters the data based on user input and then calls showResults with the filtered results. the randomize button just calls showResults with the full dataset to show random picks.
+function showResults(results) {
+	document.querySelector('main').classList.remove('home')
+	document.querySelector('#intro-img').style.display = 'none'
+	document.querySelector('#intro').style.display = 'none'
+	document.querySelector('#form-section').classList.remove('active')
+	document.querySelector('#progress-bar').classList.remove('active')
+
+	const resultDiv = document.querySelector('#result-recs')
+	const shuffleBtn = document.querySelector('#shuffle')
+	const restartBtn = document.querySelector('#results-restart')
+
+	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+	// i also used spread for my links project to generate the randomized grid so i brought it back in. i'm defining all results, and remaining results because i only want to show 3 results a time and have users click the shuffle button to view more if the top 3 suggestions aren't good enough. the spread here is to make a dupe of allResults so that when i splice the remaining array to show 3 results, it doesn't modify allResults and i can always go back to the full list of results when i need to refill the remaining pool.
+	let allResults = results
+	let remaining = [...allResults]
+
+	function showThree() {
+		// if the pool is empty, all results have been seen
+		if (remaining.length === 0) {
+			resultDiv.innerHTML = '<p>You\'ve seen all the suggestions! Try restarting for new answers.</p>'
+			shuffleBtn.hidden = true
+			return
+		}
+
+		// shuffle the remaining pool into a random order
+		remaining.sort(() => Math.random() - 0.5)
+
+		// take up to 3 and remove them from the pool so they won't repeat
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+		let threeResults = remaining.splice(0, 3)
+
+		const cardsHTML = threeResults.map(item =>
+			`<div class="results-card">
+				<img src="${item.image}" alt="${item.name}">
+				<h4>${item.name}</h4>
+			</div>`
+		).join('')
+
+		resultDiv.innerHTML = `<div class="carousel-track">${cardsHTML}</div>`
+
+		// hide shuffle button after showing the last batch
+		if (remaining.length === 0) {
+			shuffleBtn.hidden = true
+		}
+	}
+
+	if (results.length === 0) {
+		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
+		shuffleBtn.hidden = true
+		restartBtn.hidden = false
+	} else {
+		showThree()
+		restartBtn.hidden = false
+
+		// only show the shuffle button if there are more than 3 results
+		if (allResults.length > 3) {
+			shuffleBtn.hidden = false
+		}
+	}
+
+	// use onclick so re-triggering either flow replaces the handler instead of stacking it
+	shuffleBtn.onclick = showThree
+}
+
+// randomise button — skips the form and shows random picks from the full dataset
+document.querySelector('#random').addEventListener('click', () => {
+	showResults(data)
+})
+
 // submit button
 // document.querySelector('#nightcap-form').addEventListener('submit', (event) => {
 
@@ -168,9 +239,8 @@ submitBtn.addEventListener('click', (event) => {
 	const activityType = activityTypeInput ? activityTypeInput.value : ''
 
 	// map energy level 1-5
-	// the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data. 
-	let energyValue = energyLevel
-		if (energyLevel <= 2) energyLevel = 'low'
+	// the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data.
+	if (energyLevel <= 2) energyLevel = 'low'
 		else if (energyLevel <= 3) energyLevel = 'medium'
 		else energyLevel = 'high'
 
@@ -179,82 +249,29 @@ submitBtn.addEventListener('click', (event) => {
 		// i am mapping through each item in the data and checking if it matches the user's selections. if any of the criteria don't match, i return false and that item is filtered out. If all criteria match, I return true and that item is included in the results.
 
 		const inOut = criteria[0]["in/out"];
-		if (inOrOut && !inOut[inOrOut.value]) 
+		if (inOrOut && !inOut[inOrOut.value])
 			return false;
 
 		const energy = criteria[1]["energy"];
-		if (energyLevel && !energy[energyLevel]) 
+		if (energyLevel && !energy[energyLevel])
 			return false;
 
 		const cost = criteria[2]["cost"];
-		if (costSelection && !cost[costSelection.value]) 
+		if (costSelection && !cost[costSelection.value])
 			return false;
 
 		const soloSocial = criteria[3]["solo/social"];
-		if (soloOrSocial && !soloSocial[soloOrSocial.value]) 
+		if (soloOrSocial && !soloSocial[soloOrSocial.value])
 			return false;
 
 		const activityOptions = criteria[4]["type of activity"];
-		if (activityType && !activityOptions.includes(activityType)) 
+		if (activityType && !activityOptions.includes(activityType))
 			return false;
 
 		return true;
 	});
 
-	document.querySelector('#form-section').classList.remove('active')
-	document.querySelector('#progress-bar').classList.remove('active')
-
-	const resultDiv = document.querySelector('#result-recs')
-	const shuffleBtn = document.querySelector('#shuffle')
-	const restartBtn = document.querySelector('#results-restart')
-
-	// save all results so the shuffle button can access them
-	let allResults = results
-
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-	// i also used spread for my links project to generate the randomized grid so i brought it back in. i'm defining all results, and remaining results because i only want to show 3 results a time and have users click the shuffle button to view more if the top 3 suggestions aren't good enough. the spread here is to make a dupe of allResults so that when i splice the remaining array to show 3 results, it doesn't modify allResults and i can always go back to the full list of results when i need to refill the remaining pool.
-	let remaining = [...allResults]
-
-	if (results.length === 0) {
-		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
-		shuffleBtn.hidden = true
-		restartBtn.hidden = false
-	} else {
-		showThree()
-		restartBtn.hidden = false
-
-		// only show the shuffle button if there are more than 3 results
-		if (allResults.length > 3) {
-			shuffleBtn.hidden = false
-		}
-	}
-
-	function showThree() {
-		// if there are fewer than 3 left in the pool, refill it
-		if (remaining.length < 3) {
-			remaining = [...allResults]
-		}
-
-		// shuffle the remaining pool into a random order
-		remaining.sort(() => Math.random() - 0.5)
-
-		// take the first 3 and remove them from the pool so they won't repeat
-		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-		let threeResults = remaining.splice(0, 3)
-
-		const cardsHTML = threeResults.map(item =>
-			`<div class="results-card">
-				<img src="${item.image}" alt="${item.name}">
-				<h4>${item.name}</h4>
-			</div>`
-		).join('')
-
-		resultDiv.innerHTML = `<div class="carousel-track">${cardsHTML}</div>`
-	}
-
-	shuffleBtn.addEventListener('click', () => {
-		showThree()
-	})
+	showResults(results)
 })
 
 // // Target your form.

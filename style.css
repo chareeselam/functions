@@ -43,6 +43,7 @@ h1 {
 h2, h3, h4 {
 	font-family: var(--heading-font);
 	color: var(--blue);
+	font-weight: 500;
 }
 
 h1 {
@@ -125,7 +126,7 @@ h4 {
 body {
 	display: flex;
 	flex-direction: column;
-	/* padding: var(--space-md); */
+	padding: var(--space-md);
 	background-color: var(--cream);
 	max-inline-size: 800px;
 	block-size: 100vh;
@@ -219,7 +220,7 @@ main:not(.home) {
 		text-align: center;
 	}
 
-	@media (width <800px) {
+	@media (width>800px) {
 		gap: var(--space-lg);
 		/* padding-block: var(--space-ex-lg); */
 	}
