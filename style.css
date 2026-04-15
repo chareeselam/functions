@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Onest:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Onest:wght@100..900&family=Outfit:wght@100..900&display=swap');
 :root {
 	--cream:  #FAF1E1;
   	--black:  #1A1A1A;
@@ -11,9 +10,11 @@
 	--space-sm: 0.5rem;
 	--space-md: 1rem;
 	--space-lg: 2rem;
+	--space-ex-lg: 3rem;
 
 	/* fonts */
-	--heading-font: 'Barriecito', sans-serif;
+	--logo-font: 'Barriecito', sans-serif;
+	--heading-font: 'Outfit', sans-serif;
 	--body-font: 'Onest', sans-serif;
 
 	/* font sizes */
@@ -32,7 +33,11 @@ p {
 	padding-block: 0.5rem;
 }
 
-h1, h2, h3 {
+h1 {
+	font-family: var(--logo-font);
+	color: var(--blue);
+}
+h2, h3 {
 	font-family: var(--heading-font);
 	color: var(--blue);
 }
@@ -112,7 +117,7 @@ body {
 main {
 	background-color: var(--cream);
 	display: grid;
-	gap: var(--space-md);
+	gap: var(--space-ex-lg);
 	flex: 1;
 }
 
