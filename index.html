@@ -8,66 +8,47 @@
 
 	</head>
 	<body>
-		<main>
-			<header>
+		<main class="home">
+			<header id="landing">
 				<h1>Nightcap</h1>
+				<img id="intro-img" src="assets/images/landing-cream.png" alt="Dog putting phone away">
+				<!-- <video id="intro-img" src="assets/images/animated-dog.mp4" autoplay loop muted playsinline></video> -->
+				<section id="intro">
+					<div id="intro-text">
+						<hgroup>
+							<h2>Less scrolling.</h2>
+							<h2>More doing.</h2>
+						</hgroup>
+						<p>A better answer to “What should I do tonight?”</p>
+					</div>
+					<div id="intro-buttons">
+						<button id="random">Randomise</button>
+						<button id="start">Personalise</button>
+					</div>
+				</section>
 			</header>
-			<section id="intro">
-				<p>Nightcap helps you decide what to do tonight based on your mood, energy, budget, and whether going out is even on the table.</p>
-				<button id="get-started">Get started</button>
-			</section>
 
 			<div id="results">
-				<ul id="results-progress-bar">
+				<ul id="progress-bar">
 					<li>
-						<i class="icons-stay/go"></i>
-						<div class="progress-bar first">
-							<p>1</p>
-							<i class="check-mark">
-								<img src="assets/icons/Check.svg" alt="check mark">
-							</i>
-						</div>
-						<p class="label">Stay in/Go out</p>
+						<div class="segment first"></div>
+						<p class="label">In/Out</p>
 					</li>
 					<li>
-						<i class="icons-energy"></i>
-						<div class="progress-bar second">
-							<p>2</p>
-							<i class="check-mark">
-								<img src="assets/icons/Check.svg" alt="check mark">
-							</i>
-						</div>
-						<p class="label">Energy Level</p>
+						<div class="segment second"></div>
+						<p class="label">Energy</p>
 					</li>
 					<li>
-						<i class="icons-solo/social"></i>
-						<div class="progress-bar third">
-							<p>3</p>
-							<i class="check-mark">
-								<img src="assets/icons/Check.svg" alt="check mark">
-							</i>
-						</div>
+						<div class="segment third"></div>
 						<p class="label">Solo/Social</p>
 					</li>
 					<li>
-						<i class="icons-activity"></i>
-						<div class="progress-bar fourth">
-							<p>4</p>
-							<i class="check-mark">
-								<img src="assets/icons/Check.svg" alt="check mark">
-							</i>
-						</div>
+						<div class="segment fourth"></div>
 						<p class="label">Budget</p>
 					</li>
 					<li>
-						<i class="icons-activity"></i>
-						<div class="progress-bar fifth">
-							<p>5</p>
-							<i class="check-mark">
-								<img src="assets/icons/Check.svg" alt="check mark">
-							</i>
-						</div>
-						<p class="label">Activity Type</p>
+						<div class="segment fifth"></div>
+						<p class="label">Activity</p>
 					</li>
 				</ul>
 
@@ -91,52 +72,89 @@
 					</button>
 
 					<fieldset class="step">
-						<legend>Do you want to stay in or go out?</legend>
-						<input id="stay-in" name="in-or-out" type="radio" value="stay in">
-						<label for="stay-in">Stay in</label>
-						<input id="go-out" name="in-or-out" type="radio" value="go out">
-						<label for="go-out">Go out</label>
+						<legend>
+							<h3>Do you want to stay in or go out?</h3>
+						</legend>
+						<div class="input-layout">
+							<input id="stay-in" name="in-or-out" type="radio" value="stay in">
+							<label for="stay-in">
+								<!-- <img src="assets/images/form/stay-in.png" alt="Stay in"> -->
+								<p>Stay in</p>
+							</label>
+							<input id="go-out" name="in-or-out" type="radio" value="go out">
+							<label for="go-out">
+								<!-- <img src="assets/images/form/go-out.png" alt="Go out"> -->
+								<p>Go out</p>
+							</label>
+						</div>
 					</fieldset>
 
 					<section class="step">
-						<label for="energy">What is your energy level?</label>
-						<input type="range" id="energy" name="energy" min="1" max="5" value="3">
+						<label for="energy">
+							<h3>What is your energy level?</h3>
+						</label>
+						<div class="slider-wrapper">
+							<div class="slider-labels-top">
+								<span>Low</span>
+								<span>Medium</span>
+								<span>High</span>
+							</div>
+							<input type="range" id="energy" name="energy" min="1" max="5" value="3">
+							<div class="slider-labels-bottom">
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+								<span>4</span>
+								<span>5</span>
+							</div>
+						</div>
 					</section>
 
 
 					<fieldset class="step">
-						<legend>How do you want to spend your time?</legend>
-						<!-- And how different the `radio` type is! -->
-						<input id="solo" name="solo-or-social" type="radio" value="solo">
-						<label for="solo">Solo</label>
-						<input id="social" name="solo-or-social" type="radio" value="social">
-						<label for="social">Social</label>
+						<legend>
+							<h3>How do you want to spend your time?</h3>
+						</legend>
+						<div class="input-layout">
+							<input id="solo" name="solo-or-social" type="radio" value="solo">
+							<label for="solo">Solo</label>
+							<input id="social" name="solo-or-social" type="radio" value="social">
+							<label for="social">Social</label>
+						</div>
 					</fieldset>
 
 					<fieldset class="step">
-						<legend>What's your budget?</legend>
-						<input id="cost-low" name="cost" type="radio" value="low">
-						<label for="cost-low">Low</label>
-						<input id="cost-medium" name="cost" type="radio" value="medium">
-						<label for="cost-medium">Medium</label>
-						<input id="cost-high" name="cost" type="radio" value="high">
-						<label for="cost-high">High</label>
+						<legend>
+							<h3>What's your budget?</h3>
+						</legend>
+						<div class="input-layout">
+							<input id="cost-low" name="cost" type="radio" value="low">
+							<label for="cost-low">Low</label>
+							<input id="cost-medium" name="cost" type="radio" value="medium">
+							<label for="cost-medium">Medium</label>
+							<input id="cost-high" name="cost" type="radio" value="high">
+							<label for="cost-high">High</label>
+						</div>
 					</fieldset>
 
 					<fieldset class="step">
-						<legend>What type of activity are you interested in?</legend>
-						<input id="activity-cozy" name="activity-type" type="checkbox" value="Cozy">
-						<label for="activity-cozy">Cozy</label>
-						<input id="activity-creative" name="activity-type" type="checkbox" value="Creative">
-						<label for="activity-creative">Creative</label>
-						<input id="activity-active" name="activity-type" type="checkbox" value="Active">
-						<label for="activity-active">Active</label>
-						<input id="activity-explore" name="activity-type" type="checkbox" value="Explore">
-						<label for="activity-explore">Explore</label>
-						<input id="activity-eat-drink" name="activity-type" type="checkbox" value="Eat & drink">
-						<label for="activity-eat-drink">Eat & drink</label>
-						<input id="activity-social" name="activity-type" type="checkbox" value="Social">
-						<label for="activity-social">Social</label>
+						<legend>
+							<h3>What types of activities are you interested in?</h3>
+						</legend>
+						<div class="input-layout">
+							<input id="activity-cozy" name="activity-type" type="checkbox" value="Cozy">
+							<label for="activity-cozy">Cozy</label>
+							<input id="activity-creative" name="activity-type" type="checkbox" value="Creative">
+							<label for="activity-creative">Creative</label>
+							<input id="activity-active" name="activity-type" type="checkbox" value="Active">
+							<label for="activity-active">Active</label>
+							<input id="activity-explore" name="activity-type" type="checkbox" value="Explore">
+							<label for="activity-explore">Explore</label>
+							<input id="activity-eat-drink" name="activity-type" type="checkbox" value="Eat & drink">
+							<label for="activity-eat-drink">Eat & drink</label>
+							<input id="activity-social" name="activity-type" type="checkbox" value="Social">
+							<label for="activity-social">Social</label>
+						</div>
 					</fieldset>
 
 					<button id="submit" type="submit" disabled>Submit</button>
