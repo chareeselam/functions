@@ -287,8 +287,6 @@ main:has(#results.active) {
 	flex-direction: row;
 	align-items: flex-end;
 	justify-content: space-between;
-	margin-top: auto;
-	/* padding-block: var(--space-md); */
 }
 
 /* thinking dog */
@@ -586,31 +584,36 @@ input[type="range"]#energy {
 		flex-direction: column;
 		flex: 1;
 		background-color: var(--blue);
+		gap: var(--space-md);
+
+		@media (width <800px) {
+			gap: var(--space-lg);
+		}
 
 		h1 {
 			font-size: var(--text-h2);
 			text-align: center;
 		}
-	}
 
-	h1, h2, h3, p {
-		color: var(--cream);
-	}
-
-	h4 {
-		color: var(--blue)
-	}
-
-	#results-restart,
-	#shuffle {
-		color: var(--cream);
-		border-color: var(--cream);
-
-		&:hover {
-			background-color: var(--cream);
-			color: var(--blue);
+		h1, h2, h3, p {
+			color: var(--cream);
 		}
-	}
+
+		h4 {
+			color: var(--blue)
+		}
+
+		#results-restart,
+		#shuffle {
+			color: var(--cream);
+			border-color: var(--cream);
+
+			&:hover {
+				background-color: var(--cream);
+				color: var(--blue);
+			}
+		}
+	}	
 }
 
 #results-controls {
