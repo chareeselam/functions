@@ -235,7 +235,7 @@
       {
         "in/out": {
           "stay in": true,
-          "go out": false
+          "go out": true
         }
       },
       {

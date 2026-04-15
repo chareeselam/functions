@@ -80,7 +80,8 @@ h4 {
 
 #submit,
 #start,
-#random {
+#random,
+#shuffle {
 	display: inline-block;
 	inline-size: fit-content;
 	font-family: var(--body-font);
@@ -125,7 +126,7 @@ h4 {
 body {
 	display: flex;
 	flex-direction: column;
-	/* padding: var(--space-md); */
+	padding: var(--space-md);
 	background-color: var(--cream);
 	max-inline-size: 800px;
 	block-size: 100vh;
@@ -133,6 +134,10 @@ body {
 	transition: background-color 0.3s ease;
 
 	&:has(main.home) {
+		background-color: var(--blue);
+	}
+
+	&:has(#result-recs:not(:empty)) {
 		background-color: var(--blue);
 	}
 
@@ -205,6 +210,21 @@ main.home {
 				display: flex;
 				gap: var(--space-md);
 			}
+		}
+	}
+}
+
+/* results state — blue background, cream text */
+main:has(#result-recs:not(:empty)) {
+	background-color: var(--blue);
+
+	h1, h2, h3, h4, p {
+		color: var(--cream);
+	}
+
+	.results-card {
+		h4, p {
+			color: var(--blue);
 		}
 	}
 }
@@ -636,7 +656,7 @@ input[type="range"]#energy {
 	background-color: var(--white);
 	border-radius: var(--space-sm);
 	border: var(--border) solid var(--blue);
-	padding: var(--space-sm);
+	padding: var(--space-md);
 	overflow: hidden;
 	color: var(--blue);
 	flex-shrink: 0;
@@ -650,7 +670,7 @@ input[type="range"]#energy {
 		inline-size: 100%;
 		max-block-size: 20rem;
 		flex: 1;
-		object-fit: cover;
+		object-fit: fill;
 		border-radius: calc(var(--space-sm) / 2);
 	}
 }
