@@ -22,8 +22,8 @@
 						<p>A better answer to "What should I do tonight?"</p>
 					</div>
 					<div id="intro-buttons">
-						<button id="random">Randomise</button>
-						<button id="start">Personalise</button>
+						<button id="random" class="secondary-button">Randomise</button>
+						<button id="start" class="primary-button">Personalise</button>
 					</div>
 				</section>
 			</header>
@@ -86,7 +86,16 @@
 								<span>Medium</span>
 								<span>High</span>
 							</div>
-							<input type="range" id="energy" name="energy" min="1" max="5" value="3">
+							<div class="slider-track-wrapper">
+								<input type="range" id="energy" name="energy" min="1" max="5" value="3">
+								<div class="slider-ticks">
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
 							<div class="slider-labels-bottom">
 								<span>1</span>
 								<span>2</span>
@@ -145,15 +154,15 @@
 						</div>
 					</fieldset>
 
-					<button id="submit" type="submit" disabled>Submit</button>
+					<button id="submit" type="submit" class="primary-button" disabled>Submit</button>
 						<!-- There is also a special `submit` type: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit -->
 
 					<div class="form-bottom">
-						<button type="button" id="back">
+						<button type="button" id="back" class="text-button">
 							<p>Back</p>
 						</button>
 						<img src="assets/images/thinking-dog.png" alt="Thinking dog" class="thinking-dog">
-						<button type="reset" id="restart">
+						<button type="reset" id="restart" class="text-button">
 							<p>Restart</p>
 						</button>
 					</div>
@@ -163,8 +172,8 @@
 			<section id="results">
 				<h1>Nightcap</h1>
 				<div id="results-controls">
-					<button id="results-restart" hidden>Restart</button>
-					<button id="shuffle" hidden>Shuffle</button>
+					<button id="results-restart" class="secondary-button"hidden>Restart</button>
+					<button id="shuffle" class="primary-button" hidden>Shuffle</button>
 				</div>
 				<div id="result-recs"></div>
 			</section>
