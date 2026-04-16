@@ -105,7 +105,11 @@ function isAnswered(step) {
 // show/hide/disable submit button
 function showStep(index) {
 	steps.forEach((step, i) => {
-		step.classList.toggle('active', i === index)
+		if (i === index) {
+			step.classList.add('active')
+		} else {
+			step.classList.remove('active')
+		}
 	})
 
 	const isLast = index === steps.length - 1
@@ -211,14 +215,21 @@ function showResults(results) {
 	function updateDots() {
 		const total = pool.length
 		const count = Math.min(total, maxDots)
-		// i want the dot to always be in the middle (if there are more than 3 remaining) so i'm maping the active dot to slide proportionally. math.round snaps to the nearest
-		const activeDot = total <= maxDots
-			? currentIndex
-			: Math.round(currentIndex / (total - 1) * (count - 1))
+		const middle = Math.floor((count - 1) / 2)
+		let activeDot
+		if (total <= maxDots) {
+			activeDot = currentIndex
+		} else {
+			activeDot = Math.min(middle, currentIndex) + Math.max(0, (count - 1 - middle) - (total - 1 - currentIndex))
+		}
 
 		dots.forEach((dot, i) => {
 			dot.hidden = i >= count
-			dot.classList.toggle('active', i === activeDot)
+			if (i === activeDot) {
+				dot.classList.add('active')
+			} else {
+				dot.classList.remove('active')
+			}
 		})
 
 		currentCounter.textContent = currentIndex + 1
@@ -270,7 +281,12 @@ submitBtn.addEventListener('click', (event) => {
 	const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')
 	const costSelection = document.querySelector('[name="cost"]:checked')
 	const activityTypeInput = document.querySelector('[name="activity-dropdown"]:checked')
-	const activityType = activityTypeInput ? activityTypeInput.value : ''
+	let activityType
+	if (activityTypeInput) {
+		activityType = activityTypeInput.value
+	} else {
+		activityType = ''
+	}
 
 	// map energy level 1-5
 	// the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data.
