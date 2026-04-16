@@ -319,7 +319,6 @@ main:has(#results.active) {
 /* submit position in form column */
 #submit:not([hidden]) {
 	align-self: center;
-	margin-top: var(--space-md);
 }
 
 #submit:not(:disabled):not([hidden]) {
@@ -516,6 +515,7 @@ input[type="range"]#energy {
 		background-position: center;
 		background-color: transparent;
 		border: none;
+		box-shadow: none;
 		cursor: pointer;
 		position: relative;
 		z-index: 3;
@@ -530,6 +530,7 @@ input[type="range"]#energy {
 		background-position: center;
 		background-color: transparent;
 		border: none;
+		box-shadow: none;
 		cursor: pointer;
 		position: relative;
 		z-index: 3;
