@@ -1,3 +1,9 @@
+// if the browser restores the page from bfcache (e.g. hitting the browser back button),
+// reload so form inputs don't carry over from a previous session
+window.addEventListener('pageshow', (e) => {
+	if (e.persisted) location.reload()
+})
+
 document.querySelector('#start').addEventListener('click', () => {
 	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.add('active')
