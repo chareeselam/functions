@@ -7,6 +7,7 @@ document.querySelector('#start').addEventListener('click', () => {
 const steps = document.querySelectorAll('.step')
 const submitBtn = document.querySelector('#submit')
 let currentStep = 0
+let maxStep = 0
 let data = []
 
 // load data then show question one
@@ -37,6 +38,19 @@ document.querySelector('#back').addEventListener('click', () => {
 	}
 })
 
+// progress bar back-navigation
+// i wanted to make the progress bar segments clickable so users can easily go back to previous questions without having to click "back" multiple times. the logic is that if users click on a segment in the progress bar that is marked as "done" (meaning they've already been to that step), it will take them back to that step. if they click on a segment that isn't marked as "done", nothing happens because they haven't reached that step yet. 
+// https://claude.ai/share/ec7ea511-b8ca-4f6f-abcc-1d46515298b8
+document.querySelectorAll('#progress-bar li').forEach((item, index) => {
+	item.addEventListener('click', () => {
+		const segment = item.querySelector('.segment')
+		if (!segment.classList.contains('done')) return
+		currentStep = index
+		showStep(currentStep)
+		updateProgressBar(currentStep)
+	})
+})
+
 // next button
 steps.forEach((step, index) => {
 	step.addEventListener("click", () => {
@@ -57,12 +71,12 @@ function updateProgressBar(currentStep) {
 	const progress = [first, second, third, fourth, fifth];
 
 	progress.forEach((step, index) => {
-		if (index < currentStep) {
-			step.classList.remove("active");
-			step.classList.add("done");
-		} else if (index === currentStep) {
+		if (index === currentStep) {
 			step.classList.add("active");
 			step.classList.remove("done");
+		} else if (index <= maxStep) {
+			step.classList.remove("active");
+			step.classList.add("done");
 		} else {
 			step.classList.remove("active");
 			step.classList.remove("done");
@@ -96,6 +110,7 @@ function advanceStep() {
 	if (!isAnswered(steps[currentStep])) return
 	steps[currentStep].classList.add('answered')
 	currentStep++
+	if (currentStep > maxStep) maxStep = currentStep
 	showStep(currentStep)
 	updateProgressBar(currentStep)
 }
@@ -133,6 +148,7 @@ document.querySelector('#results-restart').addEventListener('click', () => {
 // reset button
 document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	currentStep = 0
+	maxStep = 0
 	steps.forEach(step => step.classList.remove('answered'))
 	document.querySelector('#result-recs').innerHTML = ''
 	document.querySelector('#shuffle').hidden = true

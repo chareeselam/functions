@@ -585,6 +585,7 @@ input[type="range"]#energy {
 
 		&.done {
 			background-color: var(--blue);
+			cursor: pointer;
 		}
 	}
 
