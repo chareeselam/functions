@@ -1,5 +1,4 @@
-// if the browser restores the page from bfcache (e.g. hitting the browser back button),
-// reload so form inputs don't carry over from a previous session
+// if the browser restores the page from bfcache (e.g. hitting the browser back button), it reloads the form inputs so they don't carry over from a previous session
 window.addEventListener('pageshow', (e) => {
 	if (e.persisted) location.reload()
 })
@@ -25,7 +24,6 @@ fetch('data.json')
 	// https://developer.mozilla.org/en-US/docs/Web/API/Response/json
 	.then(json => {
 		data = json
-		document.querySelector('#nightcap-form').reset()
 		showStep(0)
 		updateProgressBar(0)
 	})
@@ -157,22 +155,23 @@ document.querySelector('#energy').addEventListener('input', () => {
 	sliderTimer = setTimeout(advanceStep, 800)
 })
 
-// restart button on results page — triggers the form's reset event
+// restart button on results page — goes home, then resets
 document.querySelector('#results-restart').addEventListener('click', () => {
+	document.querySelector('#results').classList.remove('active')
+	document.querySelector('#progress-bar').classList.remove('active')
+	document.querySelector('#home').classList.add('active')
 	document.querySelector('#nightcap-form').reset()
 })
 
-// reset button
+// reset — clears state and returns to step 1 (form section stays active if already there)
 document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	currentStep = 0
 	maxStep = 0
 	steps.forEach(step => step.classList.remove('answered'))
 	document.querySelector('#result-recs').innerHTML = ''
-	document.querySelector('#shuffle').hidden = true
+	document.querySelectorAll('.result-dot').forEach(e => { e.hidden = false; e.classList.remove('active') })
+	document.querySelector('#result-counter').hidden = true
 	document.querySelector('#results-restart').hidden = true
-	document.querySelector('#results').classList.remove('active')
-	document.querySelector('#form-section').classList.add('active')
-	document.querySelector('#progress-bar').classList.add('active')
 	showStep(0)
 	updateProgressBar(0)
 })
@@ -186,60 +185,66 @@ function showResults(results) {
 	document.querySelector('#results').classList.add('active')
 
 	const resultDiv = document.querySelector('#result-recs')
-	const shuffleBtn = document.querySelector('#shuffle')
+	const dots = document.querySelectorAll('.result-dot')
+	const counter = document.querySelector('#result-counter')
+	const currentCounter = document.querySelector('#current-counter')
+	const totalCounter = document.querySelector('#total-counter')
 	const restartBtn = document.querySelector('#results-restart')
+	const prevBtn = document.querySelector('#prev-recs')
+	const nextBtn = document.querySelector('#next-recs')
 
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-	// i also used spread for my links project to generate the randomized grid so i brought it back in. i'm defining all results, and remaining results because i only want to show 3 results a time and have users click the shuffle button to view more if the top 3 suggestions aren't good enough. the spread here is to make a dupe of allResults so that when i splice the remaining array to show 3 results, it doesn't modify allResults and i can always go back to the full list of results when i need to refill the remaining pool.
-	let allResults = results
-	let remaining = [...allResults]
+	if (results.length === 0) {
+		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
+		dots.forEach(e => e.hidden = true)
+		counter.hidden = true
+		prevBtn.hidden = true
+		nextBtn.hidden = true
+		restartBtn.hidden = false
+		return
+	}
 
-	function showThree() {
-		// if the pool is empty, all results have been seen
-		if (remaining.length === 0) {
-			resultDiv.innerHTML = '<p>You\'ve seen all the suggestions! Try restarting for new answers.</p>'
-			shuffleBtn.hidden = true
-			return
-		}
+	// i added navigation dots to give users feedback on how many recommendations are available. i set a max limit to show 5 dots, but if there are more than 5 recommendations, the active dot is mapped proportionally (in the middle). i also added a "n of N" counter which helps users identify how many recommendations there are. 
+	const pool = results
+	const maxDots = 5
+	let currentIndex = 0
 
-		// shuffle the remaining pool into a random order
-		remaining.sort(() => Math.random() - 0.5)
+	function updateDots() {
+		const total = pool.length
+		const count = Math.min(total, maxDots)
+		// i want the dot to always be in the middle (if there are more than 3 remaining) so i'm maping the active dot to slide proportionally. math.round snaps to the nearest
+		const activeDot = total <= maxDots
+			? currentIndex
+			: Math.round(currentIndex / (total - 1) * (count - 1))
 
-		// take up to 3 and remove them from the pool so they won't repeat
-		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-		let threeResults = remaining.splice(0, 3)
+		dots.forEach((dot, i) => {
+			dot.hidden = i >= count
+			dot.classList.toggle('active', i === activeDot)
+		})
 
-		const cardsHTML = threeResults.map(item =>
+		currentCounter.textContent = currentIndex + 1
+		totalCounter.textContent = total
+	}
+
+	function showOne() {
+		const item = pool[currentIndex]
+		resultDiv.innerHTML =
 			`<div class="results-card">
 				<img src="${item.image}" alt="${item.name}">
 				<h4>${item.name}</h4>
 			</div>`
-		).join('')
-
-		resultDiv.innerHTML = `<div class="carousel-track">${cardsHTML}</div>`
-
-		// hide shuffle button after showing the last batch
-		if (remaining.length === 0) {
-			shuffleBtn.hidden = true
-		}
+		updateDots()
+		prevBtn.disabled = currentIndex === 0
+		nextBtn.disabled = currentIndex === pool.length - 1
 	}
 
-	if (results.length === 0) {
-		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
-		shuffleBtn.hidden = true
-		restartBtn.hidden = false
-	} else {
-		showThree()
-		restartBtn.hidden = false
+	showOne()
+	counter.hidden = false
+	restartBtn.hidden = false
+	prevBtn.hidden = pool.length <= 1
+	nextBtn.hidden = pool.length <= 1
 
-		// only show the shuffle button if there are more than 3 results
-		if (allResults.length > 3) {
-			shuffleBtn.hidden = false
-		}
-	}
-
-	// use onclick so re-triggering either flow replaces the handler instead of stacking it
-	shuffleBtn.onclick = showThree
+	prevBtn.onclick = () => { if (currentIndex > 0) { currentIndex--; showOne() } }
+	nextBtn.onclick = () => { if (currentIndex < pool.length - 1) { currentIndex++; showOne() } }
 }
 
 // randomise button — skips the form and shows random picks from the full dataset

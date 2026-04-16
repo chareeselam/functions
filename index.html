@@ -169,11 +169,15 @@
 
 			<section id="results">
 				<h1>Nightcap</h1>
-				<div id="results-controls">
-					<button id="results-restart" class="secondary-button"hidden>Restart</button>
-					<button id="shuffle" class="primary-button" hidden>Shuffle</button>
-				</div>
 				<div id="result-recs"></div>
+				<div id="result-dots">
+					<span class="result-dot"></span>
+					<span class="result-dot"></span>
+					<span class="result-dot"></span>
+					<span class="result-dot"></span>
+					<span class="result-dot"></span>
+				</div>
+				<p id="result-counter"><span id="current-counter">1</span> of <span id="total-counter">5</span></p>
 				<div id="result-arrows">
 					<button id="prev-recs" class="primary-button">
 						<img src="assets/icons/left.svg" alt="Left arrow">
@@ -181,6 +185,9 @@
 					<button id="next-recs" class="primary-button">
 						<img src="assets/icons/right.svg" alt="Right arrow">
 					</button>
+				</div>
+				<div id="results-controls">
+					<button id="results-restart" class="secondary-button"hidden>Restart</button>
 				</div>
 			</section>
 
