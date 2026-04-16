@@ -25,6 +25,7 @@ fetch('data.json')
 	// https://developer.mozilla.org/en-US/docs/Web/API/Response/json
 	.then(json => {
 		data = json
+		document.querySelector('#nightcap-form').reset()
 		showStep(0)
 		updateProgressBar(0)
 	})
