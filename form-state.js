@@ -90,6 +90,8 @@ function isAnswered(step) {
 	if (radio) return !!step.querySelector('input[type="radio"]:checked')
 	const dropdown = step.querySelector('select')
 	if (dropdown) return dropdown.value !== ''
+	const checkbox = step.querySelector('input[type="checkbox"]')
+	if (checkbox) return !!step.querySelector('input[type="checkbox"]:checked')
 	// this means that if there are radios or dropdowns in the step, we check if they have a value before allowing users to click "next". If there aren't any radios or dropdowns, we just return true and allow users to click "next" without having to answer any questions (like for the energy level slider).
 	// i only need it for radios and dropdowns because for other questions like my energyLevel slider, it starts at "1" but if users are already feeling "1", they don't have to move it and just click "next"
 	return true
@@ -118,7 +120,7 @@ function advanceStep() {
 // auto-advance on radio change, or update submit state on last step
 // i added an event listener to the form that listens for any changes. if the change is on a radio button, i want it to auto-advance to the next question (unless it's the last question, then i just want to update the submit button state). if the change is on any other input type, we just want to update the submit button state in case users go back and change their answers. my logic:
 document.querySelector('#nightcap-form').addEventListener('change', (e) => {
-	// this targets radio buttons and checks if the change event is coming from a radio input. 
+	// this targets radio buttons and checks if the change event is coming from a radio input.
 	if (e.target.type === 'radio') {
 		if (currentStep === steps.length - 1) {
 			showStep(currentStep)
@@ -126,6 +128,14 @@ document.querySelector('#nightcap-form').addEventListener('change', (e) => {
 			advanceStep()
 		}
 		// if the current step is the last one, i'm updating to change to a submit button, otherwise, it'll advance to the next question
+		// i also set a limit so users can only click 3 options for the "type of activity" question
+		// the logic for the checkbox limit is that when a user clicks on a checkbox, it checks how many checkboxes are currently checked. if there are already 3 checked and the user tries to check another one, it will immediately uncheck it and not allow them to select more than 3
+	} else if (e.target.type === 'checkbox') {
+		const checked = document.querySelectorAll('[name="activity-type"]:checked')
+		if (checked.length > 3) {
+			e.target.checked = false
+		}
+		showStep(currentStep)
 	} else {
 		showStep(currentStep)
 	}
