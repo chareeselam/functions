@@ -2,7 +2,7 @@
 :root {
 	--cream:  #FAF1E1;
   	--black:  #1A1A1A;
-  	--white:  #FFFFFF;
+  	/* --white:  #FFFFFF; */
   	--grey:   #E5D9C4;
 	--blue:   #003681;
 	--light-blue: #1A55A6;
@@ -31,9 +31,9 @@
 	--border-thicker: 0.125rem;
 }
 
-/* general styles */
+/* --------------- type ---------------*/
 p {
-	line-height: 1.2rem;
+	line-height: 1.4rem;
 	font-family: var(--body-font);
 	font-size: var(--text-body);
 	padding-block: 0.5rem;
@@ -55,31 +55,25 @@ h1 {
 	font-size: var(--text-h1);
 }
 
-h2 {
-	font-size: var(--text-h2);
-}
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-h4); }
 
-h3 {
-	font-size: var(--text-h3);
-}
-
-h4 {
-	font-size: var(--text-h4);
-}
-
+/* --------------- layout ---------------*/
 body {
 	display: flex;
 	flex-direction: column;
+	max-inline-size: 50rem;
 	padding: var(--space-md);
 	background-color: var(--blue);
+	block-size: 100svh;
+	max-block-size: 100svh;
+	margin-inline: auto;
 
 	&:has(#form-section.active) {
 		background-color: var(--cream);
 	}
-	max-inline-size: 800px;
-	block-size: 100svh;
-	max-block-size: 100svh;
-	margin-inline: auto;
+	
 
 	@media (width>800px) {
 		padding: var(--space-ex-lg);
@@ -94,15 +88,9 @@ main {
 	@media (width <800px) {
 		gap: var(--space-lg);
 	}
-		/* padding-block: var(--space-lg);
-	}
-
-	@media (width > 1200px) {
-		padding-block: var(--space-ex-lg);
-	} */
 }
 
-/* buttons */
+/* --------------- buttons ---------------*/
 .primary-button,
 .secondary-button {
 	display: inline-block;
@@ -131,7 +119,7 @@ main {
 	&:disabled {
 		background-color: var(--grey);
 		border-color: var(--grey);
-		color: var(--white);
+		color: var(--cream);
 		cursor: not-allowed;
 		opacity: 0.6;
 	}
@@ -215,7 +203,7 @@ main {
 
 }
 
-/* landing state — blue background */
+/* --------------- home (blue bg) ---------------*/
 #home {
 	display: none;
 
@@ -259,7 +247,7 @@ main {
 	}
 }
 
-/* form layout */
+/* --------------- form layout ---------------*/
 main:has(#form-section.active),
 main:has(#results.active) {
 	grid-template-rows: 1fr;
@@ -305,7 +293,7 @@ main:has(#results.active) {
 	}
 }
 
-.step {
+.question {
 	display: none;
 
 	&.active {
@@ -323,7 +311,7 @@ main:has(#results.active) {
 
 #submit:not(:disabled):not([hidden]) {
 	background-color: var(--blue);
-	color: var(--white);
+	color: var(--cream);
 }
 
 /* form bottom bar */
@@ -369,7 +357,7 @@ fieldset {
 	input[type="checkbox"]:checked + label {
 		background-color: var(--blue);
 		border-color: var(--blue);
-		color: var(--white);
+		color: var(--cream);
 	}
 
 	&.active:has(#activity-cozy) {
@@ -380,23 +368,26 @@ fieldset {
 			/* justify-content: center; */
 		}
 
-		label {
+		/* label {
 			flex: 0 0 auto;
-		}
+		} */
 	}
 
 	.input-layout {
 		display: flex;
-		flex-direction: column;
-		gap: var(--space-sm);
+		flex-direction: row;
+		gap: var(--space-lg);
+		justify-content: center;
+		margin-block-start: var(--space-lg);
 	}
 
 	label {
 		display: flex;
+		/* flex: 1; */
 		flex-direction: column;
 		align-items: start;
+		inline-size: fit-content;
 		justify-content: center;
-		flex: 1;
 		padding: var(--space-md) var(--space-lg);
 		border: var(--border) solid var(--blue);
 		border-radius: 9999px;
@@ -409,7 +400,7 @@ fieldset {
 
 		&:hover {
 			background-color: var(--blue);
-			color: var(--white);
+			color: var(--cream);
 		}
 
 		&:active {
@@ -591,7 +582,6 @@ input[type="range"]#energy {
 	}
 
 	.label {
-		font-family: var(--body-font);
 		font-size: var(--text-sm);
 		color: var(--grey);
 		text-align: center;
@@ -760,7 +750,7 @@ input[type="range"]#energy {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-md);
-	background-color: var(--white);
+	background-color: var(--cream);
 	border-radius: var(--space-sm);
 	border: var(--border) solid var(--blue);
 	padding: var(--space-md);

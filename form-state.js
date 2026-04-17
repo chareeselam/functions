@@ -9,32 +9,32 @@ document.querySelector('#start').addEventListener('click', () => {
 	document.querySelector('#progress-bar').classList.add('active')
 })
 
-const steps = document.querySelectorAll('.step')
+const questions = document.querySelectorAll('.question')
 const submitBtn = document.querySelector('#submit')
-let currentStep = 0
-let maxStep = 0
+let currentQuestion = 0
+let maxQuestion = 0
 let data = []
 
 // load data then show question one
 // this is a fetch request to get the data from the .json file
 // i learned that fetch returns a promise and that we can chain .then() to handle the response
-// the first .then() converts the response to JSON, and the second .then() assigns the JSON data to our variable and shows the first step of the form
+// the first .then() converts the response to JSON, and the second .then() assigns the JSON data to our variable and shows the first question of the form
 fetch('data.json')
 	.then(response => response.json())
 	// https://developer.mozilla.org/en-US/docs/Web/API/Response/json
 	.then(json => {
 		data = json
-		showStep(0)
+		showQuestion(0)
 		updateProgressBar(0)
 	})
 
 // back button
-// the back button just moves back a step and updates the progress bar. if users are on the first step and click back, it takes them to the landing page and resets the form state
+// the back button just moves back a question and updates the progress bar. if users are on the first question and click back, it takes them to the landing page and resets the form state
 document.querySelector('#back').addEventListener('click', () => {
-	if (currentStep > 0) {
-		currentStep--
-		showStep(currentStep)
-		updateProgressBar(currentStep)
+	if (currentQuestion > 0) {
+		currentQuestion--
+		showQuestion(currentQuestion)
+		updateProgressBar(currentQuestion)
 	} else {
 		// return to landing and going back to default
 		document.querySelector('#form-section').classList.remove('active')
@@ -44,30 +44,30 @@ document.querySelector('#back').addEventListener('click', () => {
 })
 
 // progress bar back-navigation
-// i wanted to make the progress bar segments clickable so users can easily go back to previous questions without having to click "back" multiple times. the logic is that if users click on a segment in the progress bar that is marked as "done" (meaning they've already been to that step), it will take them back to that step. if they click on a segment that isn't marked as "done", nothing happens because they haven't reached that step yet. 
+// i wanted to make the progress bar segments clickable so users can easily go back to previous questions without having to click "back" multiple times. the logic is that if users click on a segment in the progress bar that is marked as "done" (meaning they've already been to that question), it'll take them back to that question. if they click on a segment that isn't marked as "done", nothing happens because they haven't reached that question yet.
 // https://claude.ai/share/ec7ea511-b8ca-4f6f-abcc-1d46515298b8
 document.querySelectorAll('#progress-bar li').forEach((item, index) => {
 	item.addEventListener('click', () => {
 		const segment = item.querySelector('.segment')
 		if (!segment.classList.contains('done')) return
-		currentStep = index
-		showStep(currentStep)
-		updateProgressBar(currentStep)
+		currentQuestion = index
+		showQuestion(currentQuestion)
+		updateProgressBar(currentQuestion)
 	})
 })
 
 // next button
-steps.forEach((step, index) => {
-	step.addEventListener("click", () => {
-		nextStep(index);
+questions.forEach((question, index) => {
+	question.addEventListener("click", () => {
+		nextQuestion(index);
 	});
 });
 
 // form progress bar
 // https://dev.to/jolamemushaj/how-to-create-a-steps-progress-bar-4m2b
-// i want to make a progress bar that fills in as users go through the form. i found this link and created a segmented progress bar. the list item is filled in when the user clicks "next" and moves on to the next question. i also added a class of "answered" to the step so that if users go back to previous questions, they can see which ones they've already answered.
+// i want to make a progress bar that fills in as users go through the form. i found this link and created a segmented progress bar. the list item is filled in when the user clicks "next" and moves on to the next question. i also added a class of "answered" to the question so that if users go back to previous questions, they can see which ones they've already answered.
 // https://claude.ai/share/1711bc33-bec5-4693-b1c2-c5b9f57a7267
-function updateProgressBar(currentStep) {
+function updateProgressBar(currentQuestion) {
 	const first = document.querySelector(".first");
 	const second = document.querySelector(".second");
 	const third = document.querySelector(".third");
@@ -75,55 +75,55 @@ function updateProgressBar(currentStep) {
 	const fifth = document.querySelector(".fifth");
 	const progress = [first, second, third, fourth, fifth];
 
-	progress.forEach((step, index) => {
-		if (index === currentStep) {
-			step.classList.add("active");
-			step.classList.remove("done");
-		} else if (index <= maxStep) {
-			step.classList.remove("active");
-			step.classList.add("done");
+	progress.forEach((segment, index) => {
+		if (index === currentQuestion) {
+			segment.classList.add("active");
+			segment.classList.remove("done");
+		} else if (index <= maxQuestion) {
+			segment.classList.remove("active");
+			segment.classList.add("done");
 		} else {
-			step.classList.remove("active");
-			step.classList.remove("done");
+			segment.classList.remove("active");
+			segment.classList.remove("done");
 		}
 	});
 }
 
 // next button only if users input is valid
-function isAnswered(step) {
-	const radio = step.querySelector('input[type="radio"]')
-	if (radio) return !!step.querySelector('input[type="radio"]:checked')
-	const dropdown = step.querySelector('select')
+function isAnswered(question) {
+	const radio = question.querySelector('input[type="radio"]')
+	if (radio) return !!question.querySelector('input[type="radio"]:checked')
+	const dropdown = question.querySelector('select')
 	if (dropdown) return dropdown.value !== ''
-	const checkbox = step.querySelector('input[type="checkbox"]')
-	if (checkbox) return !!step.querySelector('input[type="checkbox"]:checked')
-	// this means that if there are radios or dropdowns in the step, we check if they have a value before allowing users to click "next". If there aren't any radios or dropdowns, we just return true and allow users to click "next" without having to answer any questions (like for the energy level slider).
+	const checkbox = question.querySelector('input[type="checkbox"]')
+	if (checkbox) return !!question.querySelector('input[type="checkbox"]:checked')
+	// this means that if there are radios or dropdowns in the question, we check if they have a value before allowing users to click "next". If there aren't any radios or dropdowns, we just return true and allow users to click "next" without having to answer any questions (like for the energy level slider).
 	// i only need it for radios and dropdowns because for other questions like my energyLevel slider, it starts at "1" but if users are already feeling "1", they don't have to move it and just click "next"
 	return true
 }
 
 // show/hide/disable submit button
-function showStep(index) {
-	steps.forEach((step, i) => {
+function showQuestion(index) {
+	questions.forEach((question, i) => {
 		if (i === index) {
-			step.classList.add('active')
+			question.classList.add('active')
 		} else {
-			step.classList.remove('active')
+			question.classList.remove('active')
 		}
 	})
 
-	const isLast = index === steps.length - 1
+	const isLast = index === questions.length - 1
 	submitBtn.hidden = !isLast
-	submitBtn.disabled = !isAnswered(steps[index])
+	submitBtn.disabled = !isAnswered(questions[index])
 }
-// when user advances, the current step is marked as "answered" so that if they go back, they can see which questions they've already answered. then it shows the next step and updates the progress bar
-function advanceStep() {
-	if (!isAnswered(steps[currentStep])) return
-	steps[currentStep].classList.add('answered')
-	currentStep++
-	if (currentStep > maxStep) maxStep = currentStep
-	showStep(currentStep)
-	updateProgressBar(currentStep)
+// when user advances, the current question is marked as "answered" so that if they go back, they can see which questions they've already answered. then it shows the next question and updates the progress bar
+function advanceQuestion() {
+	if (!isAnswered(questions[currentQuestion])) return
+	questions[currentQuestion].classList.add('answered')
+	currentQuestion++
+	if (currentQuestion > maxQuestion) maxQuestion = currentQuestion
+	showQuestion(currentQuestion)
+	updateProgressBar(currentQuestion)
 }
 
 // auto-advance on radio change, or update submit state on last step
@@ -131,12 +131,12 @@ function advanceStep() {
 document.querySelector('#nightcap-form').addEventListener('change', (e) => {
 	// this targets radio buttons and checks if the change event is coming from a radio input.
 	if (e.target.type === 'radio') {
-		if (currentStep === steps.length - 1) {
-			showStep(currentStep)
+		if (currentQuestion === questions.length - 1) {
+			showQuestion(currentQuestion)
 		} else {
-			advanceStep()
+			advanceQuestion()
 		}
-		// if the current step is the last one, i'm updating to change to a submit button, otherwise, it'll advance to the next question
+		// if the current question is the last one, i'm updating to change to a submit button, otherwise, it'll advance to the next question
 		// i also set a limit so users can only click 3 options for the "type of activity" question
 		// the logic for the checkbox limit is that when a user clicks on a checkbox, it checks how many checkboxes are currently checked. if there are already 3 checked and the user tries to check another one, it will immediately uncheck it and not allow them to select more than 3
 	} else if (e.target.type === 'checkbox') {
@@ -144,19 +144,19 @@ document.querySelector('#nightcap-form').addEventListener('change', (e) => {
 		if (checked.length > 3) {
 			e.target.checked = false
 		}
-		showStep(currentStep)
+		showQuestion(currentQuestion)
 	} else {
-		showStep(currentStep)
+		showQuestion(currentQuestion)
 	}
 })
 
 // https://claude.ai/share/bfde2840-9524-4f30-9b73-bca713c43a6a
-// i wanted to make the energy level question a range slider and have it auto-advance when users select their energy level. this function listens for input changes on the slider and then advances the step after a short delay (so it doesn't immediately jump to the next question while users are still adjusting the slider).
+// i wanted to make the energy level question a range slider and have it auto-advance when users select their energy level. this function listens for input changes on the slider and then advances the question after a short delay (so it doesn't immediately jump to the next question while users are still adjusting the slider).
 // auto-advance range slider after user releases
 let sliderTimer = null
 document.querySelector('#energy').addEventListener('input', () => {
 	clearTimeout(sliderTimer)
-	sliderTimer = setTimeout(advanceStep, 800)
+	sliderTimer = setTimeout(advanceQuestion, 800)
 })
 
 // restart button on results page — goes home, then resets
@@ -167,16 +167,16 @@ document.querySelector('#results-restart').addEventListener('click', () => {
 	document.querySelector('#nightcap-form').reset()
 })
 
-// reset — clears state and returns to step 1 (form section stays active if already there)
+// reset — clears state and returns to question 1 (form section stays active if already there)
 document.querySelector('#nightcap-form').addEventListener('reset', () => {
-	currentStep = 0
-	maxStep = 0
-	steps.forEach(step => step.classList.remove('answered'))
+	currentQuestion = 0
+	maxQuestion = 0
+	questions.forEach(question => question.classList.remove('answered'))
 	document.querySelector('#result-recs').innerHTML = ''
 	document.querySelectorAll('.result-dot').forEach(e => { e.hidden = false; e.classList.remove('active') })
 	document.querySelector('#result-counter').hidden = true
 	document.querySelector('#results-restart').hidden = true
-	showStep(0)
+	showQuestion(0)
 	updateProgressBar(0)
 })
 
