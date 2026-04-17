@@ -115,6 +115,7 @@ function showQuestion(index) {
 	const isLast = index === questions.length - 1
 	submitBtn.hidden = !isLast
 	submitBtn.disabled = !isAnswered(questions[index])
+	document.querySelector('.thinking-dog').hidden = isLast
 }
 // when user advances, the current question is marked as "answered" so that if they go back, they can see which questions they've already answered. then it shows the next question and updates the progress bar
 function advanceQuestion() {

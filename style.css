@@ -200,7 +200,16 @@ main {
 	&[hidden] {
 		display: none;
 	}
+}
 
+/* submit */
+#submit:not([hidden]) {
+	align-self: center;
+}
+
+#submit:not(:disabled):not([hidden]) {
+	background-color: var(--blue);
+	color: var(--cream);
 }
 
 /* --------------- home (blue bg) ---------------*/
@@ -244,6 +253,57 @@ main {
 			display: flex;
 			gap: var(--space-md);
 		}
+	}
+}
+
+/* --------------- progress bar ---------------*/
+#progress-bar {
+	display: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 0.2rem;
+
+	&.active {
+		display: flex;
+	}
+
+	li {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.segment {
+		inline-size: 100%;
+		block-size: 0.375rem;
+		border-radius: 3px;
+		background-color: var(--grey);
+		transition: background-color 0.3s ease;
+
+		&.active {
+			background-color: var(--dark-blue);
+		}
+
+		&.done {
+			background-color: var(--blue);
+			cursor: pointer;
+		}
+	}
+
+	.label {
+		font-size: var(--text-sm);
+		color: var(--grey);
+		text-align: center;
+		padding-block: 0;
+		transition: color 0.3s ease;
+	}
+
+	.segment.active ~ .label,
+	.segment.done ~ .label {
+		color: var(--black);
 	}
 }
 
@@ -293,6 +353,7 @@ main:has(#results.active) {
 	}
 }
 
+/* --------------- form questions ---------------*/
 .question {
 	display: none;
 
@@ -302,39 +363,13 @@ main:has(#results.active) {
 		flex: 1;
 		gap: var(--space-lg);
 	}
-}
 
-/* submit position in form column */
-#submit:not([hidden]) {
-	align-self: center;
-}
-
-#submit:not(:disabled):not([hidden]) {
-	background-color: var(--blue);
-	color: var(--cream);
-}
-
-/* form bottom bar */
-.form-bottom {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: space-between;
-}
-
-/* thinking dog */
-.thinking-dog {
-	inline-size: 50%;
-	block-size: auto;
-	display: block;
-
-	@media (width > 500px) {
-		max-inline-size: 40%;
-		inline-size: 30%;
+	&:has(activity-type) {
+		gap: var(--)
 	}
 }
 
-/* form */
+/* --------------- fieldset ---------------*/
 fieldset {
 	border: none;
 	padding: 0;
@@ -410,7 +445,30 @@ fieldset {
 	}
 }
 
-/* energy slider */
+/* --------------- form bottom --------------- */
+.form-bottom {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	.thinking-dog[hidden] {
+		display: none;
+	}
+
+	.thinking-dog {
+		inline-size: 50%;
+		block-size: auto;
+		display: block;
+
+		@media (width > 500px) {
+			max-inline-size: 40%;
+			inline-size: 30%;
+		}
+	}
+}
+
+/* --------------- energy slider --------------- */
 .slider-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -544,107 +602,7 @@ input[type="range"]#energy {
 	}
 }
 
-/* progress bar */
-#progress-bar {
-	display: none;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	gap: 0.2rem;
-
-	&.active {
-		display: flex;
-	}
-
-	li {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-	}
-
-	.segment {
-		inline-size: 100%;
-		block-size: 0.375rem;
-		border-radius: 3px;
-		background-color: var(--grey);
-		transition: background-color 0.3s ease;
-
-		&.active {
-			background-color: var(--dark-blue);
-		}
-
-		&.done {
-			background-color: var(--blue);
-			cursor: pointer;
-		}
-	}
-
-	.label {
-		font-size: var(--text-sm);
-		color: var(--grey);
-		text-align: center;
-		padding-block: 0;
-		transition: color 0.3s ease;
-	}
-
-	.segment.active ~ .label,
-	.segment.done ~ .label {
-		color: var(--black);
-	}
-}
-
-/* results editor */
-/* #result-recap {
-	display: none;
-	align-items: center;
-	justify-content: space-between;
-	gap: var(--space-md);
-	background-color: var(--white);
-	border-radius: var(--space-sm);
-	padding: var(--space-sm) var(--space-md);
-
-	&.active {
-		display: flex;
-	}
-}
-
-#recap-answers {
-	display: flex;
-	flex-wrap: wrap;
-	gap: var(--space-sm);
-	list-style: none;
-	padding: 0;
-	margin: 0;
-
-	li {
-		font-family: var(--body-font);
-		font-size: var(--text-sm);
-		background-color: var(--grey);
-		border-radius: calc(var(--space-sm) / 2);
-		padding: 0.25rem var(--space-sm);
-	}
-}
-
-#edit-recap {
-	flex-shrink: 0;
-	font-family: var(--body-font);
-	font-size: var(--text-sm);
-	padding: 0.25rem var(--space-sm);
-	border: var(--border) solid var(--black);
-	border-radius: calc(var(--space-sm) / 2);
-	background-color: transparent;
-	cursor: pointer;
-	transition: background-color 0.15s ease, color 0.15s ease;
-
-	&:hover {
-		background-color: var(--black);
-		color: var(--white);
-	}
-} */
-
-/* results */
+/* --------------- results --------------- */
 #results {
 	display: none;
 
