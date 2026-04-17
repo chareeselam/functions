@@ -237,7 +237,8 @@ function showResults(results) {
 		totalCounter.textContent = total
 	}
 
-	function showOne() {
+	function showOne(dir = '') {
+		resultDiv.dataset.dir = dir
 		const item = pool[currentIndex]
 		resultDiv.innerHTML =
 			`<div class="results-card">
@@ -255,8 +256,8 @@ function showResults(results) {
 	prevBtn.hidden = pool.length <= 1
 	nextBtn.hidden = pool.length <= 1
 
-	prevBtn.onclick = () => { if (currentIndex > 0) { currentIndex--; showOne() } }
-	nextBtn.onclick = () => { if (currentIndex < pool.length - 1) { currentIndex++; showOne() } }
+	prevBtn.onclick = () => { if (currentIndex > 0) { currentIndex--; showOne('left') } }
+	nextBtn.onclick = () => { if (currentIndex < pool.length - 1) { currentIndex++; showOne('right') } }
 }
 
 // randomise button — skips the form and shows random picks from the full dataset
