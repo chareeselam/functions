@@ -376,9 +376,9 @@ fieldset {
 	.input-layout {
 		display: flex;
 		flex-direction: row;
-		gap: var(--space-lg);
+		gap: var(--space-md);
 		justify-content: center;
-		margin-block-start: var(--space-lg);
+		margin-block-start: var(--space-md);
 	}
 
 	label {
