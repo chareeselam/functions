@@ -1,5 +1,5 @@
 
-document.querySelector('#personalise').addEventListener('click', () => {
+document.querySelector('#personalize').addEventListener('click', () => {
 	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.add('active')
 	document.querySelector('#progress-bar').classList.add('active')
@@ -174,7 +174,7 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	updateProgressBar(0)
 })
 
-// this function showResults is responsible for displaying the results after the user submits the form or clicks the randomise button. it takes in a list of results and updates the DOM to show the recommendations. 
+// this function showResults is responsible for displaying the results after the user submits the form or clicks the randomize button. it takes in a list of results and updates the DOM to show the recommendations. 
 // also handles the navigation logic for going through multiple recommendations if there are more than one (more below)
 // if there are no results, it shows a message to the user indicating that no activities were found.
 function showResults(results) {
@@ -306,11 +306,11 @@ function showResults(results) {
 	})
 }
 
-// randomise button — skips the form and shows random picks in the randomised layout
+// randomize button — skips the form and shows random picks in the randomized layout
 // same logic as "submit" button but without the filtering — just shows all the activities in a random order and lets users shuffle through them using the same navigation as the results page
-document.querySelector('#randomise').addEventListener('click', () => {
+document.querySelector('#randomize').addEventListener('click', () => {
 	document.querySelector('#home').classList.remove('active')
-	document.querySelector('#results-randomised').classList.add('active')
+	document.querySelector('#results-randomized').classList.add('active')
 
 	const pool = [...data].sort(() => Math.random() - 0.5)
 	let currentIndex = 0
@@ -351,7 +351,7 @@ document.querySelector('#randomise').addEventListener('click', () => {
 	shuffleBtn.onclick = () => { if (currentIndex < pool.length - 1) { currentIndex++; showOne('right') } }
 
 	restartBtn.onclick = () => {
-		document.querySelector('#results-randomised').classList.remove('active')
+		document.querySelector('#results-randomized').classList.remove('active')
 		document.querySelector('#home').classList.add('active')
 		resultDiv.innerHTML = ''
 		restartBtn.hidden = true

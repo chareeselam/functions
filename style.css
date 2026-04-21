@@ -310,7 +310,7 @@ main {
 /* --------------- form layout ---------------*/
 main:has(#form-section.active),
 main:has(#results.active),
-main:has(#results-randomised.active) {
+main:has(#results-randomized.active) {
 	grid-template-rows: 1fr;
 	gap: var(--space-md);
 	padding: 0;
@@ -622,8 +622,8 @@ input[type="range"]#energy {
 	}	
 }
 
-/* --------------- results randomised layout --------------- */
-#results-randomised {
+/* --------------- results randomized layout --------------- */
+#results-randomized {
 	display: none;
 
 	&.active {
