@@ -1,9 +1,5 @@
-// if the browser restores the page from bfcache (e.g. hitting the browser back button), it reloads the form inputs so they don't carry over from a previous session
-window.addEventListener('pageshow', (e) => {
-	if (e.persisted) location.reload()
-})
 
-document.querySelector('#start').addEventListener('click', () => {
+document.querySelector('#personalise').addEventListener('click', () => {
 	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.add('active')
 	document.querySelector('#progress-bar').classList.add('active')
@@ -68,12 +64,7 @@ questions.forEach((question, index) => {
 // i want to make a progress bar that fills in as users go through the form. i found this link and created a segmented progress bar. the list item is filled in when the user clicks "next" and moves on to the next question. i also added a class of "answered" to the question so that if users go back to previous questions, they can see which ones they've already answered.
 // https://claude.ai/share/1711bc33-bec5-4693-b1c2-c5b9f57a7267
 function updateProgressBar(currentQuestion) {
-	const first = document.querySelector(".first");
-	const second = document.querySelector(".second");
-	const third = document.querySelector(".third");
-	const fourth = document.querySelector(".fourth");
-	const fifth = document.querySelector(".fifth");
-	const progress = [first, second, third, fourth, fifth];
+	const progress = document.querySelectorAll('.segment')
 
 	progress.forEach((segment, index) => {
 		if (index === currentQuestion) {
@@ -117,6 +108,7 @@ function showQuestion(index) {
 	submitBtn.disabled = !isAnswered(questions[index])
 	document.querySelector('.thinking-dog').hidden = isLast
 }
+
 // when user advances, the current question is marked as "answered" so that if they go back, they can see which questions they've already answered. then it shows the next question and updates the progress bar
 function advanceQuestion() {
 	if (!isAnswered(questions[currentQuestion])) return
@@ -127,26 +119,27 @@ function advanceQuestion() {
 	updateProgressBar(currentQuestion)
 }
 
-// auto-advance on radio change, or update submit state on last step
-// i added an event listener to the form that listens for any changes. if the change is on a radio button, i want it to auto-advance to the next question (unless it's the last question, then i just want to update the submit button state). if the change is on any other input type, we just want to update the submit button state in case users go back and change their answers. my logic:
-document.querySelector('#nightcap-form').addEventListener('change', (e) => {
-	// this targets radio buttons and checks if the change event is coming from a radio input.
+// auto-advance on radio click — (i originally had it as 'change' but i changed it to 'click' so that if users go back to previously answered questions, re-clicking an already-selected answer also advances)
+document.querySelector('#nightcap-form').addEventListener('click', (e) => {
 	if (e.target.type === 'radio') {
 		if (currentQuestion === questions.length - 1) {
 			showQuestion(currentQuestion)
 		} else {
 			advanceQuestion()
 		}
-		// if the current question is the last one, i'm updating to change to a submit button, otherwise, it'll advance to the next question
-		// i also set a limit so users can only click 3 options for the "type of activity" question
-		// the logic for the checkbox limit is that when a user clicks on a checkbox, it checks how many checkboxes are currently checked. if there are already 3 checked and the user tries to check another one, it will immediately uncheck it and not allow them to select more than 3
-	} else if (e.target.type === 'checkbox') {
+	}
+})
+
+// i also set a limit so users can only click 3 options for the "type of activity" question
+// the logic for the checkbox limit is that when a user clicks on a checkbox, it checks how many checkboxes are currently checked. if there are already 3 checked and the user tries to check another one, it will immediately uncheck it and not allow them to select more than 3
+document.querySelector('#nightcap-form').addEventListener('change', (e) => {
+	if (e.target.type === 'checkbox') {
 		const checked = document.querySelectorAll('[name="activity-type"]:checked')
 		if (checked.length > 3) {
 			e.target.checked = false
 		}
 		showQuestion(currentQuestion)
-	} else {
+	} else if (e.target.type !== 'radio') {
 		showQuestion(currentQuestion)
 	}
 })
@@ -160,7 +153,7 @@ document.querySelector('#energy').addEventListener('input', () => {
 	sliderTimer = setTimeout(advanceQuestion, 800)
 })
 
-// restart button on results page — goes home, then resets
+// restart button on results page — goes home, then resets form
 document.querySelector('#results-restart').addEventListener('click', () => {
 	document.querySelector('#results').classList.remove('active')
 	document.querySelector('#progress-bar').classList.remove('active')
@@ -181,8 +174,9 @@ document.querySelector('#nightcap-form').addEventListener('reset', () => {
 	updateProgressBar(0)
 })
 
-// i changed the logic of the submit and randomize button from previous commits. now, the function showResults takes in a list of the results and handles all the display logic for both flows. 
-// the submit button filters the data based on user input and then calls showResults with the filtered results. the randomize button just calls showResults with the full dataset to show random picks.
+// this function showResults is responsible for displaying the results after the user submits the form or clicks the randomise button. it takes in a list of results and updates the DOM to show the recommendations. 
+// also handles the navigation logic for going through multiple recommendations if there are more than one (more below)
+// if there are no results, it shows a message to the user indicating that no activities were found.
 function showResults(results) {
 	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.remove('active')
@@ -198,8 +192,10 @@ function showResults(results) {
 	const prevBtn = document.querySelector('#prev-recs')
 	const nextBtn = document.querySelector('#next-recs')
 
+	// edge case: no results found
+	// shows message and hides navigation if there are no results
 	if (results.length === 0) {
-		resultDiv.innerHTML = '<p>No activities found. Try something else :)</p>'
+		resultDiv.innerHTML = '<p>No activities found. Try something else <img src="assets/icons/smiley.svg" alt="Smiley"></p>'
 		dots.forEach(e => e.hidden = true)
 		counter.hidden = true
 		prevBtn.hidden = true
@@ -208,23 +204,38 @@ function showResults(results) {
 		return
 	}
 
-	// i added navigation dots to give users feedback on how many recommendations are available. i set a max limit to show 5 dots, but if there are more than 5 recommendations, the active dot is mapped proportionally (in the middle). i also added a "n of N" counter which helps users identify how many recommendations there are. 
-	const pool = results
+	// i added navigation dots to give users feedback on how many recommendations are available. i set a max limit (maxDots) to show 5 dots, but if there are more than 5 recommendations, the active dot is mapped proportionally (in the middle). i also added a "n of N" counter to inform/show users how many recommendations are available
 	const maxDots = 5
 	let currentIndex = 0
 
 	function updateDots() {
-		const total = pool.length
+		const total = results.length
 		const count = Math.min(total, maxDots)
+		// since i set the max number of dots to 5, and index starts at 0, the middle dot is at index 2, so the formula to find the middle index is (count - 1) / 2
+		// for example, if there are 5 or more results, the middle dot is at index 2 (the third dot). if there are 3 results, the middle dot is at index 1 (the second dot)
 		const middle = Math.floor((count - 1) / 2)
+		
 		let activeDot
 		if (total <= maxDots) {
 			activeDot = currentIndex
 		} else {
-			activeDot = Math.min(middle, currentIndex) + Math.max(0, (count - 1 - middle) - (total - 1 - currentIndex))
+			const distanceFromEnd = total - 1 - currentIndex
+			const dotsAfterMiddle = count - 1 - middle
+
+			if (currentIndex <= middle) {
+				activeDot = currentIndex
+			// if there are more than 5 results and the user is on the first half, the active dot correspondes to their current index
+			} else if (distanceFromEnd <= dotsAfterMiddle) {
+				// but if there are more than 5 results and the user is on the second half, the active dot corresponds to how close they are to the end (so if they're on the last result, the last dot is active)
+				// for example, if there are 10 results, and users are on results 3-7, the middle dot (index 2) is active. if they're on result 2, the second dot is active. if they're on result 9, the second last dot is active
+				activeDot = count - 1 - distanceFromEnd
+			} else {
+				activeDot = middle
+			}
 		}
 
 		dots.forEach((dot, i) => {
+			// i = index
 			dot.hidden = i >= count
 			if (i === activeDot) {
 				dot.classList.add('active')
@@ -236,40 +247,119 @@ function showResults(results) {
 		currentCounter.textContent = currentIndex + 1
 		totalCounter.textContent = total
 	}
-
-	function showOne(dir = '') {
-		resultDiv.dataset.dir = dir
-		const item = pool[currentIndex]
-		resultDiv.innerHTML =
-			`<div class="results-card">
+	// recommendation navigation logic
+	// i'm showing one recommendation at a time and letting users navigate through them using the next and previous buttons. the showOne function updates the recommendation card shown based on the current index
+	function showOne(direction = '') {
+		const item = results[currentIndex]
+		const newCard = `<div class="results-card">
 				<img src="${item.image}" alt="${item.name}">
 				<h4>${item.name}</h4>
 			</div>`
-		updateDots()
-		prevBtn.disabled = currentIndex === 0
-		nextBtn.disabled = currentIndex === pool.length - 1
+
+		function renderNew() {
+			resultDiv.dataset.dir = direction
+			resultDiv.innerHTML = newCard
+			updateDots()
+			// disables/enables the next/previous buttons as needed (for example, if users are on the first recommendation, the previous button is disabled)
+			prevBtn.disabled = currentIndex === 0
+			nextBtn.disabled = currentIndex === results.length - 1
+		}
+
+		// here, i'm checking if there's an existing recommendation card shown. if there isn't, i just render the new card
+		// if there is, i play an exit animation based on the direction of navigation (left for previous, right for next) and then render the new card after the animation ends
+		const existing = resultDiv.firstElementChild
+		if (direction === '' || existing === null) {
+			renderNew()
+			return
+		}
+
+		prevBtn.disabled = true
+		nextBtn.disabled = true
+		if (direction === 'right') {
+			resultDiv.dataset.dir = 'exit-left'
+		} else {
+			resultDiv.dataset.dir = 'exit-right'
+		}
+		existing.addEventListener('animationend', renderNew, { once: true })
 	}
 
+	// i'm rendering the first recommendation and showing the navigation buttons (unless there are only one result)
 	showOne()
 	counter.hidden = false
 	restartBtn.hidden = false
-	prevBtn.hidden = pool.length <= 1
-	nextBtn.hidden = pool.length <= 1
+	prevBtn.hidden = results.length <= 1
+	nextBtn.hidden = results.length <= 1
 
-	prevBtn.onclick = () => { if (currentIndex > 0) { currentIndex--; showOne('left') } }
-	nextBtn.onclick = () => { if (currentIndex < pool.length - 1) { currentIndex++; showOne('right') } }
+	// next/previous button event listeners
+	prevBtn.addEventListener('click', () => {
+		if (currentIndex > 0) {
+			currentIndex--
+			showOne('left')
+		}
+	})
+
+	nextBtn.addEventListener('click', () => {
+		if (currentIndex < results.length - 1) {
+			currentIndex++
+			showOne('right')
+		}
+	})
 }
 
-// randomise button — skips the form and shows random picks from the full dataset
-document.querySelector('#random').addEventListener('click', () => {
-	showResults(data)
+// randomise button — skips the form and shows random picks in the randomised layout
+// same logic as "submit" button but without the filtering — just shows all the activities in a random order and lets users shuffle through them using the same navigation as the results page
+document.querySelector('#randomise').addEventListener('click', () => {
+	document.querySelector('#home').classList.remove('active')
+	document.querySelector('#results-randomised').classList.add('active')
+
+	const pool = [...data].sort(() => Math.random() - 0.5)
+	let currentIndex = 0
+
+	const resultDiv = document.querySelector('#result-recs-random')
+	const restartBtn = document.querySelector('#results-restart-random')
+	const shuffleBtn = document.querySelector('#results-shuffle')
+
+	function showOne(direction = '') {
+		const item = pool[currentIndex]
+		const newCard = `<div class="results-card">
+				<img src="${item.image}" alt="${item.name}">
+				<h4>${item.name}</h4>
+			</div>`
+
+		function renderNew() {
+			resultDiv.dataset.dir = direction
+			resultDiv.innerHTML = newCard
+			shuffleBtn.disabled = currentIndex === pool.length - 1
+		}
+
+		const existing = resultDiv.firstElementChild
+		if (direction === '' || existing === null) {
+			renderNew()
+			return
+		}
+
+		shuffleBtn.disabled = true
+		resultDiv.dataset.dir = 'exit-left'
+		existing.addEventListener('animationend', renderNew, { once: true })
+	}
+
+	showOne()
+	restartBtn.hidden = false
+	shuffleBtn.hidden = false
+	shuffleBtn.disabled = false
+
+	shuffleBtn.onclick = () => { if (currentIndex < pool.length - 1) { currentIndex++; showOne('right') } }
+
+	restartBtn.onclick = () => {
+		document.querySelector('#results-randomised').classList.remove('active')
+		document.querySelector('#home').classList.add('active')
+		resultDiv.innerHTML = ''
+		restartBtn.hidden = true
+		shuffleBtn.hidden = true
+	}
 })
 
-// submit button
-// document.querySelector('#nightcap-form').addEventListener('submit', (event) => {
-
 // filter data and show result
-
 // after speaking to my professor Michael about and Eric, i rewrote the logic of how the form filters through data. Explained my logic below.
 // main issue after: The "submit" button wasn't working after i rewrote it and i spoke with Claude to understand why and the mistakes i made were: forgetting to define criteria [x], starting an array at 1 instead of 0, mismatch naming between form and data, and not including the "type of activity" criteria in the filtering logic.
 // https://claude.ai/share/fb79f9e3-bb71-4878-b95a-296a0b03281c
@@ -282,13 +372,7 @@ submitBtn.addEventListener('click', (event) => {
 	// i also learned to change const to let for energyLevel because i needed to reassign the value after mapping it to low/medium/high.
 	const soloOrSocial = document.querySelector('[name="solo-or-social"]:checked')
 	const costSelection = document.querySelector('[name="cost"]:checked')
-	const activityTypeInput = document.querySelector('[name="activity-dropdown"]:checked')
-	let activityType
-	if (activityTypeInput) {
-		activityType = activityTypeInput.value
-	} else {
-		activityType = ''
-	}
+	const selectedActivityTypes = [...document.querySelectorAll('[name="activity-type"]:checked')].map(el => el.value)
 
 	// map energy level 1-5
 	// the values for energyLevel in .json is low/medium/high, but in the form, i wanted to give users the options to pick in-betweens (#2 or #4) so here, i'm defining what those values correspond to in the .json data.
@@ -317,7 +401,7 @@ submitBtn.addEventListener('click', (event) => {
 			return false;
 
 		const activityOptions = criteria[4]["type of activity"];
-		if (activityType && !activityOptions.includes(activityType))
+		if (selectedActivityTypes.length > 0 && !selectedActivityTypes.some(t => activityOptions.includes(t)))
 			return false;
 
 		return true;
@@ -325,104 +409,3 @@ submitBtn.addEventListener('click', (event) => {
 
 	showResults(results)
 })
-
-// // Target your form.
-// let formElement = document.querySelector('#nightcap-form')
-
-// // Function to match the form to URL/stored params.
-// let updateForm = (params) => {
-// 	// Parse into params:
-// 	// https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
-// 	params = new URLSearchParams(params)
-
-// 	// Our friend, the `forEach` loop:
-// 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-// 	params.forEach((value, key) => {
-// 		// Find them by their ID.
-// 		let inputOrSelect = document.getElementById(key)
-
-// 		if (inputOrSelect) {
-// 			// Set the actual input to the param value.
-// 			inputOrSelect.value = value
-// 		} else {
-// 			// Radios are a bit different, find them by `name` attribute.
-// 			document.querySelectorAll(`[name=${key}]`).forEach((element) => {
-// 				if (value == element.value) { // Check the one matching the param value.
-// 					element.checked = true
-// 				}
-// 			}
-// 		)
-// 		}
-// 	})
-
-// 	// And a callback! This function is defined over in `main.js`, for clarity.
-// 	stateCallback?.()
-// 	// The `?.` is optional chaining:
-// 	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
-// }
-
-// // Function to save them to `localStorage`.
-// let storeParams = () => {
-// 	// Get the form data:
-// 	// https://developer.mozilla.org/en-US/docs/Web/API/FormData
-// 	let formParams = new FormData(formElement)
-
-// 	// Loop through each key/value pair.
-// 	formParams.forEach((value, key) => {
-// 		// And save them out to the browser:
-// 		// https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-// 		localStorage.setItem(key, value)
-// 	})
-// }
-
-// // Function to update the URL from the form.
-// let updateUrlParams = () => {
-// 	let formParams = new FormData(formElement) // Get the form data.
-
-// 	formParams = new URLSearchParams(formParams) // Make it into params.
-// 	formParams = formParams.toString() // And then into a string.
-
-// 	// You could also write this as:
-// 	// let formParams = new URLSearchParams(new FormData(formElement)).toString()
-
-// 	// Update the URL with the params at the end.
-// 	history.replaceState(null, null, '?' + formParams)
-// 	// We use `history` here (instead of `location`) to not get into an infinite loop!
-// 	// https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
-
-// 	// And also store them!
-// 	storeParams()
-
-// 	// And a callback!
-// 	stateCallback?.()
-// }
-
-
-
-// // First, check for query/params in the URL:
-// // https://developer.mozilla.org/en-US/docs/Web/API/Location/search
-// if (location.search) {
-// 	let urlParams = location.search // Get the query string.
-
-// 	updateForm(urlParams) // Update the form from these.
-// }
-// // Otherwise check for saved params in storage.
-// else if (localStorage.length > 0) {
-// 	let storedParams = Object.entries(localStorage) // Get the saved params.
-
-// 	updateForm(storedParams) // Update the form from these.
-// }
-
-
-// // Watch for events!
-// formElement.addEventListener('submit', (event) => {
-// 	// Don’t actually submit (which would refresh the page):
-// 	// https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
-// 	event.preventDefault()
-// })
-
-// // Run any time the form is modified:
-// // https://developer.mozilla.org/en-US/docs/Web/API/Element/input_event
-// formElement.addEventListener('input', () => {
-// 	updateUrlParams()
-// })

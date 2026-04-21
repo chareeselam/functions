@@ -309,7 +309,8 @@ main {
 
 /* --------------- form layout ---------------*/
 main:has(#form-section.active),
-main:has(#results.active) {
+main:has(#results.active),
+main:has(#results-randomised.active) {
 	grid-template-rows: 1fr;
 	gap: var(--space-md);
 	padding: 0;
@@ -621,71 +622,108 @@ input[type="range"]#energy {
 	}	
 }
 
-/* --------------- result cards --------------- */
-@keyframes slideFromRight {
-	from { transform: 
-		translateX(60%); 
-		opacity: 0;
-		scale: 0.95;
-	}
+/* --------------- results randomised layout --------------- */
+#results-randomised {
+	display: none;
 
-	to { 
-		transform: translateX(0);   
-		opacity: 1;
-		scale: 1;
+	&.active {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		background-color: var(--blue);
+		gap: var(--space-md);
+
+		@media (width > 800px) {
+			gap: var(--space-lg);
+		}
+
+		h1 {
+			font-size: var(--text-h2);
+			text-align: center;
+		}
+
+		h1, h2, h3, p {
+			color: var(--cream);
+		}
+
+		h4 {
+			color: var(--blue)
+		}
 	}
 }
 
-@keyframes slideFromLeft {
-	from {
-		transform: translateX(-60%);
-		opacity: 0;
-		scale: 0.95;
-	}
+#result-recs-random[data-dir="right"]      .results-card { animation: slideFromRight 0.35s ease-out; }
+#result-recs-random[data-dir="left"]       .results-card { animation: slideFromLeft  0.35s ease-out; }
+#result-recs-random[data-dir="exit-left"]  .results-card { animation: slideToLeft    0.2s ease-in forwards; }
+#result-recs-random[data-dir="exit-right"] .results-card { animation: slideToRight   0.2s ease-in forwards; }
 
-	to {
-		transform: translateX(0);
-		opacity: 1;
-		scale: 1;
-	}
-}
-
-#result-recs[data-dir="right"] .results-card { animation: slideFromRight 0.6s ease; }
-#result-recs[data-dir="left"]  .results-card { animation: slideFromLeft  0.6s ease; }
-
-#result-recs {
+#result-recs-random {
 	overflow: hidden;
 	flex: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* padding-block: var(--space-md); */
+}
+
+/* --------------- result cards --------------- */
+@keyframes slideFromRight {
+	from { transform: translateX(60%); opacity: 0; scale: 0.95; }
+	to   { transform: translateX(0);   opacity: 1; scale: 1; }
+}
+
+@keyframes slideFromLeft {
+	from { transform: translateX(-60%); opacity: 0; scale: 0.95; }
+	to   { transform: translateX(0);    opacity: 1; scale: 1; }
+}
+
+@keyframes slideToLeft {
+	from { transform: translateX(0);    opacity: 1; scale: 1; }
+	to   { transform: translateX(-60%); opacity: 0; scale: 0.95; }
+}
+
+@keyframes slideToRight {
+	from { transform: translateX(0);   opacity: 1; scale: 1; }
+	to   { transform: translateX(60%); opacity: 0; scale: 0.95; }
+}
+
+#result-recs[data-dir="right"]      .results-card { animation: slideFromRight 0.35s ease-in; }
+#result-recs[data-dir="left"]       .results-card { animation: slideFromLeft  0.35s ease-in; }
+#result-recs[data-dir="exit-left"]  .results-card { animation: slideToLeft    0.2s ease-out forwards; }
+#result-recs[data-dir="exit-right"] .results-card { animation: slideToRight   0.2s ease-out forwards; }
+
+#result-recs,
+#result-recs-random {
+	overflow: hidden;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-block: auto;
+}
 
-	.results-card {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-md);
-		background-color: var(--cream);
-		border-radius: var(--space-sm);
-		border: var(--border) solid var(--blue);
-		padding: var(--space-md);
-		overflow: hidden;
+.results-card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	background-color: var(--cream);
+	border-radius: var(--space-sm);
+	border: var(--border) solid var(--blue);
+	padding: var(--space-md);
+	overflow: hidden;
+	color: var(--blue);
+	flex: 1 1 auto;
+	text-align: center;
+
+	h1, h2, h3, h4, p {
 		color: var(--blue);
-		flex: 1 1 auto;
-		text-align: center;
+	}
 
-		h1, h2, h3, h4, p {
-			color: var(--blue);
-		}
-
-		img {
-			inline-size: 100%;
-			max-block-size: 20rem;
-			flex: 1;
-			object-fit: cover;
-			border-radius: calc(var(--space-sm) / 2);
-		}
+	img {
+		inline-size: 100%;
+		max-block-size: 20rem;
+		flex: 1;
+		object-fit: cover;
+		border-radius: calc(var(--space-sm) / 2);
 	}
 }
 
@@ -764,8 +802,9 @@ input[type="range"]#energy {
 	}
 }
 
-#results-controls {
+.results-controls {
 	display: flex;
 	justify-content: center;
+	gap: var(--space-md);
 }
 

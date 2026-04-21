@@ -25,7 +25,7 @@
       },
       {
         "solo/social": {
-          "solo": true,
+          "solo": false,
           "social": true
         }
       },
@@ -151,7 +151,7 @@
   },
   {
     "name": "Cook a comfort dinner",
-    "image": "assets/images/comfort-dinner.png",
+    "image": "assets/images/results/comfort-dinner.png",
     "criteria": [
       {
         "in/out": {
@@ -412,7 +412,7 @@
   },
   {
     "name": "Get dessert",
-    "image": "assets/images/get-dessert.png",
+    "image": "assets/images/results/get-dessert.png",
     "criteria": [
       {
         "in/out": {
@@ -449,7 +449,7 @@
   },
   {
     "name": "Go bowling",
-    "image": "assets/images/go-bowling.png",
+    "image": "assets/images/results/bowling.png",
     "criteria": [
       {
         "in/out": {
@@ -487,7 +487,7 @@
   },
   {
     "name": "Go rock climbing",
-    "image": "assets/images/go-rock-climbing.png",
+    "image": "assets/images/results/rock-climbing.png",
     "criteria": [
       {
         "in/out": {
@@ -525,7 +525,7 @@
   },
   {
     "name": "Go roller skating",
-    "image": "assets/images/go-roller-skating.png",
+    "image": "assets/images/results/roller-skating.png",
     "criteria": [
       {
         "in/out": {
@@ -562,7 +562,7 @@
   },
   {
     "name": "Go thrifting",
-    "image": "assets/images/go-thrifting.png",
+    "image": "assets/images/results/thrifting.png",
     "criteria": [
       {
         "in/out": {
@@ -599,7 +599,7 @@
   },
   {
     "name": "Go to a concert",
-    "image": "assets/images/go-to-a-concert.png",
+    "image": "assets/images/results/concert.png",
     "criteria": [
       {
         "in/out": {
@@ -637,7 +637,7 @@
   },
   {
     "name": "Go to an art gallery",
-    "image": "assets/images/go-to-an-art-gallery.png",
+    "image": "assets/images/results/art-gallery.png",
     "criteria": [
       {
         "in/out": {
@@ -674,7 +674,7 @@
   },
   {
     "name": "Hike a nearby trail",
-    "image": "assets/images/hike-a-nearby-trail.png",
+    "image": "assets/images/results/hike.png",
     "criteria": [
       {
         "in/out": {
@@ -711,8 +711,8 @@
     ]
   },
   {
-    "name": "Host a fast game challenge",
-    "image": "assets/images/host-a-fast-game-challenge.png",
+    "name": "Host a game night",
+    "image": "assets/images/results/game-night.png",
     "criteria": [
       {
         "in/out": {
@@ -748,45 +748,8 @@
     ]
   },
   {
-    "name": "Host a karaoke session",
-    "image": "assets/images/host-a-karaoke-session.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Journal by candlelight",
-    "image": "assets/images/results/journal-by-candlelight.png",
+    "image": "assets/images/results/journal.png",
     "criteria": [
       {
         "in/out": {
@@ -823,83 +786,8 @@
     ]
   },
   {
-    "name": "Learn a dance routine",
-    "image": "assets/images/learn-a-dance-routine.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Listen to a calming album",
-    "image": "assets/images/listen-to-a-calming-album.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Make a playlist for the week",
-    "image": "assets/images/make-a-playlist-for-the-week.png",
+    "name": "Explore a new music genre",
+    "image": "assets/images/results/new-music-genre.png",
     "criteria": [
       {
         "in/out": {
@@ -937,7 +825,7 @@
   },
   {
     "name": "Make a scrapbook page",
-    "image": "assets/images/make-a-scrapbook-page.png",
+    "image": "assets/images/results/scrapbook.png",
     "criteria": [
       {
         "in/out": {
@@ -973,8 +861,8 @@
     ]
   },
   {
-    "name": "Make herbal tea and read",
-    "image": "assets/images/make-herbal-tea-and-read.png",
+    "name": "Make tea and read",
+    "image": "assets/images/results/read-and-tea.png",
     "criteria": [
       {
         "in/out": {
@@ -1012,7 +900,7 @@
   },
   {
     "name": "Make instant ramen and unwind",
-    "image": "assets/images/results/instant-ramen-and-unwind.png",
+    "image": "assets/images/results/ramen-and-unwind.png",
     "criteria": [
       {
         "in/out": {
@@ -1049,8 +937,8 @@
     ]
   },
   {
-    "name": "Meet up for casual dinner",
-    "image": "assets/images/meet-up-for-casual-dinner.png",
+    "name": "Meet friends for dinner",
+    "image": "assets/images/results/friends-dinner.png",
     "criteria": [
       {
         "in/out": {
@@ -1086,45 +974,8 @@
     ]
   },
   {
-    "name": "Play a fast-paced party game",
-    "image": "assets/images/play-a-fast-paced-party-game.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Play pickleball",
-    "image": "assets/images/play-pickleball.png",
+    "image": "assets/images/results/pickleball.png",
     "criteria": [
       {
         "in/out": {
@@ -1161,83 +1012,8 @@
     ]
   },
   {
-    "name": "Read poetry with tea",
-    "image": "assets/images/read-poetry-with-tea.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": false,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Rearrange your room",
-    "image": "assets/images/rearrange-your-room.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Sit in the park and people-watch",
-    "image": "assets/images/sit-in-the-park-and-people-watch.png",
+    "image": "assets/images/results/people-watch.png",
     "criteria": [
       {
         "in/out": {
@@ -1275,7 +1051,7 @@
   },
   {
     "name": "Start a collage project",
-    "image": "assets/images/start-a-collage-project.png",
+    "image": "assets/images/results/collage-project.png",
     "criteria": [
       {
         "in/out": {
@@ -1312,7 +1088,7 @@
   },
   {
     "name": "Take a fitness class",
-    "image": "assets/images/take-a-fitness-class.png",
+    "image": "assets/images/results/fitness-class.png",
     "criteria": [
       {
         "in/out": {
@@ -1348,46 +1124,8 @@
     ]
   },
   {
-    "name": "Take a scenic neighborhood walk",
-    "image": "assets/images/take-a-scenic-neighborhood-walk.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Explore"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Take a sunset walk",
-    "image": "assets/images/take-a-sunset-walk.png",
+    "image": "assets/images/results/sunset-walk.png",
     "criteria": [
       {
         "in/out": {
@@ -1425,7 +1163,7 @@
   },
   {
     "name": "Take photos around the city",
-    "image": "assets/images/take-photos-around-the-city.png",
+    "image": "assets/images/results/photos-around-the-city.png",
     "criteria": [
       {
         "in/out": {
@@ -1462,84 +1200,8 @@
     ]
   },
   {
-    "name": "Tidy and decorate your space",
-    "image": "assets/images/tidy-and-decorate-your-space.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active",
-          "Creative"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try a new pasta recipe",
-    "image": "assets/images/try-a-new-pasta-recipe.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": true,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
     "name": "Try a new restaurant",
-    "image": "assets/images/try-a-new-restaurant.png",
+    "image": "assets/images/results/new-restaurant.png",
     "criteria": [
       {
         "in/out": {
@@ -1569,82 +1231,6 @@
       },
       {
         "type of activity": [
-          "Explore",
-          "Eat & drink"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Try an intense yoga flow",
-    "image": "assets/images/try-an-intense-yoga-flow.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": false,
-          "medium": false,
-          "high": true
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Active"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Visit a cozy café",
-    "image": "assets/images/visit-a-cozy-cafe.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": false,
-          "go out": true
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Cozy",
           "Explore",
           "Eat & drink"
         ]
@@ -1653,7 +1239,7 @@
   },
   {
     "name": "Visit a night market",
-    "image": "assets/images/visit-a-night-market.png",
+    "image": "assets/images/results/night-market.png",
     "criteria": [
       {
         "in/out": {
@@ -1691,7 +1277,7 @@
   },
   {
     "name": "Visit a quiet library",
-    "image": "assets/images/visit-a-quiet-library.png",
+    "image": "assets/images/results/quiet-library.png",
     "criteria": [
       {
         "in/out": {
@@ -1728,8 +1314,8 @@
     ]
   },
   {
-    "name": "Walk to a nearby café",
-    "image": "assets/images/walk-to-a-nearby-cafe.png",
+    "name": "Try a new drink at a nearby café",
+    "image": "assets/images/results/try-a-new-drink.png",
     "criteria": [
       {
         "in/out": {
@@ -1767,7 +1353,7 @@
   },
   {
     "name": "Watch a nostalgic movie",
-    "image": "assets/images/watch-a-nostalgic-movie.png",
+    "image": "assets/images/results/watch-a-movie.png",
     "criteria": [
       {
         "in/out": {
@@ -1797,44 +1383,6 @@
       },
       {
         "type of activity": [
-          "Cozy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Write a reflective note",
-    "image": "assets/images/write-a-reflective-note.png",
-    "criteria": [
-      {
-        "in/out": {
-          "stay in": true,
-          "go out": false
-        }
-      },
-      {
-        "energy": {
-          "low": true,
-          "medium": false,
-          "high": false
-        }
-      },
-      {
-        "cost": {
-          "low": true,
-          "medium": true,
-          "high": true
-        }
-      },
-      {
-        "solo/social": {
-          "solo": true,
-          "social": true
-        }
-      },
-      {
-        "type of activity": [
-          "Creative",
           "Cozy"
         ]
       }
