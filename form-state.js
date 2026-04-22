@@ -1,4 +1,12 @@
 
+function goHome() {
+	document.querySelectorAll('main > header, main > section').forEach(e => e.classList.remove('active'))
+	document.querySelector('#home').classList.add('active')
+	document.querySelector('#progress-bar').classList.remove('active')
+}
+
+document.querySelectorAll('h1').forEach(h1 => h1.addEventListener('click', goHome))
+
 document.querySelector('#personalize').addEventListener('click', () => {
 	document.querySelector('#home').classList.remove('active')
 	document.querySelector('#form-section').classList.add('active')
@@ -195,7 +203,7 @@ function showResults(results) {
 	// edge case: no results found
 	// shows message and hides navigation if there are no results
 	if (results.length === 0) {
-		resultDiv.innerHTML = '<p>No activities found. Try something else <img src="assets/icons/smiley.svg" alt="Smiley"></p>'
+		resultDiv.innerHTML = '<div class="empty-state"><p>No activities found.<br>Try something else!</p><img src="assets/icons/smiley.svg" alt="Smiley"></div>'
 		dots.forEach(e => e.hidden = true)
 		counter.hidden = true
 		prevBtn.hidden = true
@@ -400,6 +408,7 @@ submitBtn.addEventListener('click', (event) => {
 		if (soloOrSocial && !soloSocial[soloOrSocial.value])
 			return false;
 
+		// for the "type of activity" criteria, since users can select multiple options, i'm checking if any of the selected options match the options for that item in the data. if there are selected options and none of them match, i return false and filter out that item.
 		const activityOptions = criteria[4]["type of activity"];
 		if (selectedActivityTypes.length > 0 && !selectedActivityTypes.some(t => activityOptions.includes(t)))
 			return false;
