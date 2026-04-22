@@ -1,4 +1,4 @@
-# Functions
+# Functions Project
 ## Nightcap
 
 Nightcap is a concept for a digital tool that helps people spend their evenings more intentionally. It was designed for my Type & Interaction 2 class at Parsons MPS Communication Design. 
